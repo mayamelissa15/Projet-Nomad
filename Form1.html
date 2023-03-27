@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>S'inscrire en tant que guide touristique </title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body >
+  <header class="bg-white bg-scroll font-medium ">
+    <nav class=" flex justify-between items-center w-[92%] mx-auto"> 
+        <div>
+            <img class="w-[120px]" src="img/Logo.png" alt="logo Nomad">
+        </div>
+        <div class="navLinks duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 "> <!--{-100 to be hidden }-->
+           <ul class="flex md:flex-row flex-col flex md:items-center md:gap-[4vw] gap-8 text-slate-600"><!--gap for view port-->
+            <li ><a class="nav-Links" href="#">Main</a></li>
+            <li ><a class="nav-Links" href="destination2.html">Destinations</a></li>
+            <li ><a class=" nav-Links text-black" href="guide.html">Guide</a></li>
+            
+            <li ><a class="nav-Links" href="#">Covoiturage</a></li>
+            <li><button class="nav-Links relative text-slate-600 " id="menu-btn"> Loisirs</button>
+                <div class=" absolute bg-slate-100  hidden flex-col rounded mt-1 p-2 text-sm w-32 z-10" id="dropdown">
+                    <a href="#"class="px-2 py-3 text-slate-600 rounded hover:bg-slate-200">Hotel</a>
+                    <a href="#"class="px-2 py-3 text-slate-600 rounded hover:bg-slate-200">Restauration</a>
+                </div></li>
+
+        </div>
+
+        <div class="flex items-center gap-6">
+           <a href="login.html"> <button class="bg-blue-500 text-white px-5 py-2 rounded-full shadow-xl hover:bg-blue-700 duration-500 ">Sign in </button> </a>
+
+            <ion-icon onclick="onToggleMenu(this)" name="menu" class=" text-3xl cursor-pointer hover:shadow rounded-full md:hidden "> </ion-icon>
+             <!--pour qu'il soit cliquable -->
+        </div>
+    </nav>
+    <script>
+        const navLinks = document.querySelector('.navLinks') // selectioner la navbar
+function onToggleMenu(e) //event argument qui va pointer vers mon element menu 
+{
+    e.name === 'menu' ? (e.name = "close",navLinks.classList.add('top-[80px]') , navLinks.classList.add('opacity-100')) :( e.name = "menu" ,navLinks.classList.remove('top-[80px]'),navLinks.classList.remove('opacity-100'))
+    /*e.name=e.name==='menu' ? 'close' : 'menu' // pour changer l'icone de menu -> a fermer 
+    navLinks.classList.toggle('top-[9%]')*/
+}
+    </script>
+</header>
+<menu class="flex justify-between">
+  <div class="m-20 flex flex-col gap-4 items-center">
+      <div><h1 id="text" class="text-3xl font-semibold " > Pour tous les guides touristiques, partout dans le monde.
+        </h1> 
+        <p class="text-2xl font-semibold text-slate-700 pt-6">Rien de plus simple pour vous faire connaître !</p>
+      </div>
+       
+      <div><p id="text" class=" text-xl font-medium text-slate-500 mb-10"  >La démarche est rapide et totalement gratuite.
+        (ni frais ou commission ne vous seront demandés).
+        Veuillez remplir le formulaire ci-dessous.
+        Dès réception, nous créerons pour vous une page individuelle sur notre site.
+        Tous les guides peuvent s’inscrire qu’ils soient certifiés ou non.</p> </div>
+      <div ><a class=" reveal bg-blue-500 shadow-2xl text-white font-medium  mt-20 px-5 py-2 rounded-full hover:bg-blue-700 duration-500 " href="#guide">S'inscrire maintenant ! </a></div>
+      
+  </div>
+  <img src="img/people-traveling (1).png" class=" reveal h-97 w-[700px]" >
+  </menu>
+<div class=" bg-slate-100 p-10">
+  <h1 class="reveal text-5xl font-semibold text-black mx-10 pt-10  ">Inscrivez vous maintenant  ! </h1>
+
+  
+<!-- FORMULAIRE D'INSCRIPTION  -->
+<form class=" reveal p-10 w-[50%] mx-auto bg-white border-transparent rounded-3xl shadow-2xl m-20 " action="#" id="guide">
+       
+  <div class="mt-3 font-medium flex flex-col gap-2">
+    <label class="text-gray-700 after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">Mail : </label>
+    <input type="text" placeholder="Email" class=" rounded-[10px] border-transparent shadow-md py-3 px-2 w-full">
+  </div>
+  <div class="mt-3 font-medium flex flex-col gap-2">
+    <label class="text-gray-700 after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">Phone Number :</label>
+    <input type="Tel" placeholder="Number"  class=" rounded-[10px] border-transparent shadow-md py-3 px-2 w-full">
+  </div>
+  <div class="mt-3 font-medium flex flex-col gap-2">
+    <label class="text-gray-700 after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700 ">Age</label>
+    <input type="number" min="19" max="70" class=" rounded-[10px] border-transparent shadow-md py-3 px-2 " >
+   </div>
+    <div class="mt-3 font-medium flex flex-col gap-2">
+      <label class="text-gray-700 after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700 ">Votre secteur</label>
+     <select placeholder="Nombre de participants" class=" rounded-[10px] border-transparent shadow-md py-3 px-2 w-full " required >
+      <option ></option>
+      <option class="text-gray-500"> Alger</option>
+      <option  class="text-gray-500"> Oran</option>
+      <option  class="text-gray-500"> Timimoune</option> 
+      <option  class="text-gray-500"> Setif</option>
+      <option  class="text-gray-500"> Bejaia</option>
+      <option  class="text-gray-500"> Constantine</option> 
+
+     </select>
+  </div>
+  <div class="mt-3 font-medium flex flex-col gap-2">
+    <label  class=" after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700 text-gray-700 ">Langue du guide</label>
+    <input type="text" placeholder="Langue #1" class=" rounded-[10px] border-transparent py-3 px-2 w-full">
+    <input type="text" placeholder="Langue #2" class=" rounded-[10px] border-transparent  py-3 px-2 w-full">
+    <input type="text" placeholder="Langue #3" class=" rounded-[10px] border-transparent  py-3 px-2 w-full">
+   </div>
+  
+  <fieldset class="mt-5 rounded-[10px] border-transparent shadow-md py-3 px-2 w-full text-gray-700 font-medium " >
+    <legend>Sexe:</legend>
+    <div >
+      <input type="radio"  id="Homme"  value="Homme"  name="sexe">
+      <label for="Homme">Homme</label>
+    </div>
+    <div >
+      <input type="radio"  id="Femme" value="femme" name="sexe">
+      <label for="Femme">Femme</label>
+    </div>
+</fieldset>
+
+  <div class="mt-5 font-medium flex flex-col gap-2">
+    <label class=" text-gray-700 ">Votre presentation</label>
+    <textarea  style=" resize:none;"class=" rounded-[10px] border-transparent shadow-md py-3 px-2 w-full text-gray-700 text-medium"></textarea>
+  </div>
+  <label for="avatar" class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700 text-gray-700 py-4 px-2 font-medium">Votre photo :</label>
+  <div class=" mt-5 rounded-[10px] border-transparent shadow-md py-4 px-2 w-full  flex items-center space-x-6">
+  
+  <div class="shrink-0">
+    <img class="h-14 w-14 object-cover rounded-full" src="img/avatar.png"  alt="Current profile photo" />
+  </div>
+  <input type="file" class="block w-full text-sm text-slate-500
+  file:mr-4 file:py-2 file:px-4
+  file:rounded-full file:border-0
+  file:text-sm file:font-semibold
+  file:bg-blue-50 file:text-blue-700
+  hover:file:bg-blue-500/75
+"/>
+  </div>
+   
+    <div class="mt-5">
+      <input type="checkbox" class="border-transparent shadow-md">
+      <span>
+        I accept the <a href="#" class="text-blue-500 font-semibold">Terms of Use</a> &  <a href="#" class="text-blue-500 font-semibold">Privacy Policy</a> 
+      </span>
+    </div>
+    <div class="mt-5 flex justify-end ">
+      <button class="bg-blue-500 text-white px-5 py-2 rounded-full shadow-xl hover:bg-blue-700 duration-500 ">Register now! </button>
+    </div>
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      
+
+        <footer class="footer font-medium">
+          <div class="container">
+              <div class="row">
+                  <div class="footer-col">
+                      <h4>company</h4>
+                      <ul>
+                          <li><a href="#">about us</a></li>
+                          <li><a href="#">our services</a></li>
+                          <li><a href="#">privacy policy</a></li>
+                          
+                      </ul>
+                  </div>
+                  <div class="footer-col">
+                      <h4>get help</h4>
+                      <ul>
+                          <li><a href="#">FAQ</a></li>
+                          
+                          <li><a href="#">payment options</a></li>
+                      </ul>
+                  </div>
+                  <div class="footer-col">
+                      <h4>our services</h4>
+                      <ul >
+                          <li><a href="#">Destination</a></li>
+                          <li><a href="#">Hotel</a></li>
+                          <li><a href="#">covoiturage</a></li>
+                          <li><a href="#">guide</a></li>
+                          <li><a href="#">Restaurant</a></li>
+                      </ul>
+                  </div>
+                  <div class="footer-col">
+                      <h4>follow us</h4>
+                      <div class="social-links">
+                          <a href="#"><i class="fab fa-facebook-f"></i></a>
+                          <a href="#"><i class="fab fa-twitter"></i></a>
+                          <a href="#"><i class="fab fa-instagram"></i></a>
+                          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+     </footer>
+      
+      <style>
+  body{
+    line-height: 1.5;
+    
+  }
+  *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+  .container{
+    max-width: 1170px;
+    margin:auto;
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ul{
+    list-style: none;
+  }
+  .footer{
+    background-color: #0a4cf5;
+      padding: 70px 0;
+  }
+  .footer-col{
+     width: 25%;
+     padding: 0 15px;
+  }
+  .footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+  .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: #ffffff;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  .footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+  }
+  .footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+  }
+  .footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+  }
+  .footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+  }
+  
+  /*responsive*/
+  @media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+  }
+  
+  
+      </style>
+      
+
+</body>
+</html>

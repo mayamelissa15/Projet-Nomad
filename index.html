@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <h1 class=" text-center text-3xl bg-blue-500 font-bold text-slate-400">tailwind css</h1>
+    <p class="section "> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt officia sapiente delectus, molestiae natus neque quisquam ipsa dignissimos doloribus omnis repellendus ex quidem expedita maiores fugiat ullam, ad tempora aliquid.</p>
+    <a>bruh</a>
+    <button class=" button bg-blue-500 rounded-3xl text-white font-semibold px-8 py-2 m-5"> click </button>
+</body>
+</html>
+
+<script>
+    const Element = document.querySelector('.section')
+    console.log(Element)
+    const A = document.querySelector('a')
+    A.innerHtml = 'hello!'
+    console.log(A)
+    A.setAttribute('class' , 'text-red-500')
+
+    button = document.querySelector('.button')
+    button.addEventListener('click' , function()
+    {
+        alert('wooy 3dami ')
+    })
+</script>

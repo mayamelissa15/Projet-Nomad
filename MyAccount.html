@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes voyages organisées </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- Google Font Link for Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+</head>
+
+<body class="bg-white flex justfify-center">
+    <!--Sidebar ta3na -->
+   
+        <sidebar class="w-3/12">
+
+            <span class="absolute text-white text-4xl top-5 left-4 cursor-pointer bg-sky-50" onclick="Openbar()">
+                <i class="bi bi-filter-left px-2 bg-sky-100 text-black rounded-md"></i>
+            </span>
+            <div
+                class="sidebar fixed top-0 bottom-0 lg:left-0 left-[-300px] p-2 w-[300px] overflow-y-auto text-center bg-slate-100 ">
+
+                <div class="text-slate-700 text-xl ">
+                    <div class="p-2.5 mt-1 flex items-center ">
+                        <i class=" text-white bi bi-app-indicator px-2 py-1 bg-blue-500 rounded-xl cursor-pointer "></i>
+                        <h1 class="font-semibold text-slate-700 text-[15px] ml-3">Mon Profil </h1>
+                        <i class=" text-black bi bi-x cursor-pointer ml-28  lg-hidden " onclick="Openbar()"></i>
+                    </div>
+                    <hr class="my-2.5 text-slate-700 mx-1.5 ">
+                </div>
+
+                <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer bg-slate-50 ">
+                    <i class="bi bi-search text-sm "></i>
+                    <input type="text" class="text-[15px] font-medium ml-4 w-full bg-transparent focus:outline-none"
+                        placeholder="search">
+                </div>
+                <hr class="my-2.5 text-slate-700 mx-1.5 ">
+                <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300  cursor-pointer hover:bg-white
+        transition ease-in-out delay-150  hover:-translate-y-0.5 hover:scale-100  hover:shadow duration-300">
+                    <i class="bi bi-gear text-sm "></i>
+                    <span class="text-[15px] ml-4 text-slate-700  font-semibold  "> Parametres </span>
+                </div>
+                <hr class="my-2.5 text-slate-700 mx-1.5 ">
+                <div
+                    class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300  cursor-pointer hover:bg-white transition ease-in-out delay-150  hover:-translate-y-0.5 hover:scale-100  hover:shadow duration-300">
+                    <i class="bi bi-images text-sm "></i>
+                    <span class="text-[15px] ml-4 text-slate-700  font-semibold  ">Mes Photos </span>
+                </div>
+                <hr class="my-2.5 text-slate-700 mx-1.5 ">
+                <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300  cursor-pointer bg-white transition ease-in-out delay-150  hover:-translate-y-0.5 hover:scale-100  hover:shadow duration-300 "
+                    onclick="dropdown()">
+                    <i class="bi bi-signpost-split"></i>
+                    <div class="flex justify-between w-full items-center ">
+
+                        <span class="text-[15px] ml-4 text-slate-700  font-semibold  "> Guide</span>
+                        <span class="text-sm rotate-180" id="arrow">
+                            <i class="bi bi-chevron-down"></i>
+                        </span>
+
+                    </div>
+                </div>
+
+                <div class="text-left  font-thin mt-2 w-4/5 mx-auto text-slate-700 text-[15px] " id="submenu">
+                    <a href="MyAccount.html"><h1 class="cursor-pointer p-2 hover:bg-white rounded-md mt-1 font-semibold">Mes Voyages organisées
+                    </h1> </a>
+                    <a href="Mesdemandes.html"><h1 class="cursor-pointer p-2 hover:bg-white rounded-md mt-1 font-semibold"> Mes demandes </h1></a>
+                </div>
+
+
+
+                <hr class="my-2.5 text-slate-700 mx-1.5 ">
+                <div
+                    class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300  cursor-pointer hover:bg-white transition ease-in-out delay-150  hover:-translate-y-0.5 hover:scale-100  hover:shadow duration-300 ">
+                    <i class="bi bi-car-front-fill"></i>
+                    <span class="text-[15px] ml-4 text-slate-700  font-semibold  "> Ma voiture </span>
+                </div>
+
+                <hr class="my-2.5 text-slate-700 mx-1.5 ">
+                <div
+                    class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300  cursor-pointer hover:bg-white transition ease-in-out delay-150  hover:-translate-y-0.5 hover:scale-100  hover:shadow duration-300 ">
+                    <i class="bi bi-box-arrow-right"></i>
+
+                    <span class="text-[15px] ml-4 text-slate-700  font-semibold  "> Logout </span>
+                </div>
+            </div>
+        </sidebar>
+ <section class="  w-9/12">
+     <profile class="m-2 flex justify-between"> 
+            <p class="text-blanc text-lg font-semibold "> Hello , Hacina Abla 👋  </p>
+        
+            <img src="img/avatar.png" class="w-8 h-8">  
+     </profile>
+     <hr class="my-4 text-slate-700 mx-1.5 ">
+ 
+        <div class="flex flex-row gap-10">
+        <div class="flex flex-col w-5/12 m-5 ">
+            <h1 class="text-black  font-semibold text-3xl py-5"> Gerez vos voyages ! </h1>
+        <p class="text-slate-900 font-semibold text-xl  py-5">Cet espace est dédié à la gestion de vos voyages organisés. Vous pouvez choisir parmi une sélection d'excursions en fonction de vos préférences en termes d'heure, de lieu et de compagnie. </p> 
+        <p class="text-blue-00 font-semibold text-md  py-5"> Consultez le calendrier ci-dessous pour vérifier vos disponibilités. </p>
+        </div> 
+        <div class="wrapper w-7/12">
+            <header>
+              <p class="current-date"></p>
+              <div class="icons">
+                <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                <span id="next" class="material-symbols-rounded">chevron_right</span>
+              </div>
+            </header>
+            <div class="calendar">
+              <ul class="weeks">
+                <li>Sun</li>
+                <li>Mon</li>
+                <li>Tue</li>
+                <li>Wed</li>
+                <li>Thu</li>
+                <li>Fri</li>
+                <li>Sat</li>
+              </ul>
+              <ul class="days"></ul>
+            </div>
+          </div>
+          
+        </div>
+        <div> 
+            <h1  class="text-slate-700 font-semibold
+             text-2xl ">My bookings</h1>
+             <p class="text-slate-500 font-semibold text-md  py-5">Nous vous offrons la flexibilité de personnaliser votre voyage selon vos souhaits en contactant les voyageurs !</p>
+             <hr class="my-2.5 text-slate-900 mx-8 ">
+            
+             
+            <div class="flex flex-row my-5">
+                <img src="img/avatar.png " class="w-16 h-[50px] " >
+                <div class=" mx-10 flex flex-col"> 
+                    <h1 class=" mx-auto text-slate-700 font-medium
+                    text-lg "> Mellaz Maya Melissa </h1>
+                   <!-- <h4 class="text-slate-600 font-medium
+                    text-md  "> Tizi-ouzou </h4>-->
+                    <button class="my-2 py-2 px-2
+                rounded-full border-0
+                text-sm font-semibold
+                bg-blue-50 text-blue-700
+                hover:bg-blue-100 show-modal " 
+                >show more</button>
+                </div>
+                <button class="mx-auto my-auto py-4 px-10
+                rounded-full border-0
+                text-sm font-semibold
+                bg-green-50 text-green-700
+                hover:bg-green-100" 
+                >Accept</button>
+                <button class="mx-auto my-auto  py-4 px-10
+                rounded-full border-0
+                text-sm font-semibold
+                bg-red-50 text-red-700
+                hover:bg-red-100">Refus</button>
+                
+                <p class="text-slate-700 font-medium
+                text-lg my-auto mx-auto">1000$</p>
+
+                <p class="text-slate-400 font-medium
+                text-lg my-auto mx-auto">March 10 , at 18:00 </p>
+            </div>
+
+                            <!-- my Modal -->
+                            <div class=" flex justify-between modal hidden mx-auto my-auto ">
+                                <div class="m-4">
+                                <h1 class="text-slate-900 font-medium text-[20px] show-modal mb-2 ">Specification </h1>
+                                <p class="text-slate-700 font-medium text-[15px] show-modal ">
+                                J'aspirerais à explorer les merveilleux endroits de Béjaia, en faisant escale à Cap Carbon, aux Aiguades, à la Place Geydon et à bien d'autres sites féeriques et merveilleux à partir de 16h. Je souhaiterais visiter chaque endroit pendant environ 1h et je suis disposé à payer 250 DA par heure. </p>
+                                <p class="text-slate-900 font-medium text-[15px] show-modal"><i> Wilaya Tizi-ouzou , Algerie </i></p>
+                                </div>
+
+                               <i class="close-modal text-blue-700 font-bold cursor-pointer text-[30px]  show-modal bi bi-x mx-5 hover:-translate-y-0.5 hover:scale-100   duration-300 "></i>
+                              </div>
+                               
+                              <script>
+                                const Modal = document.querySelector('.modal');
+                                const showModal = document.querySelector('.show-modal');
+                                const closeModal = document.querySelector('.close-modal');
+                               
+                                showModal.addEventListener('click', function(){
+                                 Modal.classList.remove('hidden')
+                                });
+                               
+                                closeModal.addEventListener('click', function(){
+                                 Modal.classList.add('hidden')
+                                });
+                                 </script>
+
+                                 <!-- Fin modal -->
+            <hr class="my- text-slate-900 mx-8 ">
+                         
+            <div class="demande flex flex-row my-5">
+                <img src="img/avatar.png " class="w-16 h-[50px]" >
+                <div class=" mx-10 flex flex-col"> 
+                    <h1 class="text-slate-700 font-medium
+                    text-lg "> Mellaz Maya Melissa </h1>
+                    <h4 class="text-slate-400 font-medium
+                    text-md  "> Tizi-ouzou </h4>
+                </div>
+
+                <button class="m-4 py-4 px-10
+                rounded-full border-0
+                text-sm font-semibold
+                bg-green-50 text-green-700
+                hover:bg-green-100 close-demande">Accept</button>
+                <button class="m-4 py-4 px-10
+                rounded-full border-0
+                text-sm font-semibold
+                bg-red-50 text-red-700
+                hover:bg-red-100 close-demande">Refus</button>
+                
+                <p class="text-slate-700 font-medium
+                text-lg m-5 mx-10">1000$</p>
+
+                <p class="text-slate-400 font-medium
+                text-lg m-5 mx-10">March 10 , at 18:00 </p>
+            </div>
+            <script>
+                const Demande = document.querySelector('.demande');
+                
+                const closeDemande = document.querySelector('.close-demande');
+                closeDemande.addEventListener('click', function(){
+                 Demande.classList.add('hidden')
+                });
+                 </script>
+            <hr class="my- text-slate-900 mx-8 ">    
+            <!------------------>     
+            <div class="flex flex-row my-5">
+                <img src="img/avatar.png " class="w-16 h-[50px]" >
+                <div class=" mx-10 flex flex-col"> 
+                    <h1 class="text-slate-700 font-medium
+                    text-lg "> Mellaz Maya Melissa </h1>
+                    <h4 class="text-slate-400 font-medium
+                    text-md  "> Tizi-ouzou </h4>
+                </div>
+
+                <button class="m-4 py-4 px-10
+                rounded-full border-0
+                text-sm font-semibold
+                bg-green-50 text-green-700
+                hover:bg-green-100">Accept</button>
+                <button class="m-4 py-4 px-10
+                rounded-full border-0
+                text-sm font-semibold
+                bg-red-50 text-red-700
+                hover:bg-red-100">Refus</button>
+                
+                <p class="text-slate-700 font-medium
+                text-lg m-5 mx-10">1000$</p>
+
+                <p class="text-slate-400 font-medium
+                text-lg m-5 mx-10">March 10 , at 18:00 </p>
+            </div>
+            <hr class="my- text-slate-900 mx-8 ">         
+
+            <!------------>
+            <div class="contenu flex flex-row my-5">
+                <img src="img/avatar.png " class="w-16 h-[50px]" >
+                <div class=" mx-10 flex flex-col"> 
+                    <h1 class="text-slate-700 font-medium
+                    text-lg "> Mellaz Maya Melissa </h1>
+                    <h4 class="text-slate-400 font-medium
+                    text-md  "> Tizi-ouzou </h4>
+                </div>
+
+                <button class="modifier-html m-4 py-4 px-10
+                rounded-full border-0
+                text-sm font-semibold
+                bg-green-50 text-green-700
+                hover:bg-green-100 " >Accept</button>
+                <button class="m-4 py-4 px-10
+                rounded-full border-0
+                text-sm font-semibold
+                bg-red-50 text-red-700
+                hover:bg-red-100">Refus</button>
+                
+                <p class="text-slate-700 font-medium
+                text-lg m-5 mx-10">1000$</p>
+
+                <p class="text-slate-400 font-medium
+                text-lg m-5 mx-10">March 10 , at 18:00 </p>
+            </div>
+        </div>
+        
+</section>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .wrapper{
+    width: 450px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  }
+  .wrapper header{
+    display: flex;
+    align-items: center;
+    padding: 25px 30px 10px;
+    justify-content: space-between;
+  }
+  header .icons{
+    display: flex;
+  }
+  header .icons span{
+    height: 38px;
+    width: 38px;
+    margin: 0 1px;
+    cursor: pointer;
+    color: #284fff;
+    text-align: center;
+    line-height: 38px;
+    font-size: 1.9rem;
+    user-select: none;
+    border-radius: 50%;
+  }
+  .icons span:last-child{
+    margin-right: -10px;
+  }
+  header .icons span:hover{
+    background: #f2f2f2;
+  }
+  header .current-date{
+    font-size: 1.45rem;
+    font-weight: 500;
+  }
+  .calendar{
+    padding: 20px;
+  }
+  .calendar ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: center;
+  }
+  .calendar .days{
+    margin-bottom: 20px;
+  }
+  .calendar li{
+    color: #333;
+    width: calc(100% / 7);
+    font-size: 1.07rem;
+  }
+  .calendar .weeks li{
+    font-weight: 500;
+    cursor: default;
+  }
+  .calendar .days li{
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+    margin-top: 30px;
+  }
+  .days li.inactive{
+    color: #aaa;
+  }
+  .days li.active{
+    color: #fff;
+  }
+  .days li::before{
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .days li.active::before{
+    background: #284fff;
+  }
+  .days li:not(.active):hover::before{
+    background: #f2f2f2;
+  }
+  </style>
+  
+  
+  <script>
+    const daysTag = document.querySelector(".days"),
+  currentDate = document.querySelector(".current-date"),
+  prevNextIcon = document.querySelectorAll(".icons span");
+  
+  // getting new date, current year and month
+  let date = new Date(),
+  currYear = date.getFullYear(),
+  currMonth = date.getMonth();
+  
+  // storing full name of all months in array
+  const months = ["January", "February", "March", "April", "May", "June", "July",
+                "August", "September", "October", "November", "December"];
+  
+  const renderCalendar = () => {
+      let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // getting first day of month
+      lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(), // getting last date of month
+      lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(), // getting last day of month
+      lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); // getting last date of previous month
+      let liTag = "";
+  
+      for (let i = firstDayofMonth; i > 0; i--) { // creating li of previous month last days
+          liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
+      }
+  
+      for (let i = 1; i <= lastDateofMonth; i++) { // creating li of all days of current month
+          // adding active class to li if the current day, month, and year matched
+          let isToday = i === date.getDate() && currMonth === new Date().getMonth() 
+                       && currYear === new Date().getFullYear() ? "active" : "";
+          liTag += `<li class="${isToday}">${i}</li>`;
+      }
+  
+      for (let i = lastDayofMonth; i < 6; i++) { // creating li of next month first days
+          liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`
+      }
+      currentDate.innerText = `${months[currMonth]} ${currYear}`; // passing current mon and yr as currentDate text
+      daysTag.innerHTML = liTag;
+  }
+  renderCalendar();
+  
+  prevNextIcon.forEach(icon => { // getting prev and next icons
+      icon.addEventListener("click", () => { // adding click event on both icons
+          // if clicked icon is previous icon then decrement current month by 1 else increment it by 1
+          currMonth = icon.id === "prev" ? currMonth - 1 : currMonth + 1;
+  
+          if(currMonth < 0 || currMonth > 11) { // if current month is less than 0 or greater than 11
+              // creating a new date of current year & month and pass it as date value
+              date = new Date(currYear, currMonth, new Date().getDate());
+              currYear = date.getFullYear(); // updating current year with new date year
+              currMonth = date.getMonth(); // updating current month with new date month
+          } else {
+              date = new Date(); // pass the current date as date value
+          }
+          renderCalendar(); // calling renderCalendar function
+      });
+  });
+
+   /* function modifierHtml() {
+  var element = document.getElementById('contenu');
+  element.innerHTML = '<div class="contenu bg-red-500 flex flex-row my-5">';
+}
+var bouton = document.getElementById('modifier-html');
+bouton.addEventListener('click', modifierHtml);
+*/
+      function dropdown() {
+            document.querySelector('#submenu').classList.toggle('hidden')
+            document.querySelector('#arrow').classList.toggle('rotate-0')
+        }
+        dropdown()
+
+        function Openbar() {
+            document.querySelector('.sidebar').classList.toggle('left-[-300px]')
+        }
+    </script>
+
+
+</body>
+
+</html>

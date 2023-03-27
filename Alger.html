@@ -1,0 +1,825 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    
+      <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alger</title>
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+      </head>
+    
+      <body>
+<header class="bg-white bg-scroll font-medium ">
+        <nav class=" flex justify-between items-center w-[92%] mx-auto">
+            <div>
+                <img class="w-[120px]" src="img/Logo.png" alt="logo Nomad">
+            </div>
+            <div
+                class=" navLinks duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 ">
+                <!--{-100 to be hidden }-->
+                <ul class="flex md:flex-row flex-col flex md:items-center md:gap-[4vw] gap-8 text-slate-600">
+                    <!--gap for view port-->
+                    <li><a class="hover:text-gray-400 duration-500 " href="#">Main</a></li>
+                    <li><a class="text-black" href="destination2.html">Destinations</a></li>
+                    <li><a class="hover:text-gray-400 duration-500" href="guide.html">guide</a></li>
+                    <li><a class="hover:text-gray-400 duration-500" href="#">Hotel</a></li>
+                    <li><a class="hover:text-gray-400 duration-500" href="#">Covoiturage</a></li>
+                </ul>
+            </div>
+
+            <div class="flex items-center gap-6">
+                <a href="login.html"><button
+                        class="bg-blue-500 text-white px-5 py-2 rounded-full hover:bg-blue-700 duration-500 ">Sign in
+                    </button></a>
+                <ion-icon onclick="onToggleMenu(this)" name="menu"
+                    class=" text-3xl cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none  hover:shadow rounded-full md:hidden ">
+                </ion-icon>
+                <!--pour qu'il soit cliquable -->
+            </div>
+
+        </nav>
+    </header>
+
+
+    <section class=" ">
+        <div style="background-image:url('img/1.jpg') "
+            class="border-transparent rounded-[5px] bg-bottom bg-left relative bg-cover bg-fixed h-96 w-full ">
+        </div>
+         <div class=" grid grid-cols-2 gap-4 ">
+            
+                <div class="mt-10 mx-10">
+                    <h3 class="text-base text-lg font-medium py-3 underline decoration-sky-600">Algeria , Africa</h3>
+                    <h1 class="text-blue-500 text-5xl font-bold ">Algiers</h1>
+                    <p class="text-xl font-normal text-slate-700 py-4 leading-loose indent-8">Lorem ipsum, dolor sit amet
+                        consectetur adipisicing elit. Sint, error beatae possimus maiores ex quisquam ipsum ea ducimus
+                        quo nihil fuga temporibus aliquid enim, explicabo quas molestias reiciendis? Temporibus,
+                        deserunt?
+                        Eius quisquam praesentium recusandae possimus dolorem nam minus explicabo. Pariatur nostrum.</p>
+                </div>
+
+            <div class="border-l-4 border-blue-500 mt-32 mx-28 shadow-xl rounded-xl" style="width:400px; height:300px ">
+                <div>
+                    <h1 class=" text-2xl text-blue-500 font-medium px-5  "> Jump to :</h1>
+                    <ul class="text-black text-2xl font-medium p-5 flex justify-between flex-col">
+                        <a href="#historique"><li
+                            class="py-2  hover:text-blue-500 cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none ">
+                            Historique</li></a>
+                        <a href="#explore"><li
+                            class="py-2 hover:text-blue-500 cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none ">
+                            Explore Algiers! </li></a>
+                        <a href="#tool"><li
+                            class="py-2 hover:text-blue-500 cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none ">
+                           Planning toolkit</li></a>
+                           <a href="guide.html"><li
+                            class="py-2 hover:text-blue-500 cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none ">
+                           Plan a trip! </li></a>
+                    </ul>
+                </div>
+            </div>
+       </div>
+
+
+        <div class="mx-10">
+            <h1 class="text-blue-600 text-5xl font-bold" id="historique">Historique</h1>
+            <!-- This text always show up -->
+            <p class="text-xl font-normal text-slate-700 py-4 leading-loose indent-8"> Algiers the capital city of
+                Algeria and has a long and fascinating history that dates back to ancient times. The city has
+                been inhabited by various groups of people over the centuries, including the Phoenicians,
+                Romans, Arabs, amazigh and French. Here is a brief overview of Algiers
+                <!-- The three dots -->
+                <span id="dots">...</span>
+
+                <!-- This content only be shown as needed -->
+                <span id="more" class="hidden text-xl font-normal text-slate-700 pt-4 leading-loose">The city
+                    was founded by the Phoenicians in the 4th century BC, and was later conquered by the Romans
+                    in the 2nd century AD. During the Roman era, Algiers was an important center of trade and
+                    commerce, with a thriving port that served as a hub for the transportation of goods and
+                    people across the Mediterranean.
+                    In the 7th century, Algiers was conquered by the Arab armies of the Umayyad Caliphate, and
+                    became a major center of Islamic scholarship and learning. During this period, the city
+                    developed a rich culture and heritage, with many notable scholars, poets, and artists
+                    calling Algiers home.
+                    In the 16th century, Algiers was conquered by the Ottoman Empire, and became an important
+                    center of trade and commerce once again. The Ottomans built new harbors and fortifications
+                    in the city, which helped to further expand its economic and strategic importance.
+                    In the 19th century, Algiers was conquered by the French, who established a colonial
+                    administration and began a process of modernization and urbanization. The French built new
+                    roads, buildings, and infrastructure in the city, and also established a large naval base
+                    and administrative center in Algiers.
+                    During the 20th century, Algiers played a pivotal role in the struggle for Algerian
+                    independence from French colonial rule. The city was the site of many key political and
+                    military events during the Algerian War of Independence, which lasted from 1954 to 1962.
+                    <span>
+            </p>
+
+            <!-- Implement the read more/read less button -->
+            <button onclick="toggleText()" id="button"
+                class="mt-3 px-5 pb-2 text-blue-500 font-semibold text-lg duration-300 ">Read
+                more</button>
+        </div>
+    </section>
+
+
+
+
+
+
+        <section id="tranding">
+          <div class="container px-10">
+            <h3 class="text-center section-subheading text-slate-700 text-xl font-bold">- popular places -</h3>
+            <h1 class="text-center section-heading text-blue-600 text-5xl font-bold " id="explore">Explore Algiers!</h1>
+          </div>
+          <div class="container">
+            <div class="swiper tranding-slider">
+              <div class="swiper-wrapper">
+                <!-- Slide-start -->
+                <div class="swiper-slide tranding-slide">
+                  <div class="tranding-slide-img">
+                    <img src="img/casbah.jpg" alt="Tranding">
+                  </div>
+                  <div class="tranding-slide-content">
+                   
+                    <div class="tranding-slide-content-bottom">
+                      <h2 class="place-name text-white text-2xl font-semibold ">
+                        La casbah
+                      </h2>
+
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide-end -->
+                <!-- Slide-start -->
+                <div class="swiper-slide tranding-slide">
+                  <div class="tranding-slide-img">
+                    <img src="img/cathedral.jpg" alt="Tranding">
+                  </div>
+                  <div class="tranding-slide-content">
+                    
+                    <div class="tranding-slide-content-bottom">
+                      <h2 class="place-name text-white text-2xl font-semibold">
+                        Cathedral
+                      </h2>
+                     
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide-end -->
+                <!-- Slide-start -->
+                <div class="swiper-slide tranding-slide">
+                  <div class="tranding-slide-img">
+                    <img src="img/jardinhamma.jpg" alt="Tranding">
+                  </div>
+                  <div class="tranding-slide-content">
+                    
+                    <div class="tranding-slide-content-bottom">
+                      <h2 class="place-name text-white text-2xl font-semibold">
+                       Jardin Hamma 
+                      </h2>
+                      
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide-end -->
+                <!-- Slide-start -->
+                <div class="swiper-slide tranding-slide">
+                  <div class="tranding-slide-img">
+                    <img src="img/masjid.jpg" alt="Tranding">
+                  </div>
+                  <div class="tranding-slide-content">
+                    <div class="tranding-slide-content-bottom">
+                      <h2 class="place-name text-white text-2xl font-semibold">
+                       Mosquée
+                      </h2>
+                      
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide-end -->
+                <!-- Slide-start -->
+                <div class="swiper-slide tranding-slide">
+                  <div class="tranding-slide-img">
+                    <img src="img/musée1.jpg" alt="Tranding">
+                  </div>
+                  <div class="tranding-slide-content">
+                    
+                    <div class="tranding-slide-content-bottom">
+                      <h2 class="place-name text-white text-2xl font-semibold">
+                        musée d'alger
+                      </h2>
+                    
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide-end -->
+                <!-- Slide-start -->
+                <div class="swiper-slide tranding-slide">
+                  <div class="tranding-slide-img">
+                    <img src="img/musee2.jpg" alt="Tranding">
+                  </div>
+                  <div class="tranding-slide-content">
+                    
+                    <div class="tranding-slide-content-bottom">
+                      <h2 class="place-name text-white text-2xl font-semibold">
+                        Musée
+                      </h2>
+                      
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide-end -->
+                <!-- Slide-start -->
+                <div class="swiper-slide tranding-slide">
+                  <div class="tranding-slide-img">
+                    <img src="img/Notre dame d'Afrique (Alger) by Samir Bzk on 500px.jfif" alt="Tranding">
+                  </div>
+                  <div class="tranding-slide-content">
+                   
+                    <div class="tranding-slide-content-bottom">
+                      <h2 class="place-name text-white text-2xl font-semibold">
+                        notre dame d'Afrique
+                      </h2>
+                     
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide-end -->
+              </div>
+    
+              <div class="tranding-slider-control">
+                <div class="swiper-button-prev slider-arrow">
+                  <ion-icon name="arrow-back-outline"></ion-icon>
+                </div>
+                <div class="swiper-button-next slider-arrow">
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+    
+            </div>
+          </div>
+        </section>
+    
+
+        <div class="flex mx-20 h-[500px] text-medium ">
+            <div class=" flex-col overflow-y-scroll overflow-x-hidden h-full pr-4 border-slate-300  ">
+                
+                <div
+                    class="cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none  flex py-2 mt-2 mr-14 border-transparent rounded-3xl hover:shadow-xl w-full bg-white transition transform hover:-translate-y-1  motion-reduce:transition-none motion-reduce:hover:transform-none  duration-500">
+                    
+                    <div class="ml-4 shrink-0">
+                        <img class="rounded-3xl w-[117px] h-[119px]" src="img/casbah.jpg" alt="img1">
+                    </div>
+                  
+                    <div class="flex-auto ml-4">
+                        <h1 class="text-2xl font-bold text-[#0057D9]">
+                            Casbah of Algiers
+                        </h1>
+                        <p class="mt-2 leading-relaxed">
+                            The Casbah is the old town of Algiers and is a UNESCO World Heritage site. It is a maze of
+                            narrow streets, traditional markets, and historic buildings that date back to the Ottoman
+                            era.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none  flex py-4 mt-4  border-transparent rounded-3xl hover:shadow-xl w-full bg-white ">
+                    
+                    <div class="ml-4 shrink-0">
+                        <img class="rounded-3xl w-[117px] h-[119px] bg-contain"
+                            src="img/Notre dame d'Afrique (Alger) by Samir Bzk on 500px.jfif" alt="img1">
+                    </div>
+                
+                    <div class="flex-auto ml-4">
+                        <h1 class="text-2xl font-bold text-[#0057D9]">
+                            Notre Dame d'Afrique
+                        </h1>
+                        <p class="mt-2 leading-relaxed"> This Catholic basilica is a landmark of Algiers and offers
+                            panoramic views of the city and the Mediterranean Sea.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none  transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none duration-500  border-transparent flex py-4 mt-4 mr-14 rounded-3xl hover:shadow-xl w-full bg-white">
+                
+                    <div class="ml-4 shrink-0">
+                        <img class="rounded-3xl w-[117px] h-[119px]" src="img/jardinhamma.jpg" alt="img1">
+                    </div>
+                    
+                    <div class="flex-auto ml-4">
+                        <h1 class="text-2xl font-bold text-[#0057D9]">
+                            Jardin d'Essai du Hamma
+                        </h1>
+                        <p class="mt-2 leading-relaxed">
+                            This botanical garden is one of the largest and most beautiful in the world, featuring a
+                            wide variety of exotic plants, trees, and flowers.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none  transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none duration-500  border-transparent flex py-4 mt-4 mr-14 rounded-3xl hover:shadow-xl w-full bg-white">
+                    
+                    <div class="ml-4 shrink-0">
+                        <img class="rounded-3xl w-[117px] h-[119px]" src="img/musée1.jpg" alt="img1">
+                    </div>
+                    
+                    <div class="flex-auto ml-4">
+                        <h1 class="text-2xl font-bold text-[#0057D9]">
+                            Museum of Antiquities
+                        </h1>
+                        <p class="mt-2 leading-relaxed">
+                            This museum features a collection of artifacts from the Roman, Punic, and Islamic eras,
+                            including mosaics, ceramics, and jewelry.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none  transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none duration-500 border-transparent flex py-4 mt-4 mr-14 rounded-3xl hover:shadow-xl w-full bg-white">
+                   
+                    <div class="ml-4 shrink-0">
+                        <img class="rounded-3xl w-[117px] h-[119px]" src="img/cathedral.jpg" alt="img1">
+                    </div>
+                   
+                    <div class="flex-auto ml-4">
+                        <h1 class="text-2xl font-bold text-[#0057D9]">
+                            Algiers Cathedral
+                        </h1>
+                        <p class="mt-2 leading-relaxed">
+                            This historic cathedral is one of the most impressive examples of French colonial
+                            architecture in the city.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none  transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none duration-500 border-transparent flex py-4 mt-4 mr-14 rounded-3xl hover:shadow-xl w-full bg-white">
+                    
+                    <div class="ml-4 shrink-0">
+                        <img class="rounded-3xl w-[117px] h-[119px]" src="img/musee2.jpg" alt="img1">
+                    </div>
+                    
+                    <div class="flex-auto ml-4">
+                        <h1 class="text-2xl font-bold text-[#0057D9]">
+                            The National Museum of Fine Arts
+                        </h1>
+                        <p class="mt-2 leading-relaxed"> This museum houses a large collection of Algerian art,
+                            including paintings, sculptures, and installations.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none  transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none  duration-500 border-transparent flex py-4 mt-4 mr-14 rounded-3xl hover:shadow-xl w-full bg-white">
+                   
+                    <div class="ml-4 shrink-0">
+                        <img class="rounded-3xl w-[117px] h-[119px]" src="img/alger.jpg" alt="img1">
+                    </div>
+                    
+                    <div class="flex-auto ml-4">
+                        <h1 class="text-2xl font-bold text-[#0057D9]">
+                            The Monument of the Martyrs
+                        </h1>
+                        <p class="mt-2 leading-relaxed">
+                            This war memorial commemorates the Algerian War of Independence and features a large bronze
+                            statue of a fallen soldier.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none duration-500  border-transparent flex py-4 mt-4 mr-14 rounded-3xl hover:shadow-xl w-full bg-white">
+                   
+                    <div class="ml-4 shrink-0">
+                        <img class="rounded-3xl w-[117px] h-[119px]" src="img/masjid.jpg" alt="img1">
+                    </div>
+                    
+                    <div class="flex-auto ml-4">
+                        <h1 class="text-2xl font-bold text-[#0057D9]">
+                            The Ketchaoua Mosque
+                        </h1>
+                        <p class="mt-2 leading-relaxed">
+                            This historic mosque is a UNESCO World Heritage site and is one of the oldest and most
+                            important religious sites in the city.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      </div>
+      <div> <h1 class="text-black text-5xl font-bold m-20" id="tool">Planning toolkit</h1></div> 
+
+      <card class="flex flex-row justify-between m-20">
+      
+      <div class="h-96 w-64  bg-gradient-to-b from-blue-300/30 to-white rounded-3xl m-5 cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none duration-500">
+      <img class="h-20 w-20 mt-2 mx-auto"src="https://cdn-icons-png.flaticon.com/512/3655/3655399.png">
+      <h1 class="text-5xl text-black font-semibold m-5 ">Best things to do </h1>
+      <p class="text-slate-700 font-medium m-5 ">
+          Discover some of the most unique and fulfilling experiences your next destination has to offer.</p>
+      </div>
+      <div class="h-96 w-64 bg-gradient-to-b from-blue-300/30 to-white  rounded-3xl m-5 cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none duration-500">
+          <img class="h-20 w-20 mt-2 mx-auto"src="https://cdn-icons-png.flaticon.com/512/4910/4910558.png">
+          <h1 class="text-5xl text-black font-semibold m-5 ">When to visit </h1>
+          <p class="text-slate-700 font-medium m-5 ">
+      Tips & Travel trends to help you pick the perfect time to visit this destination.</p>
+          </div>
+          <div class="h-96 w-64  bg-gradient-to-b from-blue-300/30 to-white rounded-3xl m-5 cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none duration-500">
+              <img class="h-20 w-20 mt-2 mx-auto"src="https://cdn-icons-png.flaticon.com/512/5855/5855571.png">
+              <h1 class="text-5xl text-black font-semibold m-5 ">Best places to visit </h1>
+              <p class="text-slate-700 font-medium m-5 ">
+                  Put these must-see destinations on your next travel wish list.</p>
+              </div>
+              <div class="h-96 w-64  bg-gradient-to-b from-blue-300/30 to-white rounded-3xl m-5 cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none duration-500">
+                  <img class="h-20 w-20 mt-2 mx-auto"src="https://cdn-icons-png.flaticon.com/512/4723/4723204.png">
+                  <h1 class="text-5xl text-black font-semibold m-5 ">ways to get around  </h1>
+                  <p class="text-slate-700 font-medium m-5 ">
+                      Browse the various transportation options to make your trip that much easier when you arrive.</p>
+                  </div>
+      
+      </card>
+
+
+
+      <footer class="footer font-medium mt-20">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>our services</h4>
+                    <ul >
+                        <li><a href="#">Destination</a></li>
+                        <li><a href="#">Hotel</a></li>
+                        <li><a href="#">covoiturage</a></li>
+                        <li><a href="#">guide</a></li>
+                        <li><a href="#">Restaurant</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+ 
+    <style>
+        
+   
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    .container{
+        max-width: 1000px;
+        margin:auto;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    ul{
+        list-style: none;
+    }
+    .footer{
+        background-color: #0a4cf5;
+        padding: 70px 0;
+    }
+    .footer-col{
+       width: 25%;
+       padding: 0 15px;
+    }
+    .footer-col h4{
+        font-size: 18px;
+        color: #ffffff;
+        text-transform: capitalize;
+        margin-bottom: 35px;
+        font-weight: 500;
+        position: relative;
+    }
+    .footer-col h4::before{
+        content: '';
+        position: absolute;
+        left:0;
+        bottom: -10px;
+        background-color: #ffffff;
+        height: 2px;
+        box-sizing: border-box;
+        width: 50px;
+    }
+    .footer-col ul li:not(:last-child){
+        margin-bottom: 10px;
+    }
+    .footer-col ul li a{
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 300;
+        color: #bbbbbb;
+        display: block;
+        transition: all 0.3s ease;
+    }
+    .footer-col ul li a:hover{
+        color: #ffffff;
+        padding-left: 8px;
+    }
+    .footer-col .social-links a{
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        background-color: rgba(255,255,255,0.2);
+        margin:0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        color: #ffffff;
+        transition: all 0.5s ease;
+    }
+    .footer-col .social-links a:hover{
+        color: #24262b;
+        background-color: #ffffff;
+    }
+    
+    /*responsive*/
+    @media(max-width: 767px){
+      .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    }
+    @media(max-width: 574px){
+      .footer-col{
+        width: 100%;
+    }
+    }
+       
+/*caroussel*/
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+:root {
+  --primary: #1971ff;
+  --white: #ffffff;
+  
+}
+
+
+
+@media (min-width: 1440px) {
+  html {
+    zoom: 1.5;
+  }
+}
+
+@media (min-width: 2560px) {
+  html {
+    zoom: 1.7;
+  }
+}
+
+@media (min-width: 3860px) {
+  html {
+    zoom: 2.0;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 1.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: #797979;
+  transition: all 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #222224;
+}
+
+::-webkit-scrollbar-track {
+  background: #f9f9f9;
+}
+
+
+
+.container {
+  max-width: 100rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 3rem;
+  color: var(--primary);
+  padding: 2rem 0;
+}
+
+#tranding {
+  padding: 0;
+}
+
+@media (max-width:1440px) {
+  #tranding {
+    padding:  0;
+  }
+}
+
+#tranding .tranding-slider {
+  height: 48rem;
+  padding:  0;
+  position: relative;
+}
+
+@media (max-width:500px) {
+  #tranding .tranding-slider {
+    height: 400px;
+  }
+}
+
+.tranding-slide {
+  width: 37rem;
+  height: 4rem;
+  position: relative;
+}
+
+@media (max-width:500px) {
+  .tranding-slide {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+  .tranding-slide .tranding-slide-img img {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+}
+
+.tranding-slide .tranding-slide-img img {
+  width: 35rem;
+  height: 35rem;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+.tranding-slide .tranding-slide-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.tranding-slide-content .tranding-slide-content-bottom {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  color: var(--white);
+}
+
+
+
+
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+
+.tranding-slider-control {
+  position: relative;
+  bottom: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tranding-slider-control .swiper-button-next {
+  left: 58% !important;
+  transform: translateX(-58%) !important;
+}
+
+@media (max-width:990px) {
+  .tranding-slider-control .swiper-button-next {
+    left: 70% !important;
+    transform: translateX(-70%) !important;
+  }
+}
+
+@media (max-width:450px) {
+  .tranding-slider-control .swiper-button-next {
+    left: 80% !important;
+    transform: translateX(-80%) !important;
+  }
+}
+
+@media (max-width:990px) {
+  .tranding-slider-control .swiper-button-prev {
+    left: 30% !important;
+    transform: translateX(-30%) !important;
+  }
+}
+
+@media (max-width:450px) {
+  .tranding-slider-control .swiper-button-prev {
+    left: 20% !important;
+    transform: translateX(-20%) !important;
+  }
+}
+
+.tranding-slider-control .slider-arrow {
+  background: var(--white);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  left: 42%;
+  transform: translateX(-42%);
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.tranding-slider-control .slider-arrow ion-icon {
+  font-size: 2rem;
+  color: #222224;
+}
+
+.tranding-slider-control .slider-arrow::after {
+  content: '';
+}
+
+.tranding-slider-control .swiper-pagination {
+  position: relative;
+  width: 10rem;
+  bottom: 1rem;
+}
+
+.tranding-slider-control .swiper-pagination .swiper-pagination-bullet {
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
+  background: var(--primary);
+}
+    </style>
+    <script>
+        var TrandingSlider = new Swiper('.tranding-slider', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  loop: true,
+  slidesPerView: 'auto',
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 2.5,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
+});
+    </script>
+    </html> 
+</body>
+</html>

@@ -1,0 +1,7 @@
+il me reste a faire : 
+responsive 
+changer la photo de profil des qu'on change limage selectionner 
+2 videos en js
+git github 
+reponsive 
+les details des button js etc 
