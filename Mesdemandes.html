@@ -12,10 +12,10 @@
     <body class="bg-white flex justfify-center">
         <!--Sidebar ta3na -->
        
-            <sidebar class="w-3/12">
+            <sidebar class="md:w-3/12">
     
-                <span class="absolute text-white text-4xl top-5 left-4 cursor-pointer bg-sky-50" onclick="Openbar()">
-                    <i class="bi bi-filter-left px-2 bg-sky-100 text-black rounded-md"></i>
+                <span class="absolute text-white text-3xl top-3 md:top-5 left-4 cursor-pointer bg-sky-50" onclick="Openbar()">
+                    <i class="bi bi-filter-left px-2 bg-slate-100 text-black rounded-md"></i>
                 </span>
                 <div
                     class="sidebar fixed top-0 bottom-0 lg:left-0 left-[-300px] p-2 w-[300px] overflow-y-auto text-center bg-slate-100 ">
@@ -84,23 +84,23 @@
                     </div>
                 </div>
             </sidebar>
-     <section class="  w-9/12">
-         <profile class="m-2 flex justify-between"> 
+     <section class="  md:w-9/12">
+         <profile class="m-3 flex justify-end md:justify-between"> 
                 <p class="text-blanc text-lg font-semibold "> Hello , Hacina Abla 👋  </p>
             
-                <img src="img/avatar.png" class="w-8 h-8">  
+                <img src="img/avatar.png" class="w-6 h-6 md:w-8 md:h-8">  
          </profile>
-         <hr class="my-4 text-slate-700 mx-1.5 ">
+         <hr class="my-6 md:my-4 text-slate-700 mx-1.5 ">
         
-         <div class="flex justify-between">
-         <h1 class="text-3xl text-slate-900 font-semibold "> Mes demandes </h1>
-         <a href="guide.html" class="cursor-pointer flex justify-around text-md text-white bg-blue-400 font-medium border-transparent shadow-md  rounded-3xl px-3 py-2 hover:-translate-y-0.5 hover:scale-90   duration-300 ">
+         <div class="flex flex-col md:m-8 m-4 md:flex-row  ">
+         <h1 class=" text-2xl md:text-3xl text-slate-900 font-semibold  "> Mes demandes </h1>
+         <!-- <a href="guide.html" class="cursor-pointer flex justify-around text-md text-white bg-blue-500 font-medium border-transparent shadow-md  rounded-3xl px-3 py-2 hover:-translate-y-0.5 hover:scale-90   duration-300 "> 
          <p>Add a New trip</p>
          <i class="bi bi-plus-circle px-2" ></i>
-        </a>
-        </div>
-
-         <p class="text-slate-700 font-normal  text-xl py-5 pr-5">Sur cette page, vous trouverez un aperçu de vos demandes de guides touristiques pour découvrir les plus belles destinations d'Algérie que nous proposons. Nous vous recommandons de surveiller attentivement vos demandes et de contacter le guide dès que celle-ci est acceptée.</p>
+        </a> -->
+        
+</div>
+         <p class="text-slate-700 font-normal md:m-8 m-4 text-medium md:text-xl py-5 md:py-1 pr-5">Sur cette page, vous trouverez un aperçu de vos demandes de guides touristiques pour découvrir les plus belles destinations d'Algérie que nous proposons. Nous vous recommandons de surveiller attentivement vos demandes et de contacter le guide dès que celle-ci est acceptée.</p>
 
 
 
@@ -148,5 +148,14 @@
          
             
     </section>
+    <script>function dropdown() {
+        document.querySelector('#submenu').classList.toggle('hidden')
+        document.querySelector('#arrow').classList.toggle('rotate-0')
+    }
+    dropdown()
+
+    function Openbar() {
+        document.querySelector('.sidebar').classList.toggle('left-[-300px]')
+    }</script>
 </body>
 </html>
