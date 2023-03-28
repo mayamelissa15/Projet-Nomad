@@ -1,7 +1,8 @@
 
 
 *{
-  
+  margin : 0;
+  padding:0;
   box-sizing: border-box;
 }
 
@@ -65,7 +66,7 @@
   padding-top: 365px;
   padding-left: 20px;
   position: absolute;
-  z-index: 20;
+  z-index: 10;
   
 }  
   .card-content p {
@@ -74,7 +75,20 @@
   
 
 }
-
+/*petit ecran w ecran moyen 768*/
+@media screen and (max-width: 480px)
+{
+  .card-content{
+    padding-top: 355px;
+    padding-left: 20px;
+    position: absolute;
+    z-index: 10;
+  }
+  .card-content p {
+    color: rgb(185, 191, 201);
+    font-size: 25;
+}
+}
 .card-content h3 {
   color:rgb(211, 212, 212);
   font-size: 45px;
