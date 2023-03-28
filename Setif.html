@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="cards.css">
+  <script src="main.js"></script>
+    <title>Setif , سطيف</title>
+</head>
+<body > 
+  <!-- start Header -->
+  <header class="bg-white bg-scroll font-medium ">
+    <nav class=" flex justify-between items-center w-[92%] mx-auto">
+        <div>
+            <img class="w-[120px]" src="img/Logo.png" alt="logo Nomad">
+        </div>
+        <div
+            class="navLinks duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 ">
+            <!--{-100 to be hidden }-->
+            <ul class="flex md:flex-row flex-col flex md:items-center md:gap-[4vw] gap-8 text-slate-600 z-10">
+                <!--gap for view port-->
+                <li><a class="nav-Links" href="#">Home</a></li>
+                <li><a class="nav-Links" href="destination2.html">Destination</a></li>
+                <li><a class=" nav-Links text-black" href="guide.html">Guide</a></li>
+
+                <li><a class="nav-Links" href="#">Carpoolinge</a></li>
+                <li><button class="nav-Links relative text-slate-600 " id="menu-btn"> Loisirs</button>
+                    <div class=" absolute bg-slate-100  hidden flex-col rounded mt-1 p-2 text-sm w-32 z-10"
+                        id="dropdown">
+                        <a href="#" class="px-2 py-1 text-slate-600 rounded hover:bg-slate-200">Hotel</a>
+                        <a href="#" class="px-2 py-1 text-slate-600 rounded hover:bg-slate-200">Restoration</a>
+                    </div>
+                </li>
+
+        </div>
+
+        <div class="flex items-center gap-6">
+            <a href="login.html"> <button
+                    class="bg-blue-500 text-white px-5 py-2 rounded-full shadow-xl hover:bg-blue-700 duration-500 ">Sign
+                    in </button> </a>
+
+            <ion-icon onclick="onToggleMenu(this)" name="menu"
+                class=" text-3xl cursor-pointer hover:shadow rounded-full md:hidden "> </ion-icon>
+            <!--pour qu'il soit cliquable -->
+        </div>
+    </nav>
+    <script>
+        const navLinks = document.querySelector('.navLinks') // selectioner la navbar
+        function onToggleMenu(e) //event argument qui va pointer vers mon element menu 
+        {
+            e.name === 'menu' ? (e.name = "close", navLinks.classList.add('top-[80px]'), navLinks.classList.add('opacity-100')) : (e.name = "menu", navLinks.classList.remove('top-[80px]'), navLinks.classList.remove('opacity-100'))
+            /*e.name=e.name==='menu' ? 'close' : 'menu' // pour changer l'icone de menu -> a fermer 
+            navLinks.classList.toggle('top-[9%]')*/
+        }
+    </script>
+</header>
+    <!-- End Header -->
+    <div> 
+        <img src="img/téléchargement.jfif" class=" px-1 w-full h-64 lg:h-96">
+    </div>
+<!-- start container -->
+<div class="flex flex-col md:flex-row bg-white w-full">
+    <section class=" m-2 md:my-10 md:mx-4  border-transparent basis-4/6">
+      <div class="m-2 md:mt-10 md:mx-10">
+        <h3 class=" text-base text-lg font-medium py-3 underline decoration-blue-600">Algeria , 
+            سطيف</h3>
+        <h1 class=" text-blue-700 text-5xl md:text-7xl font-bold ">Setif</h1>
+        <p class=" text-3xl font-normal text-black py-4 leading-relaxed ">
+            Setif is a province located in northeastern Algeria, bordered by the Atlas Mountains to the south and the Tell Atlas to the north. It has a rich history and a diverse economy. Here is an overview of its history and features.
+        </p>
+      </div>
+      <div class=" px-2 md:px-10 ">
+        <h1 class="text-black text-xl font-semibold" id="historique">Foundation and Ancient History</h1>
+        <!-- This text always show up -->
+        <p class="  text-lg font-normal text-gray-600 py-4  "> 
+           
+            The region around Setif has a long history dating back to ancient times. It was an important center of Numidian and Roman civilization, with several historic sites such as the Roman city of Timgad and the ancient Numidian city of Cuicul.
+            In the medieval period, the region was conquered by various Arab and Berber dynasties, including the Almoravids and the Almohads. Setif became an important center of Islamic scholarship and culture.
+          <!-- The three dots -->
+          <span id="dots">...</span>
+
+          <!-- This content only be shown as needed -->
+          <span>
+            <div class="  hidden text-xl font-normal text-text-slate-700  " id="more">
+              <h2 class="text-black text-xl font-semibold ">Colonial and Modern History</h2>
+              <p class="text-lg font-normal text-gray-600 py-4  ">During the colonial period, Setif was part of French-controlled Algeria. It was an important center of agriculture and industry, with significant production of grain, wine, and textiles. It was also an important center of the Algerian nationalist movement, with several important events such as the Setif massacre of 1945.
+
+                After Algeria's independence in 1962, Setif became an important center of industry and development. The province experienced rapid growth and urbanization, with a diverse economy including agriculture, industry, and services..</p>
+
+
+              <h2 class="text-black text-xl font-semibold "> Features of the Province </h2>
+              <p class="text-lg font-normal text-gray-600 py-4  ">Features of the Province
+                Today, Setif is a vibrant and diverse province with a population of over 1.5 million people. It is home to several historic sites, including the Roman ruins at Timgad, the Setif museum of antiquities, and several historic mosques and madrasas.
+                
+                The province is known for its beautiful countryside, with rolling hills, fertile valleys, and stunning mountain vistas. It is also an important center of education, with several major universities and research institutes.
+                
+                Setif is famous for its local cuisine, with dishes such as couscous, bourek, and makroud. It is also an important center of industry, with several major factories producing textiles, electronics, and other products.
+                
+                In summary, Setif is a province with a rich history and a diverse economy. It is home to many historic sites, beautiful countryside, and a vibrant population. It remains an important center of industry, education, and culture in Algeria.
+                Today, Setif is a vibrant and diverse province with a population of over 1.5 million people. It is home to several historic sites, including the Roman ruins at Timgad, the Setif museum of antiquities, and several historic mosques and madrasas.
+                
+                The province is known for its beautiful countryside, with rolling hills, fertile valleys, and stunning mountain vistas. It is also an important center of education, with several major universities and research institutes.
+                
+                Setif is famous for its local cuisine, with dishes such as couscous, bourek, and makroud. It is also an important center of industry, with several major factories producing textiles, electronics, and other products.
+                
+                In summary, Setif is a province with a rich history and a diverse economy. It is home to many historic sites, beautiful countryside, and a vibrant population. It remains an important center of industry, education, and culture in Algeria.</p>
+
+
+              
+            </div><span>
+        </p>
+
+        <!-- Implement the read more/read less button -->
+        <button onclick="toggleText()" id="button"
+          class="pb-2 text-text-slate-700 font-semibold text-lg duration-300 hover:text-xl ">Read
+          more</button>
+      </div>
+    </section>
+    <section class=" relative mt-4 md:mt-24 basis-2/6">
+      <ul class=" sticky top-0 bg-white w-96 p-5 border-l-4 border-black">
+
+        <h1 class="text-normal text-black  decoration-black  font-medium m-4"> Jump to : </h1>
+        <li
+          class="before:content-['__01__'] before:font-medium  before:text-slate-500 before:m-4 before:text-xs text-xl text-black underline underline-offset-4 decoration-black hover:text-blue-500 font-medium hover:decoration-blue-500 m-4">
+          Must see experiences
+        </li>
+        <li
+          class=" before:content-['__01__'] before:font-medium  before:text-slate-500 before:m-4 before:text-xs font-semibold text-xl text-black underline underline-offset-4 decoration-black hover:text-blue-500 hover:decoration-blue-500 m-4">
+          Featured & latest stories </li>
+        <li
+          class=" before:content-['__01__'] before:font-medium  before:text-slate-500 before:m-4 before:text-xs font-semibold text-xl text-black underline underline-offset-4 decoration-black hover:text-blue-500 hover:decoration-blue-500 m-4">
+          planning a trip</li>
+        <li
+          class=" before:content-['__01__'] before:font-medium  before:text-slate-500 before:m-4 before:text-xs font-semibold text-xl text-black underline underline-offset-4 decoration-black hover:text-blue-500 hover:decoration-blue-500 m-4">
+          books & Guides</li>
+      </ul>
+    </section>
+  </div>
+<!-- End container -->
+
+<!-- start Section destination -->
+
+<h1 class="  font-bold text-blue-700 text-3xl md:text-5xl py-4 px-2 md:py-8 md:px-10" id="explore">Explore Setif 
+</h1> 
+<div class=" flex flex-col md:flex-row  ">
+  <div class=" h-[500px] w-full md:w-[50%] text-medium">
+    <div class=" flex flex-col overflow-y-scroll overflow-x-hidden h-full pr-2 border-slate-300  ">
+
+      <div
+        class="cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none  flex py-4 mt-4 mr-14 border-transparent rounded-3xl hover:shadow-xl w-full bg-white   duration-500">
+
+        <div class="ml-4 shrink-0">
+          <img class="rounded-3xl w-[117px] h-[119px]" src="img/casbah.jpg" alt="img1">
+        </div>
+
+        <div class="flex-auto ml-4">
+          <h1 class="text-2xl font-bold text-slate-700">
+            Djémila
+          </h1>
+          <p class="mt-2 leading-relaxed">
+            This is an ancient Roman city that is located about 50 km southwest of Sétif. It was declared a UNESCO World Heritage Site in 1982 and contains some of the best-preserved Roman ruins in North Africa.
+          </p>
+        </div>
+      </div>
+      <div
+        class="cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none  flex py-4 mt-4  border-transparent rounded-3xl hover:shadow-xl w-full bg-white ">
+
+        <div class="ml-4 shrink-0">
+          <img class="rounded-3xl w-[117px] h-[119px] bg-contain"
+            src="img/Notre dame d'Afrique (Alger) by Samir Bzk on 500px.jfif" alt="img1">
+        </div>
+
+        <div class="flex-auto ml-4">
+          <h1 class="text-2xl font-bold text-slate-700">
+            El Eulma
+          </h1>
+          <p class="mt-2 leading-relaxed"> This is a bustling town located just outside of Sétif that is known for its bustling markets and traditional crafts. It is also home to the Stade du 8 Mai 1945, which is one of the largest football stadiums in Algeria.
+            
+          </p>
+        </div>
+      </div>
+      <div
+        class="cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none duration-500  border-transparent flex py-4 mt-4 mr-14 rounded-3xl hover:shadow-xl w-full bg-white">
+
+        <div class="ml-4 shrink-0">
+          <img class="rounded-3xl w-[117px] h-[119px]" src="img/jardinhamma.jpg" alt="img1">
+        </div>
+
+        <div class="flex-auto ml-4">
+          <h1 class="text-2xl font-bold text-slate-700">
+            Setif Grand Mosque
+          </h1>
+          <p class="mt-2 leading-relaxed">
+            This is the largest mosque in Sétif and is a major center of Islamic worship in the city. It is located in the heart of the city and features stunning architecture and intricate tilework.
+
+          </p>
+        </div>
+      </div>
+      <div
+        class="cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none duration-500  border-transparent flex py-4 mt-4 mr-14 rounded-3xl hover:shadow-xl w-full bg-white">
+
+        <div class="ml-4 shrink-0">
+          <img class="rounded-3xl w-[117px] h-[119px]" src="img/musée1.jpg" alt="img1">
+        </div>
+
+        <div class="flex-auto ml-4">
+          <h1 class="text-2xl font-bold text-slate-700">
+            Ain El Fouara Fountain
+          </h1>
+          <p class="mt-2 leading-relaxed">
+            This is a historic fountain that is located in the center of Sétif. It is a popular gathering place for locals and visitors alike, and its colorful tilework and intricate carvings make it a must-see attraction.
+          </p>
+        </div>
+      </div>
+      <div
+        class="cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none duration-500 border-transparent flex py-4 mt-4 mr-14 rounded-3xl hover:shadow-xl w-full bg-white">
+
+        <div class="ml-4 shrink-0">
+          <img class="rounded-3xl w-[117px] h-[119px]" src="img/cathedral.jpg" alt="img1">
+        </div>
+
+        <div class="flex-auto ml-4">
+          <h1 class="text-2xl font-bold text-slate-700">
+            The Ain El Kebira National Park
+          </h1>
+          <p class="mt-2 leading-relaxed">
+            This is a large park located just outside of Sétif that is home to a wide variety of flora and fauna. It is a great place to go hiking, picnicking, or simply enjoying the natural beauty of the area.
+          </p>
+        </div>
+      </div>
+      <div
+        class="cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none duration-500 border-transparent flex py-4 mt-4 mr-14 rounded-3xl hover:shadow-xl w-full bg-white">
+
+        <div class="ml-4 shrink-0">
+          <img class="rounded-3xl w-[117px] h-[119px]" src="img/musee2.jpg" alt="img1">
+        </div>
+
+        <div class="flex-auto ml-4">
+          <h1 class="text-2xl font-bold text-slate-700">
+            The Sétif Museum of Archaeology
+          </h1>
+          <p class="mt-2 leading-relaxed"> 
+         This is a small but fascinating museum that is located in the heart of Sétif. It features a wide range of artifacts from throughout the region's history, including Roman, Byzantine, and Islamic artifacts.
+
+Overall, Sétif is a fascinating city with a rich history and a diverse range of attractions to explore.
+
+          </p>
+        </div>
+      </div>
+      <div
+        class="cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none  duration-500 border-transparent flex py-4 mt-4 mr-14 rounded-3xl hover:shadow-xl w-full bg-white">
+
+        <div class="ml-4 shrink-0">
+          <img class="rounded-3xl w-[117px] h-[119px]" src="img/alger.jpg" alt="img1">
+        </div>
+
+        <div class="flex-auto ml-4">
+          <h1 class="text-2xl font-bold text-slate-700">
+            The Monument Aux Morts
+          </h1>
+          <p class="mt-2 leading-relaxed">
+            This war memorial commemorates the soldiers who died in World War I and II, and features a large bronze statue of a soldier.
+          </p>
+        </div>
+      </div>
+      <div
+        class="cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none duration-500  border-transparent flex py-4 mt-4 mr-14 rounded-3xl hover:shadow-xl w-full bg-white">
+
+        <div class="ml-4 shrink-0">
+          <img class="rounded-3xl w-[117px] h-[119px]" src="img/masjid.jpg" alt="img1">
+        </div>
+
+        <div class="flex-auto ml-4">
+          <h1 class="text-2xl font-bold text-slate-700">
+            The Trionfal Arch
+          </h1>
+          <p class="mt-2 leading-relaxed">
+            This ancient Roman arch dates back to the 4th century, and is one of the few remaining examples of Roman architecture in the city.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--  End section destination -->
+<!-- start slider -->
+<div class=" slider  ml-20 mb-10  w-full md:w-[50%]">
+    <div class="slides">
+      <!--radio button-->
+      <input type="radio" id="radio1" name="radio-btn">
+      <input type="radio" id="radio2" name="radio-btn">
+      <input type="radio" id="radio3" name="radio-btn">
+      <input type="radio" id="radio4" name="radio-btn">
+      <!--radio button-->
+      <!--slides image-->
+      <div class="slide first">
+        <img src="img/seetif.jpg" alt="">
+      </div>
+      <div class="slide">
+        <img src="img/Oraan.jpg" alt="">
+      </div>
+      <div class="slide">
+        <img src="img/algeer.jpg">
+      </div>
+      <div class="slide">
+        <img src="img/Constaantine.jpg" alt="">
+      </div>
+
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!--  end slider  -->
+
+<toolkit>
+    <div>
+        <h1 class="text-black text-3xl md:text-5xl font-bold my-20 mx-4 md:m-20" id="tool">Planning toolkit</h1>
+      </div>
+    
+      <card class="flex flex-col md:flex-row md:justify-between my-8 mx-4 md:m-20">
+    
+        <div
+          class=" h-96 w-64  bg-gradient-to-b from-blue-300/30 to-white rounded-3xl m-5 cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none duration-500">
+          <img class="h-20 w-20 mt-2 mx-auto" src="https://cdn-icons-png.flaticon.com/512/3655/3655399.png">
+          <h1 class="text-5xl text-black font-semibold m-5 ">Best things to do </h1>
+          <p class="text-text-slate-700 font-medium m-5 ">
+            Discover some of the most unique and fulfilling experiences your next destination has to offer.</p>
+        </div>
+        <div
+          class=" h-96 w-64 bg-gradient-to-b from-blue-300/30 to-white  rounded-3xl m-5 cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none duration-500">
+          <img class="h-20 w-20 mt-2 mx-auto" src="https://cdn-icons-png.flaticon.com/512/4910/4910558.png">
+          <h1 class="text-5xl text-black font-semibold m-5 ">When to visit </h1>
+          <p class="text-text-slate-700 font-medium m-5 ">
+            Tips & Travel trends to help you pick the perfect time to visit this destination.</p>
+        </div>
+        <div
+          class=" h-96 w-64  bg-gradient-to-b from-blue-300/30 to-white rounded-3xl m-5 cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none duration-500">
+          <img class="h-20 w-20 mt-2 mx-auto" src="https://cdn-icons-png.flaticon.com/512/5855/5855571.png">
+          <h1 class="text-5xl text-black font-semibold m-5 ">Best places to visit </h1>
+          <p class="text-text-slate-700 font-medium m-5 ">
+            Put these must-see destinations on your next travel wish list.</p>
+        </div>
+        <div
+          class=" h-96 w-64  bg-gradient-to-b from-blue-300/30 to-white rounded-3xl m-5 cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none duration-500">
+          <img class="h-20 w-20 mt-2 mx-auto" src="https://cdn-icons-png.flaticon.com/512/4723/4723204.png">
+          <h1 class="text-5xl text-black font-semibold m-5 ">ways to get around </h1>
+          <p class="text-text-slate-700 font-medium m-5 ">
+            Browse the various transportation options to make your trip that much easier when you arrive.</p>
+        </div>
+    
+      </card>
+</toolkit>
+
+<footer class="footer ">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>company</h4>
+          <ul>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">our services</a></li>
+            <li><a href="#">privacy policy</a></li>
+
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>get help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+
+            <li><a href="#">payment options</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>our services</h4>
+          <ul>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Hotel</a></li>
+            <li><a href="#">Carpooling</a></li>
+            <li><a href="#">Guide</a></li>
+            <li><a href="#">Restoration</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<style>
+    .slider {
+      width: 500px;
+      height: 500px;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+  
+    .slides {
+      width: 500%;
+      height: 500px;
+      display: flex;
+    }
+  
+    .slides input {
+      display: none;
+  
+    }
+  
+    .slide {
+      width: 20%;
+      transition: .9s;
+    }
+  
+    .slide img {
+      width: 800px;
+      height: 500px;
+    }
+  /*reponsive */
+  @media screen and (max-width: 768px) {
+  .slider {
+    width: 350px;
+    height: 300px;
+  }
+  
+  .slides img {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+/* Pour les écrans petits */
+@media screen and (max-width: 480px) {
+  .slider {
+    width: 300px;
+    height: 200px;
+    
+  }
+  
+  .slides img {
+    width: 100%;
+    height: 200px;
+  }
+}
+/* Pour les écrans larges */
+.navigation-manual {
+    position: absolute;
+      width: 500px;
+      margin-top: 520px;
+      display:flex;
+      justify-content: center;
+}
+
+.manual-btn {
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 10px;
+}
+
+/* Pour les écrans moyens */
+@media screen and (max-width: 768px) {
+  .navigation-manual {
+      position: absolute;
+      width: 180px;
+      margin-top: 320px;
+      margin-left: 100px;
+      display:flex;
+      justify-content: center;
+  }
+
+  .manual-btn {
+    
+    border-radius: 8px;
+  }
+
+  .manual-btn:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+/* Pour les écrans petits */
+@media screen and (max-width: 480px) {
+  .navigation-manual {
+   
+      position: absolute;
+      width: 200px;
+      margin-top: 250px;
+      margin-left: 50px;
+      display:flex;
+      justify-content: center;
+  }
+
+  .manual-btn {
+    padding: 2px;
+    border-radius: 5px;
+  }
+
+  .manual-btn:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+
+  
+    .manual-btn {
+      border: 2px solid rgb(30, 71, 208);
+      padding: 5px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 1s;
+    }
+  
+    .manual-btn:not(:last-child) {
+      margin-right: 40px;
+  
+    }
+  
+    .manual-btn:hover {
+      background-color: rgb(30, 71, 208);
+    }
+  
+    /*pour fair eleffet de slide */
+    #radio1:checked~.first {
+      margin-left: 0;
+  
+    }
+  
+    #radio2:checked~.first {
+      margin-left: -20%;
+  
+    }
+  
+    #radio3:checked~.first {
+      margin-left: -40%;
+  
+    }
+  
+    #radio4:checked~.first {
+      margin-left: -60%;
+  
+    
+    }
+  </style>
+  <!-- Javascript code -->
+  <script>
+    function toggleText() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var button = document.getElementById("button");
+  
+      if (dots.classList.contains("hidden")) {
+        // Show the dots
+        dots.classList.remove("hidden");
+  
+        // Hide the more text
+        moreText.classList.add("hidden");
+  
+        // change text of the button
+        button.innerHTML = "Read more";
+      } else {
+        // Hide the dots
+        dots.classList.add("hidden");
+  
+        // hide the more text
+        moreText.classList.remove("hidden");
+  
+        // change text of the button
+        button.innerHTML = "Read less";
+      }
+    }
+  
+  </script>
+</body>
+</html>
