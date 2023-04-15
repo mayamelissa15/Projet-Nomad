@@ -3,4 +3,3 @@ il me reste a faire :
 ajouter evenement pour calendrier 
 slider bar
 caroussel 
-https://tailwindcss.com/docs/hover-focus-and-other-states
