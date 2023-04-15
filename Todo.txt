@@ -1,6 +1,6 @@
 il me reste a faire : 
 
-changer la photo de profil des qu'on change limage selectionner 
-changer le sign up vers la photo de profil f navbar 
-+ ktiba pour les wilayas 
 ajouter evenement pour calendrier 
+slider bar
+caroussel 
+https://tailwindcss.com/docs/hover-focus-and-other-states

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank you!</title>
+    <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" href="index.css"> <!--Hover effect nav bar + font for all the pages etc -->
+<!--importer l'icon de la reponsive ta3 navbar-->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="main.js"></script>
+</head>
+<body>
+     <!--Responsive Navbar-->
+     <header class="bg-white bg-scroll font-medium ">
+        <nav class=" flex justify-between items-center w-[92%] mx-auto">
+            <div>
+                <img class="w-[120px]" src="img/Logo.png" alt="logo Nomad">
+            </div>
+            <div
+                class="navLinks duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 ">
+                <!--{-100 to be hidden }-->
+                <ul class="flex md:flex-row flex-col flex md:items-center md:gap-[4vw] gap-8 text-slate-600 z-10">
+                    <!--gap for view port-->
+                    <li><a class="nav-Links" href="#">Home</a></li>
+                    <li><a class="nav-Links" href="destination2.html">Destinations</a></li>
+                    <li><a class=" nav-Links text-black" href="guide.html">Guide</a></li>
+
+                    <li><a class="nav-Links" href="#">Carpooling</a></li>
+                    <li><button class="nav-Links relative text-slate-600 " id="menu-btn"> Leisure</button>
+                        <div class=" absolute bg-slate-100  hidden flex-col rounded mt-1 p-2 text-sm w-32 z-10"
+                            id="dropdown">
+                            <a href="#" class="px-2 py-1 text-slate-600 rounded hover:bg-slate-200">Hotel</a>
+                            <a href="#" class="px-2 py-1 text-slate-600 rounded hover:bg-slate-200">Restoration</a>
+                        </div>
+                    </li>
+
+            </div>
+
+            <div class="flex items-center gap-6">
+                <a href="login.html"> <button
+                        class="bg-blue-500 text-white px-5 py-2 rounded-full shadow-xl hover:bg-blue-700 duration-500 ">Sign
+                        in </button> </a>
+
+                <ion-icon onclick="onToggleMenu(this)" name="menu"
+                    class=" text-3xl cursor-pointer hover:shadow rounded-full md:hidden "> </ion-icon>
+                <!--pour qu'il soit cliquable -->
+            </div>
+        </nav>
+        <script>
+            const navLinks = document.querySelector('.navLinks') // selectioner la navbar
+            function onToggleMenu(e) //event argument qui va pointer vers mon element menu 
+            {
+                e.name === 'menu' ? (e.name = "close", navLinks.classList.add('top-[80px]'), navLinks.classList.add('opacity-100')) : (e.name = "menu", navLinks.classList.remove('top-[80px]'), navLinks.classList.remove('opacity-100'))
+                /*e.name=e.name==='menu' ? 'close' : 'menu' // pour changer l'icone de menu -> a fermer 
+                navLinks.classList.toggle('top-[9%]')*/
+            }
+        </script>
+    </header>
+
+<div class=" w-[600px] mx-auto" >
+    <img src="img/cnfrmd1.png" class="mx-auto h-[300px]">
+   
+    <h1 class="mx-8 my-2 text-lg md:text-3xl text-slate-900 font-medium ">
+        Your registration has been successfully processed.
+    </h1>
+    <p class="mx-8 my-4 text-sm md:text-xl text-slate-700 font-normal ">
+        You're all set! your registration was successful! You can now enjoy all the benefits of our online service. 
+    </p>
+    <a href="#" class="flex justify-center "> <button
+        class="my-2 bg-[#2b96fe] text-white shadow-xl font-medium px-5 py-2 rounded-full shadow-xl hover:bg-blue-600 duration-500 ">Back to home  </button> </a>
+
+</div>
+
+</body>
+</html>
