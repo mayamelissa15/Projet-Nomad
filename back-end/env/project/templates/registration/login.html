@@ -1,0 +1,32 @@
+{% extends 'registration/register.html' %}
+{% block login %}
+    <form method="post" action="#" class="sign-in-form">
+              {% csrf_token %}
+            <h2 class="title">Sign in</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              {{ form.username }}
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              {{ form.password }}
+            </div>
+            <input type="submit" value="Login" class="btn solid" />
+            <p class="social-text">Or Sign in with social platforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+
+{% endblock %}

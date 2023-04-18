@@ -1,0 +1,108 @@
+{% extends 'main-part.html' %}
+
+
+
+{% block search-bar %}
+ <div class=" overflow-hidden sm:py-12">
+    <form class="relative mx-12 py-2 " style="width:700px" method="GET" action="{% url 'search-dest' %}">
+      <input type="search" name="search-dest"
+        class="peer cursor-pointer relative z-10 h-11 w-full rounded-full border bg-transparent pl-12 outline-none focus:w-full focus:cursor-text focus:border-slate-500 focus:pl-16 focus:pr-4 "
+        placeholder="Search for a destination..">
+      <svg xmlns="http://www.w3.org/2000/svg"
+        class="absolute inset-y-0 my-auto h-8 w-12 border-r border-transparent stroke-gray-500 px-3.5 peer-focus:border-slate-500 peer-focus:stroke-black"
+        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+    </form>
+    </div>
+{% endblock search-bar %}
+
+{% block search-result %}
+{% endblock search-result %}
+{% block content %}
+<!-- cards  -->
+  <div class="cards">
+    <a href="Constantine.html" class="card">
+      <div class=" card-background reveal" style="background-image: url(img/Constaantine.jpg)"></div>
+      <div class="card-content">
+        <p>Algeria, Africa</p>
+        <h3>Constantine</h3>
+      </div>
+    </a>
+    <a href="Alger.html" class="card">
+      <div class=" card-background reveal" style="background-image: url(img/Algeer.jpg)"></div>
+      <div class="card-content">
+        <p>Algeria, Africa</p>
+        <h3>Alger</h3>
+      </div>
+    </a>
+    <a href="Oran.html" class="card">
+      <div class=" card-background reveal" style="background-image: url(img/Oraan.jpg)"></div>
+      <div class="card-content">
+        <p>Algeria, Africa</p>
+        <h3>Oran</h3>
+      </div>
+    </a>
+    <a href="Setif.html" class="card">
+      <div class=" card-background reveal" style="background-image: url(img/seetif.jpg)"></div>
+      <div class="card-content">
+        <p>Algeria, Africa</p>
+        <h3>Setif</h3>
+      </div>
+    </a> <a href="Timimoune.html" class="card">
+      <div class=" card-background reveal" style="background-image: url(img/Timimouune.jpg)"></div>
+      <div class="card-content">
+        <p>Algeria, Africa</p>
+        <h3>Timimoune</h3>
+      </div>
+    </a>
+
+    <a href="Bejaia.html" class="card">
+      <div class=" card-background reveal" style="background-image: url(img/3549066f03e7ac13d6c72edfd636172a.jpg)">
+      </div>
+      <div class="card-content">
+        <p>Algeria, Africa</p>
+        <h3>Bejaia</h3>
+      </div>
+    </a>
+
+
+  </div>
+
+<!-- feedback -->
+  <div class="bg-slate-100 p-10 mt-10 reveal">
+    <h1 class=" text-4xl font-semibold text-black mb-10 ">Your opinion interests us !</h1>
+    <section
+      class=" md:h-[420px]  md:w-[550px] bg-white shadow-2xl  md:mx-auto rounded-3xl hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none duration-500 hover:shadow-5xl">
+      <form>
+        <p class="text-Black text-xl font-medium pt-5 mx-10 my-5">Feedback </p>
+        <p class="text-slate-700 text-medium font-medium  mx-10">How was your experience ? </p>
+        <div class="mx-10 my-2">
+          <div class="stars">
+            <i class="star fa-solid fa-star cursor-pointer width-[35px] "></i>
+            <i class="star fa-solid fa-star cursor-pointer width-[35px] "></i>
+            <i class="star fa-solid fa-star cursor-pointer width-[35px] "></i>
+            <i class="star fa-solid fa-star cursor-pointer width-[35px] "></i>
+            <i class="star fa-solid fa-star cursor-pointer width-[35px] "></i>
+          </div>
+        </div>
+        <div class="mx-10 my-4">
+          <label class=" my-4 font-medium text-gray-600 ">Email</label>
+          <input type="text" placeholder="Email" class=" rounded-[10px] border-transparent shadow-md p-2 w-full">
+        </div>
+        <div class="mx-10 my-4 font-medium flex flex-col gap-2">
+          <label class=" text-gray-600 ">Tell us more</label>
+          <textarea style=" resize:none;"
+            class=" rounded-[10px] border-transparent shadow-md p-2 w-[100%]  h-[100%]text-gray-700 text-medium"></textarea>
+        </div>
+
+          <a href="#" ><button type="submit"
+              class="bg-blue-500 m-5 md:mx-5 md:mb-20 text-white font-semibold  px-5 py-2 rounded-full hover:bg-blue-700 duration-500 shadow-xl ">submit
+            </button></a>
+
+
+      </form>
+</section>
+</div>
+
+{% endblock content%}

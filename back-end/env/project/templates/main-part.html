@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinations</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+  <link rel="stylesheet" href="{% static 'css/cards.css' %}">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+  <link rel="stylesheet" type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+</head>
+
+<body>
+<!-- header -->
+  <header class="bg-white bg-scroll font-medium ">
+    <nav class=" flex justify-between items-center w-[92%] mx-auto">
+        <div>
+            <img class="w-[120px]" src="{% static 'img/logo.png' %}" alt="logo Nomad">
+        </div>
+        <div class="navLinks duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 z-[15] "> <!--{-100 to be hidden }-->
+           <ul class="flex md:flex-row flex-col flex md:items-center md:gap-[4vw] gap-8 text-slate-600"><!--gap for view port-->
+            <li ><a class="nav-Links" href="#">Home</a></li>
+            <li ><a class="nav-Links text-black" href="#">Destination</a></li>
+            <li ><a class=" nav-Links " href="guide.html">Guide</a></li>
+
+            <li ><a class="nav-Links" href="#">Carpooling</a></li>
+            <li><button class="nav-Links relative text-slate-600 " id="menu-btn"> Leisure</button>
+                <div class=" absolute bg-slate-100  hidden flex-col rounded mt-1 p-2 text-sm w-32 z-10" id="dropdown">
+                    <a href="#"class="px-2 py-1 text-slate-600 rounded hover:bg-slate-200">Hotel</a>
+                    <a href="#"class="px-2 py-1 text-slate-600 rounded hover:bg-slate-200">Restoration</a>
+                </div></li>
+           </ul>
+        </div>
+
+        <div class="flex items-center gap-6">
+            <a href="login.html"> <button class="bg-blue-500 text-white px-5 py-2 rounded-full shadow-xl hover:bg-blue-700 duration-500 ">Sign in </button> </a>
+
+            <ion-icon onclick="onToggleMenu(this)" name="menu" class=" text-3xl cursor-pointer hover:shadow rounded-full md:hidden "> </ion-icon>
+             <!--pour qu'il soit cliquable -->
+        </div>
+    </nav>
+    <script>
+        const navLinks = document.querySelector('.navLinks') // selectioner la navbar
+function onToggleMenu(e) //event argument qui va pointer vers mon element menu
+{
+    e.name === 'menu' ? (e.name = "close",navLinks.classList.add('top-[80px]') , navLinks.classList.add('opacity-100')) :( e.name = "menu" ,navLinks.classList.remove('top-[80px]'),navLinks.classList.remove('opacity-100'))
+    /*e.name=e.name==='menu' ? 'close' : 'menu' // pour changer l'icone de menu -> a fermer
+    navLinks.classList.toggle('top-[9%]')*/
+}
+    </script>
+</header>
+
+
+
+{% block search-bar %}
+{% endblock search-bar %}
+
+{% block search-result %}
+{% endblock search-result %}
+
+{% block content %}
+{% endblock content%}
+
+<!-- footer -->
+  <footer class="footer font-medium">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>company</h4>
+          <ul>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">our services</a></li>
+            <li><a href="#">privacy policy</a></li>
+
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>get help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+
+            <li><a href="#">payment options</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>our services</h4>
+          <ul>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Hotel</a></li>
+            <li><a href="#">Carpooling</a></li>
+            <li><a href="#">Guide</a></li>
+            <li><a href="#">Restoration</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

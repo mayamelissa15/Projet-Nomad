@@ -1,0 +1,30 @@
+ header .nav-Links  {
+    position : relative ;
+}
+
+ header .nav-Links::after  {
+    content:"";
+     position: absolute;
+    background:linear-gradient(126deg, rgba(0,131,221,0.6054796918767507) 0%, rgba(0,87,221,1) 100%);    height:3px;
+    width : 0;
+    left : 0;
+    bottom: -10px;
+    transition: 0.5s;
+    border-radius: 2px;
+    
+    }
+
+ header .nav-Links:hover:after {
+    width : 100%;
+}
+.reveal{
+    position : relative;
+    transform : translateY(150px);
+    opacity: 0;
+    transition: all 2s ease ; 
+}
+.reveal.active{
+    transform : translateY(0px);
+    opacity : 1;
+}
+
