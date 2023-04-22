@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="cards.css">
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <link rel="stylesheet" href="search.css">
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src="main.js"></script>
   <link rel="stylesheet" type="text/css"
@@ -57,17 +58,21 @@ function onToggleMenu(e) //event argument qui va pointer vers mon element menu
     </script>
 </header>
   <!-- search bar -->
-  <div class=" overflow-hidden sm:py-12">
-    <form class="relative mx-12 py-2 " style="width:700px">
-      <input type="search"
-        class="peer cursor-pointer relative z-10 h-11 w-full rounded-full border bg-transparent pl-12 outline-none focus:w-full focus:cursor-text focus:border-slate-500 focus:pl-16 focus:pr-4  placeholder:text-slate-400 "
-        placeholder="Search for a destination.." >
-      <svg xmlns="http://www.w3.org/2000/svg"
-        class="absolute inset-y-0 my-auto h-8 w-12 border-r border-transparent stroke-gray-500 px-3.5 peer-focus:border-slate-500 peer-focus:stroke-black"
-        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-      </svg>
-    </form>
+  <div class=" overflow-hidden mx-8 sm:py-12">
+    <div class="wrapper">
+      <div class="search-input">
+        <a href="" target="_blank" hidden></a>
+        <input type="text" placeholder="Type to search..">
+        <div class="autocom-box">
+          <!-- here list are inserted from javascript -->
+        </div>
+        <div class="icon"><i class="fas fa-search"></i></div>
+      </div>
+    </div>
+
+     <script src="suggestions.js"></script> 
+     <script src="search.js"></script> 
+
   </div>
 <!-- cards  -->
   <div class="cards">
