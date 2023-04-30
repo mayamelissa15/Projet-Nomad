@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/75daf6b927.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="footer.css">
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+    <title>Form</title>
+</head>
+
+<body class="bg-slate-100" style="font-family: 'SF Pro Display', sans-serif;">
+    <header class="bg-white bg-scroll font-medium">
+        <nav class=" flex justify-between items-center w-[92%] mx-auto">
+            <div>
+                <img class="w-[80px]" src="Ressources/PNGs and SVGs/Logo.png" alt="logo Nomad">
+            </div>
+            <div
+                class="navLinks duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 ">
+                <!--{-100 to be hidden }-->
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 text-slate-600">
+                    <!--gap for view port-->
+                    <li><a class="nav-Links" href="#">Main</a></li>
+                    <li><a class="nav-Links" href="destination2.html">Destinations</a></li>
+                    <li><a class=" nav-Links text-black" href="guide.html">Guide</a></li>
+
+                    <li><a class="nav-Links" href="#">Covoiturage</a></li>
+                    <li><button class="nav-Links relative text-slate-600 " id="menu-btn"> Loisirs</button>
+                        <div class=" absolute bg-slate-100  hidden flex-col rounded mt-1 p-2 text-sm w-32 z-10"
+                            id="dropdown">
+                            <a href="#" class="px-2 py-1 text-slate-600 rounded hover:bg-slate-200">Hotel</a>
+                            <a href="#" class="px-2 py-1 text-slate-600 rounded hover:bg-slate-200">Restauration</a>
+                        </div>
+                    </li>
+            </div>
+
+            <div class="flex items-center gap-6">
+                <a href="login.html"> <button
+                        class="bg-blue-500 text-white px-5 py-2 rounded-full shadow-xl hover:bg-blue-700 duration-500 ">Sign
+                        in
+                    </button> </a>
+
+                <ion-icon onclick="onToggleMenu(this)" name="menu"
+                    class=" text-3xl cursor-pointer hover:shadow rounded-full md:hidden "> </ion-icon>
+                <!--pour qu'il soit cliquable -->
+            </div>
+        </nav>
+        <script>
+            const navLinks = document.querySelector('.navLinks') // selectioner la navbar
+            function onToggleMenu(e) //event argument qui va pointer vers mon element menu 
+            {
+                e.name === 'menu' ? (e.name = "close", navLinks.classList.add('top-[80px]'), navLinks.classList.add('opacity-100')) : (e.name = "menu", navLinks.classList.remove('top-[80px]'), navLinks.classList.remove('opacity-100'))
+                /*e.name=e.name==='menu' ? 'close' : 'menu' // pour changer l'icone de menu -> a fermer 
+                navLinks.classList.toggle('top-[9%]')*/
+            }
+        </script>
+    </header>
+    <div class="w-full">
+        <div>
+            <img src="Ressources/PNGs and SVGs/rent illustration.png" class="mx-auto h-[500px]" alt="header-bg">
+        </div>
+        <div class="flex justify-center">
+            <h1 class="font-bold text-2xl py-4">Looking for a hassle-free and convenient car rent experience?</h1>
+        </div>
+        <div class="flex justify-center text-center text-[#5B5B5B] font-semibold text-xl px-48">Look no further than our
+            car rental website! With our user-friendly interface,
+            you can quickly and easily rent your car by filling the form below.</div>
+    </div>
+    <div class="relative my-8 mx-64 border-2 border-slate-300 bg-white h-[1250px] rounded-[50px]">
+        <!--Quote icon div-->
+        <div class="absolute -top-6 right-16">
+            <img class="h-[48px] w-[48px]" src="Ressources/PNGs and SVGs/quote-blue.png">
+        </div>
+
+        <div class="flex items-center mx-14 pt-4">
+            <div
+                class="flex items-center justify-center font-semibold border-[1px] border-slate-300 drop-shadow-md rounded-full px-4 py-2 my-6">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Algeria.svg/256px-Flag_of_Algeria.svg.png"
+                    alt="Algerian Flag" class="h-5">
+                <span class="text-gray-500 ml-1">+213</span>
+            </div>
+            <input type="tel" placeholder="Enter your phone number"
+                class="font-semibold border-[1px] border-slate-300 drop-shadow-md rounded-full px-4 py-2 my-6 w-full">
+        </div>
+        <div class="flex flex-row items-center mx-14">
+            <div class="flex basis-1/4 justify-center">
+                <h1 class="flex font-semibold text-[20px]">Rent your car from: </h1>
+            </div>
+            <div class="flex basis-3/4">
+                <input type="date"
+                    class="flex font-semibold border-[1px] border-slate-300 drop-shadow-md rounded-full px-4 py-2 my-6 w-full">
+            </div>
+        </div>
+        <div class="flex flex-row items-center mx-14">
+            <div class="flex basis-1/4 justify-center">
+                <h1 class="flex font-semibold text-[20px]">To: </h1>
+            </div>
+            <div class="flex basis-3/4">
+                <input type="date"
+                    class="flexfont-semibold border-[1px] border-slate-300 drop-shadow-md rounded-full px-4 py-2 my-6 w-full">
+            </div>
+        </div>
+        <div class="flex items-center mx-14 py-4">
+            <input type="text" placeholder="License plate number"
+                class="font-semibold border-[1px] border-slate-300 drop-shadow-md rounded-full px-4 py-2 w-full">
+        </div>
+        <div class="flex items-center mx-14 py-4 select-box">
+            <select id="trans-box"
+                class="cursor-pointer font-semibold border-[1px] border-slate-300 drop-shadow-md rounded-full px-4 py-2 w-full"
+                name="transmission-select">
+                <option selected disabled>Transmission</option>
+                <option>Automatic</option>
+                <option>Manual</option>
+            </select>
+            <img style="transform: translate(0,-45%)" class="absolute inline-block top-1/2 right-4 h-[16px] w-[16px]"
+                src="Ressources/PNGs and SVGs/down-arrow.png">
+        </div>
+        <div class="flex items-center mx-14 py-4 select-box">
+            <select id="fuel-box"
+                class="cursor-pointer font-semibold border-[1px] border-slate-300 drop-shadow-md rounded-full px-4 py-2 w-full"
+                name="fuel-select">
+                <option selected disabled>Fuel</option>
+                <option>Essence</option>
+                <option>Diesel</option>
+                <option>Electricity</option>
+            </select>
+            <img style="transform: translate(0,-45%)" class="absolute inline-block top-1/2 right-4 h-[16px] w-[16px]"
+                src="Ressources/PNGs and SVGs/down-arrow.png">
+        </div>
+        <div class="flex flex-row items-center mx-14">
+            <div class="flex basis-2/4">
+                <h1 class="flex font-semibold text-[20px]">Upload an image of your identity card: </h1>
+            </div>
+            <div class="flex basis-3/4">
+                <input type="file"
+                    class="file:py-2 file:px-4 file:text-blue-700 file:rounded-full file:bg-violet-50 file:border-0 file:cursor-pointer file:mr-8 hover:file:bg-violet-200 file:duration-[300ms] hover:duration-[300ms] flex font-semibold border-[1px] border-slate-300 drop-shadow-md rounded-full px-4 py-2 my-6 w-full"
+                    multiple>
+            </div>
+        </div>
+        <div class="flex flex-row items-center mx-14">
+            <div class="flex basis-2/4">
+                <h1 class="flex font-semibold text-[20px]">Upload an image of your driving license: </h1>
+            </div>
+            <div class="flex basis-3/4">
+                <input type="file"
+                    class="file:py-2 file:px-4 file:text-blue-700 file:rounded-full file:bg-violet-50 file:border-0 file:cursor-pointer file:mr-8 hover:file:bg-violet-200 file:duration-[300ms] hover:duration-[300ms] flex font-semibold border-[1px] border-slate-300 drop-shadow-md rounded-full px-4 py-2 my-6 w-full"
+                    multiple>
+            </div>
+        </div>
+        <div class="flex flex-row items-center mx-14">
+            <div class="flex basis-2/4">
+                <h1 class="flex font-semibold text-[20px]">Upload an image of your vehicule: </h1>
+            </div>
+            <div class="flex basis-3/4">
+                <input type="file"
+                    class="file:py-2 file:px-4 file:text-blue-700 file:rounded-full file:bg-violet-50 file:border-0 file:cursor-pointer file:mr-8 hover:file:bg-violet-200 file:duration-[300ms] hover:duration-[300ms]  flex font-semibold border-[1px] border-slate-300 drop-shadow-md rounded-full px-4 py-2 my-6 w-full"
+                    multiple>
+            </div>
+        </div>
+        <div class="flex flex-col mx-14 mt-8">
+            <div class="flex basis-2/4">
+                <h1 class="flex font-semibold text-[20px]">Add some notes about your vehicule: </h1>
+            </div>
+            <div>
+                <textarea id="notes-box" placeholder="Notes"
+                    class="border mt-8 rounded-xl border-slate-300 h-[200px] w-full"> </textarea>
+            </div>
+        </div>
+        <div class="flex flex-row justify-end mt-10 mx-14">
+            <a
+                class="cursor-pointer text-white text-xl font-semibold bg-[#0057D9] px-8 py-2 rounded-full drop-shadow-md duration-[300ms] hover:bg-blue-900 hover:duration-[300ms]">Done</a>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>our services</h4>
+                    <ul>
+                        <li><a href="#">Destination</a></li>
+                        <li><a href="#">Hotel</a></li>
+                        <li><a href="#">covoiturage</a></li>
+                        <li><a href="#">guide</a></li>
+                        <li><a href="#">Restaurant</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
