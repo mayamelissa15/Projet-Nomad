@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="footer.css">
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/75daf6b927.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <title>Car</title>
+
+<body class="bg-gray-100" style="font-family: 'SF Pro Display', sans-serif;">
+    <header class="bg-white bg-scroll font-medium ">
+        <nav class=" flex justify-between items-center w-[92%] mx-auto">
+            <div>
+                <img class="w-[120px]" src="Ressources/PNGs and SVGs/Logo.png" alt="logo Nomad">
+            </div>
+            <div
+                class="navLinks duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 z-[15] ">
+                <!--{-100 to be hidden }-->
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 text-slate-600">
+                    <!--gap for view port-->
+                    <li><a class="nav-Links" href="#">Home</a></li>
+                    <li><a class="nav-Links" href="destination2.html">Destination</a></li>
+                    <li><a class=" nav-Links " href="guide.html">Guide</a></li>
+
+                    <li><a class="nav-Links text-black" href="#">Carpooling</a></li>
+                    <li><button class="nav-Links relative text-slate-600 " id="menu-btn"> Leisure</button>
+                        <div class=" absolute bg-slate-100  hidden flex-col rounded mt-1 p-2 text-sm w-32 z-10"
+                            id="dropdown">
+                            <a href="#" class="px-2 py-1 text-slate-600 rounded hover:bg-slate-200">Hotel</a>
+                            <a href="#" class="px-2 py-1 text-slate-600 rounded hover:bg-slate-200">Restoration</a>
+                        </div>
+                    </li>
+
+            </div>
+
+            <div class="flex items-center gap-6">
+                <a href="login.html"> <button
+                        class="bg-blue-500 text-white px-5 py-2 rounded-full shadow-xl hover:bg-blue-700 duration-500 ">Sign
+                        in </button> </a>
+
+                <ion-icon onclick="onToggleMenu(this)" name="menu"
+                    class=" text-3xl cursor-pointer hover:shadow rounded-full md:hidden "> </ion-icon>
+                <!--pour qu'il soit cliquable -->
+            </div>
+        </nav>
+        <script>
+            const navLinks = document.querySelector('.navLinks') // selectioner la navbar
+            function onToggleMenu(e) //event argument qui va pointer vers mon element menu 
+            {
+                e.name === 'menu' ? (e.name = "close", navLinks.classList.add('top-[80px]'), navLinks.classList.add('opacity-100')) : (e.name = "menu", navLinks.classList.remove('top-[80px]'), navLinks.classList.remove('opacity-100'))
+                /*e.name=e.name==='menu' ? 'close' : 'menu' // pour changer l'icone de menu -> a fermer 
+                navLinks.classList.toggle('top-[9%]')*/
+            }
+        </script>
+    </header>
+    <div class="mt-4">
+        <a
+            class="text-[#0057D9] text-xl font-bold cursor-pointer mx-36 duration-[300ms] hover:text-[#6195ed] hover:duration-[300ms]">&#8592
+            See Other Cars</a>
+    </div>
+    <div class="mx-36 flex md:flex-col my-8 bg-white rounded-xl">
+        <div class="h-[115px]">
+            <div class="mx-12 mt-8 mb-2">
+                <h1 class="text-3xl font-bold">Tesla Model S</h1>
+            </div>
+            <div class="mx-12">
+                <div class="flex items-center">
+                    <div class="text-xl" style="color: #0057D9">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <!--Black line (Can be changed to gray for info section)-->
+            <div class="border-[1px] w-1/3 border-black mx-12 mt-8">
+            </div>
+        </div>
+        <!-- Swiper -->
+        <div class="swiper mySwiper mt-4">
+            <div class="swiper-wrapper w-full h-96">
+                <div class="swiper-slide"><img class="rounded-md"
+                        src="Ressources/Images/Covoiturage/Tesla sample images/2013-Tesla-Model-S-5YJSA1DP0DFP21798-1.jpg">
+                </div>
+                <div class="swiper-slide"><img class="rounded-md"
+                        src="Ressources/Images/Covoiturage/Tesla sample images/2013-tesla-model-s_100421974_m.jpg">
+                </div>
+                <div class="swiper-slide"><img class="rounded-md"
+                        src="Ressources/Images/Covoiturage/Tesla sample images/onsite-service-by-tesla-motor-technicians-on-2013-tesla-model-s-upstate-ny-photo-david-noland_100448940_m.jpg">
+                </div>
+                <div class="swiper-slide"><img class="rounded-md"
+                        src="Ressources/Images/Covoiturage/Tesla sample images/onsite-service-by-tesla-motor-technicians-on-2013-tesla-model-s-upstate-ny-photo-david-noland_100448941_m.jpg">
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- Notes + INFO -->
+        <div class="flex flex-col md:flex-row px-12 mt-4 mb-8 gap-8">
+            <!-- Notes -->
+            <div class="flex flex-col flex-1">
+                <h1 class="font-bold text-2xl">Notes from owner:</h1>
+                <div class="relative border-[1px] rounded-lg w-full h-96 mt-4">
+                    <!--Notes from Owner here-->
+                    <!--Quote icon-->
+                    <div class="absolute rotate-180 left-2 -bottom-8">
+                        <img class="h-[64px] w-[64px]" src="Ressources/PNGs and SVGs/quote-blue.png">
+                    </div>
+                </div>
+            </div>
+            <!-- Info -->
+            <div class="flex flex-1 flex-col">
+                <h1 class="font-bold text-2xl">Car Info:</h1>
+                <div class="flex flex-col gap-4 relative border-[1px] rounded-lg h-96 w-full mt-4 p-8">
+                    <div class="flex flex-row h-full border-b-2 border-gray-300 pb-4 gap-4">
+                        <!-- Icon -->
+                        <div class="place-self-center">
+                            <img class="h-[36px] w-[36px]" src="Ressources/PNGs and SVGs/manual-transmission.png"
+                                alt="trans-icon">
+                        </div>
+                        <!-- Type -->
+                        <div class="place-self-center">
+                            <h1 class="font-medium text-base">Transmission</h1>
+                        </div>
+                        <!-- Input -->
+                        <div class="place-content-end self-center flex flex-1">
+                            <h1 class="font-black text-base">Automatic</h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-row h-full border-b-2 border-gray-300 pb-4 gap-4">
+                        <!-- Icon -->
+                        <div class="place-self-center">
+                            <img class="h-[36px] w-[36px]" src="Ressources/PNGs and SVGs/fuel.png" alt="trans-icon">
+                        </div>
+                        <!-- Type -->
+                        <div class="place-self-center">
+                            <h1 class="font-medium text-base">Fuel</h1>
+                        </div>
+                        <!-- Inp²t -->
+                        <div class="place-content-end self-center flex flex-1">
+                            <h1 class="font-black text-base">Electricity</h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-row h-full border-b-2 border-gray-300 pb-4 gap-4">
+                        <!-- Icon -->
+                        <div class="place-self-center">
+                            <img class="h-[36px] w-[36px]" src="Ressources/PNGs and SVGs/license-plate (1).png"
+                                alt="trans-icon">
+                        </div>
+                        <!-- Type -->
+                        <div class="place-self-center">
+                            <h1 class="font-medium text-base">License Plate</h1>
+                        </div>
+                        <!-- Input -->
+                        <div class="place-content-end self-center flex flex-1">
+                            <h1 class="font-black text-base">05768-118-21</h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-row h-full border-b-2 border-gray-300 pb-4 gap-4">
+                        <!-- Icon -->
+                        <div class="place-self-center">
+                            <img class="h-[36px] w-[36px]" src="Ressources/PNGs and SVGs/calendar.png" alt="trans-icon">
+                        </div>
+                        <!-- Type -->
+                        <div class="place-self-center">
+                            <h1 class="font-medium text-base">Availability</h1>
+                        </div>
+                        <!-- Input -->
+                        <div class="place-content-end self-center flex flex-1">
+                            <h1 class="font-black text-base">from 4/30 to 7/5</h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-row h-full pb-4 gap-4">
+                        <!-- Icon -->
+                        <div class="place-self-center">
+                            <img class="h-[36px] w-[36px]" src="Ressources/PNGs and SVGs/profile.png" alt="trans-icon">
+                        </div>
+                        <!-- Type -->
+                        <div class="place-self-center">
+                            <h1 class="font-medium text-base">Owner</h1>
+                        </div>
+                        <!-- Input -->
+                        <div class="place-content-end self-center flex flex-1">
+                            <h1 class="font-black text-base">Wadiâ Boumediene</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 class="mx-36 text-4xl font-semibold text-black mb-10 ">How was your experience?</h1>
+    <div class="grid grid-cols-2 mx-36 gap-52">
+        <section class=" md:h-96  md:w-[550px] bg-white rounded-3xl relative">
+            <img src="Ressources/PNGs and SVGs/quote-blue.png" class="absolute h-[64px] w-[64px] right-8 -top-8">
+            <form>
+                <p class="text-Black text-xl font-bold pt-5 mx-10 my-5">Feedback </p>
+                <p class="text-slate-700 text-lg font-medium  mx-10">How was your experience ? </p>
+                <div class="mx-10 my-2">
+                    <div class="stars">
+                        <i class="star fa-solid fa-star cursor-pointer text-xl"></i>
+                        <i class="star fa-solid fa-star cursor-pointer text-xl"></i>
+                        <i class="star fa-solid fa-star cursor-pointer text-xl"></i>
+                        <i class="star fa-solid fa-star cursor-pointer text-xl"></i>
+                        <i class="star fa-solid fa-star cursor-pointer text-xl"></i>
+                    </div>
+                </div>
+                <div class="mx-10 my-4 font-medium flex flex-col gap-2">
+                    <label class="text-lg text-gray-600 ">Tell us more</label>
+                    <textarea style=" resize:none;"
+                        class="outline-none rounded-[10px] shadow-md p-2 w-[100%]  h-[100%]text-gray-700 text-medium"></textarea>
+                </div>
+
+                <a class="" href="#"><button type="submit"
+                        class="bg-blue-500 mt-2 md:mx-5 md:mb-20 text-white font-semibold px-5 py-2 rounded-full hover:bg-blue-700 duration-500 shadow-xl ">Submit
+                    </button></a>
+            </form>
+        </section>
+        <!--Feedback image-->
+        <div>
+            <img src="Ressources/PNGs and SVGs/Car Feedback image blue.jpg.png" class="w-[360px] rounded-3xl">
+            <!--Text div + quotes-->
+            <div class="relative left-40">
+                <img style="transform: scaleX(-1);" src="Ressources/PNGs and SVGs/quote-blue.png"
+                    class="absolute h-10 w-10 -top-8 -left-6">
+                <h1 class="text-2xl font-black">Your opinion really matters</h1>
+                <img src="Ressources/PNGs and SVGs/quote-blue.png" class="absolute h-10 w-10 left-64 top-6">
+            </div>
+        </div>
+    </div>
+
+    <h1 class="mx-36 text-4xl font-semibold text-black mt-10">Comments</h1>
+
+    <!--Comments container-->
+    <div class="flex flex-row mx-36 mt-8 h-28 gap-6 min-w-min bg-white p-4 rounded-[10px]">
+        <!--Profile picture-->
+        <div class="shrink-0">
+            <img src="Ressources/pfp.jpg" class="rounded-[50%] h-20 w-20 object-cover">
+        </div>
+        <!--Username + Rating + Comment-->
+        <div class="flex flex-col gap-1">
+            <div class="flex flex-row justify-between">
+                <h1 class="font-bold text-lg">Wadie Boumediene</h1>
+                <div class="cursor-pointer"><i class="fa-solid fa-ellipsis-vertical text-xl" id="btn"></i></div>
+            </div>
+            <div class="text-sm" style="color: #0057D9">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <div>
+                <p class="text-gray-800 font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+                    perspiciatis quisquam debitis rem,
+                    ipsam inventore reiciendis incidunt deserunt quaerat aspernatur quidem, ut delectus quam harum
+                    ipsa fugit animi excepturi? Voluptates!</p>
+            </div>
+        </div>
+    </div>
+    <!--List-->
+    <!-- <div class="flex w-36 h-8 bg-slate-300 rounded-sm justify-center items-center" id="list">
+        <h1 class="font-medium text-gray-700">Report</h1>
+    </div> -->
+    <script>
+        const button = getElementById("btn");
+        const list = getElementById("list");
+
+        button.addEventListener("click", (event) => {
+            if (list.style.display == "none") {
+                list.style.display == "block";
+            } else {
+                list.style.display == "none";
+            }
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+    <script>
+        const stars = document.querySelectorAll('.star');
+        // on va faire une boucle through the stars
+
+        stars.forEach((star, index1) => {
+            star.addEventListener("click", () => {
+                stars.forEach((star, index2) => {
+                    // on va ajouter la classe active a chaque fois qu'on clique sur une etoile avec un index inferieur et la remove de celui de l'index superieur 
+                    index1 >= index2 ? star.classList.add("active") : star.classList.remove("active")
+                });
+            });
+        });
+    </script>
+    </section>
+    </div>
+    <style>
+        .star {
+            color: rgb(219 234 254);
+            transition: color 0.2s ease;
+        }
+
+        .star.active {
+            color: rgb(37 99 235);
+        }
+    </style>
+    <footer class="bg-blue-500 footer font-medium mt-8">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>our services</h4>
+                    <ul>
+                        <li><a href="#">Destination</a></li>
+                        <li><a href="#">Hotel</a></li>
+                        <li><a href="#">Carpooling</a></li>
+                        <li><a href="#">Guide</a></li>
+                        <li><a href="#">Restoration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+<style>
+    html,
+    body {
+        position: relative;
+        height: 100%;
+    }
+
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .swiper {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/75daf6b927.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+    <link href="//db.onlinewebfonts.com/c/de58fdcb98299a76fccd3c0cb4e5a6c0?family=Kabel" rel="stylesheet"
+        type="text/css" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="box-border" style="font-family: 'SF Pro Display', sans-serif;">
+    <header class="bg-white bg-scroll font-medium">
+        <nav class=" flex justify-between items-center w-[92%] mx-auto">
+            <div>
+                <img class="w-[80px]" src="Ressources/PNGs and SVGs/Logo.png" alt="logo Nomad">
+            </div>
+            <div
+                class="navLinks duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 ">
+                <!--{-100 to be hidden }-->
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 text-slate-600">
+                    <!--gap for view port-->
+                    <li><a class="nav-Links" href="#">Main</a></li>
+                    <li><a class="nav-Links" href="destination2.html">Destinations</a></li>
+                    <li><a class=" nav-Links text-black" href="guide.html">Guide</a></li>
+
+                    <li><a class="nav-Links" href="#">Covoiturage</a></li>
+                    <li><button class="nav-Links relative text-slate-600 " id="menu-btn"> Loisirs</button>
+                        <div class=" absolute bg-slate-100  hidden flex-col rounded mt-1 p-2 text-sm w-32 z-10"
+                            id="dropdown">
+                            <a href="#" class="px-2 py-1 text-slate-600 rounded hover:bg-slate-200">Hotel</a>
+                            <a href="#" class="px-2 py-1 text-slate-600 rounded hover:bg-slate-200">Restauration</a>
+                        </div>
+                    </li>
+
+            </div>
+
+            <div class="flex items-center gap-6">
+                <a href="login.html"> <button
+                        class="bg-blue-500 text-white px-5 py-2 rounded-full shadow-xl hover:bg-blue-700 duration-500 ">Sign
+                        in
+                    </button> </a>
+
+                <ion-icon onclick="onToggleMenu(this)" name="menu"
+                    class=" text-3xl cursor-pointer hover:shadow rounded-full md:hidden "> </ion-icon>
+                <!--pour qu'il soit cliquable -->
+            </div>
+        </nav>
+        <script>
+            const navLinks = document.querySelector('.navLinks') // selectioner la navbar
+            function onToggleMenu(e) //event argument qui va pointer vers mon element menu 
+            {
+                e.name === 'menu' ? (e.name = "close", navLinks.classList.add('top-[80px]'), navLinks.classList.add('opacity-100')) : (e.name = "menu", navLinks.classList.remove('top-[80px]'), navLinks.classList.remove('opacity-100'))
+                /*e.name=e.name==='menu' ? 'close' : 'menu' // pour changer l'icone de menu -> a fermer 
+                navLinks.classList.toggle('top-[9%]')*/
+            }
+        </script>
+    </header>
+
+    <div class="relative grid grid-cols-3 h-[50rem]">
+        <h1 style="transform: translate(-50%, -50%);"
+            class="z-10 text-white font-bold text-[120px] tracking-[.25em] absolute top-1/2 left-1/2">NOMAD</h1>
+        <div>
+            <img style="object-fit:cover;filter:brightness(60%)" class="h-full"
+                src="Ressources/Images/main/dmc_alger.jpg" alt="image1">
+        </div>
+        <div class="">
+            <img style="object-fit:cover;filter:brightness(60%)" class="h-full"
+                src="Ressources/Images/main/parc-Tassili-nAjjer-1024x683.jpg" alt="image2">
+        </div>
+        <div>
+            <img style="object-fit:cover;filter:brightness(60%)" class="h-full"
+                src="Ressources/Images/main/Leonid-Andronov-iStock-1013633242.jpg" alt="image3">
+        </div>
+    </div>
+    <div class="mt-[41px]">
+        <div class="bg-white text-gray-700 text-base tracking-wide ml-[54px]">
+            <p class="font-[1000]">PLAN YOUR TRIP</p>
+        </div>
+        <div class="bg-white ml-[54px] mt-2 w-[500px]">
+            <h1 class="font-bold text-5xl">Where to next?</h1>
+        </div>
+        <div class="mt-10 grid grid-cols-3 justify-items-center h-[400px] relative">
+            <div
+                class="border rounded-[20px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] w-[330px] h-[315px] left-[48px] top-[1025px] cursor-pointer hover:underline">
+                <a><img class="cursor-pointer h-full w-full object-cover rounded-[20px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+                        src="Ressources/Images/main/Constantine.jpg" alt="constantine">
+                    <p class="font-bold text-2xl mt-4 ml-1">Constantine</p>
+                </a>
+            </div>
+            <div
+                class="border rounded-[20px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] w-[330px] h-[315px] left-[48px] top-[1025px] cursor-pointer hover:underline">
+                <a><img class="cursor-pointer h-full w-full object-cover object-left rounded-[20px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+                        src="Ressources/Images/main/panorama-d-alger.jpg" alt="alger">
+                    <p class="font-bold text-2xl mt-4 ml-1">Alger</p>
+                </a>
+            </div>
+            <div
+                class="border rounded-[20px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] w-[330px] h-[315px] left-[48px] top-[1025px] cursor-pointer hover:underline">
+                <a><img class="cursor-pointer h-full w-full object-cover rounded-[20px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+                        src="Ressources/Images/main/800px-Summer_day_in_skikda.jpg" alt="skikda">
+                    <p class="font-bold text-2xl mt-4 ml-1">Skikda</p>
+                </a>
+            </div>
+        </div>
+        <div class="mx-14">
+            <a
+                class="border-[1px] cursor-pointer text-black font-bold bg-white px-6 py-2 rounded-full shadow-2xl border-black basis-1/4 duration-[350ms] hover:bg-[#0057D9] hover:text-white hover:duration-[350ms]">View
+                all destinations</a>
+        </div>
+        <!--Features Div-->
+        <div class="flex flex-row justify-between mt-16 mx-16">
+            <div class="grid grid-cols-[100px_minmax(0px,_1fr)]">
+                <div class="pr-8 justify-self-end"><img class="w-[96px] h-[96px]"
+                        src="Ressources/PNGs and SVGs/Untitled (2).svg"></div>
+                <div class="">
+                    <h1 class="text-2xl font-bold">Des expériences authentiques</h1>
+                    <p>Laissez-vous porter par votre curiosité, ressentez l’émotion de la découverte et explorez le
+                        monde comme jamais.</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-[100px_minmax(0px,_1fr)]">
+                <div class="pr-8 justify-self-end"><img class="w-[96px] h-[96px]"
+                        src="Ressources/PNGs and SVGs/Untitled (1).svg"></div>
+                <div class="">
+                    <h1 class="text-2xl font-bold">Réservation flexible</h1>
+                    <p>Annulez gratuitement, planifiez sur le pouce et réservez à la dernière minute. Découvrez le monde
+                        à votre façon.</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-[100px_minmax(0px,_1fr)]">
+                <div class="pr-8 justify-self-end"><img class="w-[96px] h-[96px]"
+                        src="Ressources/PNGs and SVGs/Untitled.svg"></div>
+                <div class="">
+                    <h1 class="text-2xl font-bold">Un monde de possibilités</h1>
+                    <p>Profitez de recommendations et d’itinéraires personnalisés, avec plus de 60 000 activités,
+                        visites
+                        guidées et sites emblématiques.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Testimonials-->
+    <div class="flex justify-center mt-8">
+        <h1 class="uppercase text-6xl font-black mt-8">Testimonials</h1>
+    </div>
+    <section class="h-[700px] w-full flex items-center justify-center my-8">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div
+                        class="testimonial px-[50px] py-0 relative max-w-[900px] w-full bg-white border-[1px] rounded-md border-slate-100 drop-shadow-xl">
+                        <div class="testi-content py-4">
+                            <div class="slide flex items-center content-center flex-col gap-y-4">
+                                <img class="h-[170px] w-[170px] object-cover rounded-[50%]" src="Ressources/pfp.jpg"
+                                    alt="image">
+                                <!--Stars-->
+                                <div class="text-xl" style="color: #0057D9">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="px-6 py-0.5 text-center text-xl font-medium text-[#333]">Lorem ipsum dolor sit
+                                    amet consectetur adipisicing elit. Officia ea doloribus sit eveniet
+                                    aspernatur tempora exercitationem voluptatum cumque quasi, obcaecati molestiae,
+                                    neque
+                                    dignissimos atque debitis hic ullam aliquam incidunt ab aperiam, accusamus vero.
+                                    Doloribus
+                                    dolor ipsam quasi est impedit animi.</p>
+                                <img class="h-[96px] w-[96px] absolute left-[80%] top-[88%]"
+                                    src="Ressources/PNGs and SVGs/quote-blue.png">
+                                <div class="details flex flex-col items-center">
+                                    <span class="name font-semibold text-2xl text-[#333]">Wadie Boumediene</span>
+                                    <span class="job font-normal text-xl text-[#333]">CS Student</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div
+                        class="testimonial px-[50px] py-0 relative max-w-[900px] w-full bg-white border-[1px] rounded-md border-slate-100 drop-shadow-xl">
+                        <div class="testi-content py-4">
+                            <div class="slide flex items-center content-center flex-col gap-y-4">
+                                <img class="h-[170px] w-[170px] object-cover rounded-[50%]" src="Ressources/pfp2.jpg"
+                                    alt="image">
+                                <!--Stars-->
+                                <div class="text-xl" style="color: #0057D9">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="px-6 py-0.5 text-center text-xl font-medium text-[#333]">Lorem ipsum dolor sit
+                                    amet consectetur adipisicing elit. Officia ea doloribus sit eveniet
+                                    aspernatur tempora exercitationem voluptatum cumque quasi, obcaecati molestiae,
+                                    neque
+                                    dignissimos atque debitis hic ullam aliquam incidunt ab aperiam, accusamus vero.
+                                    Doloribus
+                                    dolor ipsam quasi est impedit animi.</p>
+                                <img class="h-[96px] w-[96px] absolute left-[80%] top-[88%]"
+                                    src="Ressources/PNGs and SVGs/quote-blue.png">
+                                <div class="details flex flex-col items-center">
+                                    <span class="name font-semibold text-2xl text-[#333]">Ahmed Mo7sin</span>
+                                    <span class="job font-normal text-xl text-[#333]">Tiktoker</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div
+                        class="testimonial px-[50px] py-0 relative max-w-[900px] w-full bg-white border-[1px] rounded-md border-slate-100 drop-shadow-xl">
+                        <div class="testi-content py-4">
+                            <div class="slide flex items-center content-center flex-col gap-y-4">
+                                <img class="h-[170px] w-[170px] object-cover rounded-[50%]" src="Ressources/pfp3.jpg"
+                                    alt="image">
+                                <!--Stars-->
+                                <div class="text-xl" style="color: #0057D9">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="px-6 py-0.5 text-center text-xl font-medium text-[#333]">Lorem ipsum dolor sit
+                                    amet consectetur adipisicing elit. Officia ea doloribus sit eveniet
+                                    aspernatur tempora exercitationem voluptatum cumque quasi, obcaecati molestiae,
+                                    neque
+                                    dignissimos atque debitis hic ullam aliquam incidunt ab aperiam, accusamus vero.
+                                    Doloribus
+                                    dolor ipsam quasi est impedit animi.</p>
+                                <img class="h-[96px] w-[96px] absolute left-[80%] top-[88%]"
+                                    src="Ressources/PNGs and SVGs/quote-blue.png">
+                                <div class="details flex flex-col items-center">
+                                    <span class="name font-semibold text-2xl text-[#333]">Ching Chong</span>
+                                    <span class="job font-normal text-xl text-[#333]">Chinwi</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!--Guide Touristique Div-->
+    <div class="grid grid-cols-2">
+        <!--Div Containing Image-->
+        <div><img src="Ressources/PNGs and SVGs/tour-guide-concept-illustration_114360-2002.jpg"></div>
+        <!--Div Containing Text-->
+        <div class="py-8 mr-20">
+            <h1 class="text-4xl font-bold text-[#0057D9] h-12">Vous êtes guide touristique?</h1>
+            <p class="font-bold text-2xl h-12 my-8">Soyez référencé sur notre site,c'est 100% gratuit !</p>
+            <p style="font-weight: 500;" class="text-2xl leading-relaxed h-80">Le site vous permettra de mettre en
+                avant votre profil ou
+                celui de votre agence.
+                Grace à Nomad vous pourrez mieux vous faire connaitre et
+                ainsi être contacté directement par des
+                touristes du monde entier. Pour cela, non de plus simple, suivez le lien pour remplir le
+                formulaire d'inscription avec toutes les informations nécessaires pour créer votre page.</p>
+            <div class="pl-36 my-12">
+                <a
+                    class="border-[1px] cursor-pointer text-black text-2xl font-bold bg-white px-6 py-2 rounded-full shadow-2xl border-black duration-[350ms] hover:bg-[#0057D9] hover:text-white hover:duration-[350ms]">Je
+                    suis guide touristique</a>
+            </div>
+        </div>
+
+    </div>
+    <!--Video Div-->
+    <div class="relative w-full h-[863px] mt-14">
+        <div style="transform: translate(-50%, -50%);" class="pb-80 absolute top-1/2 left-1/2">
+            <h1 style="font-family: 'Kabel', sans-serif;" class="text-9xl text-white">BEST IN</h1>
+            <h1 style="font-family: 'Kabel', sans-serif;" class="text-9xl text-white">TRAVEL</h1>
+            <h2 style="font-family: 'Kabel', sans-serif;" class="text-9xl text-white text-center">2023</h2>
+        </div>
+        <div style="transform: translate(-50%, 50%);" class="absolute top-1/2 left-1/2">
+            <p style="font-family: 'SF Pro Display', sans-serif;"
+                class="pt-16 font-bold text-white text-center text-xl">Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat.</p>
+        </div>
+        <video autoplay loop muted plays-inline class="object-cover right-0 bottom-0 -z-10 w-full h-full ">
+            <source src="Ressources/Images/main/Studio_Project.mp4" type="video/mp4">
+        </video>
+    </div>
+    </div>
+    <div class="pt-12 pb-12">
+        <h1 class="flex justify-center font-bold text-8xl">SOCIALS</h1>
+    </div>
+    <div class="h-[38.75rem] bg-[#0057D9]">
+        <div class="flex h-[11.688rem]">
+            <div class="flex basis-1/4 justify-center">
+                <h1 class="flex items-center text-white text-4xl font-bold">#nomad</h1>
+            </div>
+            <!--Social Media-->
+            <div class="pl-8 basis-3/4 justify-end flex items-center text-white font-bold space-x-10 mr-20">
+                <h1 class="font-bold text-l">FOLLOW NOMAD:</h1>
+                <a href="#" class="h-[24px] w-[24px]"><img src="Ressources/PNGs and SVGs/twitter-xxl.png"
+                        alt="twitter"></a>
+                <a href="#" class="h-[28px] w-[24px]"><img src="Ressources/PNGs and SVGs/tiktok-xxl.png"
+                        alt="twitter"></a>
+                <a href="#" class="h-[28px] w-[24px]"><img src="Ressources/PNGs and SVGs/FACEBOOK.png"
+                        alt="twitter"></a>
+                <a href="#" class="h-[24px] w-[24px]"><img
+                        src="Ressources/PNGs and SVGs/new-Instagram-logo-white-glyph-1200x1199.png" alt="twitter"></a>
+            </div>
+        </div>
+        <!--Comptes Instagram-->
+        <div class="h-[22rem] grid grid-cols-6">
+            <a class="cursor-pointer hover:brightness-110"><img class="h-full" style="object-fit:cover;"
+                    src="Ressources/Images/main/Ek4Ysl1XYAAYWNW.jfif" alt="photo1"></a>
+            <a class="cursor-pointer hover:brightness-110"><img class="h-full" style="object-fit:cover;"
+                    src="Ressources/Images/main/gettyimages-1000660946-1-740x490.jpg" alt="photo1"></a>
+            <a class="cursor-pointer hover:brightness-110"><img class="h-full" style="object-fit:cover;"
+                    src="Ressources/Images/main/Sahara-algerien.webp" alt="photo1"></a>
+            <a class="cursor-pointer hover:brightness-110"><img class="h-full" style="object-fit:cover;"
+                    src="Ressources/Images/main/IMG-20200829-WA0032.jpg" alt="photo1"></a>
+            <a class="cursor-pointer hover:brightness-110"><img class="h-full" style="object-fit:cover;"
+                    src="Ressources/Images/main/exposition-paysages-dalgerie.jpg" alt="photo1"></a>
+            <a class="cursor-pointer hover:brightness-110"><img class="h-full" style="object-fit:cover;"
+                    src="Ressources/Images/main/photo-paysage-algerie-16.jpg" alt="photo1"></a>
+        </div>
+    </div>
+    <!--Footer-->
+    <div class="h-[27rem] bg-white py-16">
+        <div class="flex">
+            <div class="flex basis-1/4 justify-center">
+                <h1 class="flex items-start text-[#0057D9] text-4xl font-bold">#nomad</h1>
+            </div>
+            <div class="flex basis-3/4 justify-between items-start mx-14 px-8">
+                <div class="flex items-center">
+                    <ul>
+                        <a class="cursor-pointer">
+                            <li style="font-weight: 700;"><b>Hotels</b></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="flex items-center">
+                    <ul>
+                        <a class="cursor-pointer">
+                            <li style="font-weight: 700;"><b>Guide</b></li>
+                        </a>
+                        <a class="cursor-pointer">
+                            <li>Devenir un guide</li>
+                        </a>
+                        <a class="cursor-pointer">
+                            <li>Trouver un guide</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="flex items-center">
+                    <ul>
+                        <a class="cursor-pointer">
+                            <li style="font-weight: 700;"><b>Covoiturage</b></li>
+                        </a>
+                        <a class="cursor-pointer">
+                            <li>Trouver une voiture</li>
+                        </a>
+                        <a class="cursor-pointer">
+                            <li>Louer une voiture</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="flex items-center spacing-y-8">
+                    <ul>
+                        <a class="cursor-pointer">
+                            <li style="font-weight: 700;"><b>Socials</b></li><a>
+                                <a class="cursor-pointer">
+                                    <li>Twitter</li>
+                                </a>
+                                <a class="cursor-pointer">
+                                    <li>Tiktok</li>
+                                </a>
+                                <a class="cursor-pointer">
+                                    <li>Facebook</li>
+                                </a>
+                                <a class="cursor-pointer">
+                                    <li>Instagram</li>
+                                </a>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+<style>
+    .swiper {
+        width: 100%;
+        height: 105%;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+</html>

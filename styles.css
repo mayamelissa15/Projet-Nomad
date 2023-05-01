@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.select-box {
+    position: relative;
+}
+
+.select-box option {
+    font-weight: 600;
+}
+
+.select-box select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    position: relative;
+}
+
+.select-box select::ms-expand {
+    display: none;
+}
+
+.select-box select:focus {
+    outline-color: #0057D9;
+}
+
+input[type="date"] {
+    color: rgb(156, 163, 175);
+    font-weight: 600;
+}
+
+input[type="file"] {
+    color: rgb(156, 163, 175);
+    font-weight: 600;
+}
+
+input:focus {
+    outline-color: #0057D9;
+}
+
+#trans-box {
+    color: rgb(156, 163, 175);
+    font-weight: 600;
+    outline-color: #0057D9;
+}
+
+#fuel-box {
+    color: rgb(156, 163, 175);
+    font-weight: 600;
+    outline-color: #0057D9;
+}
+
+#notes-box {
+    font-weight: 600;
+    outline-color: #0057D9;
+    color: rgb(100, 100, 100);
+    padding: 16px;
+}
+
+.swiper-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#testimonial-box:hover {
+    transform: translateY(-10px);
+    transition: all ease 0.3s;
+}
+
+#testimonial-box img {
+    border-radius: 100%;
+}
+
+@media(max-width:1060px) {
+    #testimonial-box {
+        width: 45%;
+        padding: 10px;
+    }
+}
+
+@media(max-width:790px) {
+    #testimonial-box {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #testimonial-heading h1 {
+        font-size: 1.4rem;
+    }
+}
+
+@media(max-width:340px) {
+    #box-top {
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+
+    #reviews {
+        margin-top: 10px;
+    }
+}
+
+.card:hover .arrow {
+    color: #0057D9;
+}
+
+.card:hover .icon {
+    color: #0057D9;
+}

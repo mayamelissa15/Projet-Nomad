@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/75daf6b927.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="index.css">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="script.js"></script>
+</head>
+
+<body class="bg-white">
+    <header class="bg-white bg-scroll font-medium ">
+        <nav class=" flex justify-between items-center w-[92%] mx-auto">
+            <div>
+                <img class="w-[80px]" src="Ressources/PNGs and SVGs/Logo.png" alt="logo Nomad">
+            </div>
+            <div
+                class="navLinks duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 ">
+                <!--{-100 to be hidden }-->
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 text-slate-600">
+                    <!--gap for view port-->
+                    <li><a class="nav-Links" href="#">Main</a></li>
+                    <li><a class="nav-Links" href="destination2.html">Destinations</a></li>
+                    <li><a class=" nav-Links text-black" href="guide.html">Guide</a></li>
+
+                    <li><a class="nav-Links" href="#">Covoiturage</a></li>
+                    <li><button class="nav-Links relative text-slate-600 " id="menu-btn"> Loisirs</button>
+                        <div class=" absolute bg-slate-100  hidden flex-col rounded mt-1 p-2 text-sm w-32 z-10"
+                            id="dropdown">
+                            <a href="#" class="px-2 py-1 text-slate-600 rounded hover:bg-slate-200">Hotel</a>
+                            <a href="#" class="px-2 py-1 text-slate-600 rounded hover:bg-slate-200">Restauration</a>
+                        </div>
+                    </li>
+
+            </div>
+
+            <div class="flex items-center gap-6">
+                <a href="login.html"> <button
+                        class="bg-blue-500 text-white px-5 py-2 rounded-full shadow-xl hover:bg-blue-700 duration-500 ">Sign
+                        in
+                    </button> </a>
+
+                <ion-icon onclick="onToggleMenu(this)" name="menu"
+                    class=" text-3xl cursor-pointer hover:shadow rounded-full md:hidden "> </ion-icon>
+                <!--pour qu'il soit cliquable -->
+            </div>
+        </nav>
+        <script>
+            const navLinks = document.querySelector('.navLinks') // selectioner la navbar
+            function onToggleMenu(e) //event argument qui va pointer vers mon element menu 
+            {
+                e.name === 'menu' ? (e.name = "close", navLinks.classList.add('top-[80px]'), navLinks.classList.add('opacity-100')) : (e.name = "menu", navLinks.classList.remove('top-[80px]'), navLinks.classList.remove('opacity-100'))
+                /*e.name=e.name==='menu' ? 'close' : 'menu' // pour changer l'icone de menu -> a fermer 
+                navLinks.classList.toggle('top-[9%]')*/
+            }
+        </script>
+    </header>
+    <!--Header image-->
+    <div style="background-image: url(https://i.imgur.com/yRKZnA8.jpg);" class="header-image h-[680px]">
+        <div class="px-14 pt-14 pb-8">
+            <h1 class="font-bold text-4xl text-white mt-96">Explore Algeria's most luxurious Hotels</h1>
+        </div>
+        <div class="relative px-14 pb-8">
+            <img style="transform: scaleX(-1);" class="h-[48px] w-[48px]"
+                src="Ressources/PNGs and SVGs/quote-white.png">
+            <p class="text-white font-semibold text-2xl">
+                Plan your next stay in Algeria and experience the warmth of our hospitality, where comfort and
+                relaxation await you at our hotels.</p>
+            <img class="absolute right-12 h-[48px] w-[48px]" src="Ressources/PNGs and SVGs/quote-white.png">
+        </div>
+    </div>
+
+
+
+    <div class="px-14 pt-8">
+        <h1 class="block font-bold text-5xl pb-8">Explore Hotels in Algeria</h1>
+        <div class="inline-block select-box mb-8">
+            <img style="transform: translate(0,-45%)" class="absolute inline-block top-1/2 right-4 h-[16px] w-[16px]"
+                src="Ressources/PNGs and SVGs/down-arrow.png">
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>our services</h4>
+                    <ul>
+                        <li><a href="#">Destination</a></li>
+                        <li><a href="#">Hotel</a></li>
+                        <li><a href="#">covoiturage</a></li>
+                        <li><a href="#">guide</a></li>
+                        <li><a href="#">Restaurant</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1Ijoid2FkaWUtYm91bWVkaWVuZTAzIiwiYSI6ImNsZjViaHJqeTA1am80NHBjcnA0YzM0azMifQ.ytG1PtMg_qIfyYn6_tLR4A';
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/wadie-boumediene03/clfyf84mp000y01o3kvchq8z9',
+            center: [35.720, -0.634],
+            zoom: 6,
+        })
+            ;
+        var marker = new mapboxgl.Marker()
+            .setLngLat([35.6915, -0.5968])
+            .addTo(map);
+        var marker = new mapboxgl.Marker()
+            .setLngLat([35.6975, -0.6306])
+            .addTo(map);
+        var marker = new mapboxgl.Marker()
+            .setLngLat([35.6911, -0.6412])
+            .addTo(map);
+        var marker = new mapboxgl.Marker()
+            .setLngLat([35.6941, -0.6284])
+            .addTo(map);
+        var marker = new mapboxgl.Marker()
+            .setLngLat([35.7057, -0.6338])
+            .addTo(map);
+    </script>
+</body>

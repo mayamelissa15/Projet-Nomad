@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covoiturage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/75daf6b927.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="footer.css">
+    <script src="main.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+</head>
+
+<body style="font-family: 'SF Pro Display', sans-serif;">
+    <header class="bg-white bg-scroll font-medium ">
+        <nav class=" flex justify-between items-center w-[92%] mx-auto">
+            <div>
+                <img class="w-[120px]" src="Ressources/PNGs and SVGs/Logo.png" alt="logo Nomad">
+            </div>
+            <div
+                class="navLinks duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 z-[15] ">
+                <!--{-100 to be hidden }-->
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 text-slate-600">
+                    <!--gap for view port-->
+                    <li><a class="nav-Links" href="#">Home</a></li>
+                    <li><a class="nav-Links" href="destination2.html">Destination</a></li>
+                    <li><a class=" nav-Links " href="guide.html">Guide</a></li>
+
+                    <li><a class="nav-Links text-black" href="#">Carpooling</a></li>
+                    <li><button class="nav-Links relative text-slate-600 " id="menu-btn"> Leisure</button>
+                        <div class=" absolute bg-slate-100  hidden flex-col rounded mt-1 p-2 text-sm w-32 z-10"
+                            id="dropdown">
+                            <a href="#" class="px-2 py-1 text-slate-600 rounded hover:bg-slate-200">Hotel</a>
+                            <a href="#" class="px-2 py-1 text-slate-600 rounded hover:bg-slate-200">Restoration</a>
+                        </div>
+                    </li>
+
+            </div>
+
+            <div class="flex items-center gap-6">
+                <a href="login.html"> <button
+                        class="bg-blue-500 text-white px-5 py-2 rounded-full shadow-xl hover:bg-blue-700 duration-500 ">Sign
+                        in </button> </a>
+
+                <ion-icon onclick="onToggleMenu(this)" name="menu"
+                    class=" text-3xl cursor-pointer hover:shadow rounded-full md:hidden "> </ion-icon>
+                <!--pour qu'il soit cliquable -->
+            </div>
+        </nav>
+        <script>
+            const navLinks = document.querySelector('.navLinks') // selectioner la navbar
+            function onToggleMenu(e) //event argument qui va pointer vers mon element menu 
+            {
+                e.name === 'menu' ? (e.name = "close", navLinks.classList.add('top-[80px]'), navLinks.classList.add('opacity-100')) : (e.name = "menu", navLinks.classList.remove('top-[80px]'), navLinks.classList.remove('opacity-100'))
+                /*e.name=e.name==='menu' ? 'close' : 'menu' // pour changer l'icone de menu -> a fermer 
+                navLinks.classList.toggle('top-[9%]')*/
+            }
+        </script>
+    </header>
+    <menu class="flex flex-col-reverse md:flex-row md:mx-14 mt-8">
+        <div class="m-4 flex flex-col gap-4 basis-1/2">
+            <div>
+                <h1 id="text" class="text-3xl font-semibold ">Wherever your journey takes you,
+                </h1>
+                <p class="text-2xl font-semibold text-slate-700 pt-6">We'll get you there</p>
+            </div>
+
+            <div>
+                <p id="text" class=" text-xl font-medium text-slate-500 mb-10">Are you tired of relying on public transportation or hailing cabs every time you need to go somewhere? Let Nomad help you take control of your travels. Our reliable and affordable car rental service offers a range of vehicles to suit your needs, from compact cars for solo travelers to spacious SUVs for families or groups. With easy online booking and flexible pickup and drop-off options, we make renting a car a hassle-free experience.</p>
+            </div>
+        </div>
+        <img src="Ressources/PNGs and SVGs/new illustration.jpg" class="object-fill basis-1/2 h-96 w-full">
+    </menu>
+    <div class="mt-8">
+        <h1 class="font-black text-2xl ml-4 md:ml-[54px]">Cars available for
+            rent</h1>
+    </div>
+    <div class="ml-4 md:ml-[54px] mt-[30px]">
+        <img class="inline-block w-[32px] h-[32px]" src="Ressources/PNGs and SVGs/edit.png" alt="filter-icon">
+        <h2 class="inline-block font-bold text-xl ml-2">Filter by</h2>
+    </div>
+    <div class="ml-4 md:ml-[54px] mt-[20px] inline-block">
+        <select
+            class="cursor-pointer font-semibold border-[1px] border-slate-500 drop-shadow-lg rounded-full px-4 py-2 md:w-[550px]"
+            name="wilaya-select">
+            <option selected disabled>By Wilaya</option>
+            <option>Skikda</option>
+            <option>Bejaia</option>
+            <option>Tizi-Ouzou</option>
+            <option>Alger</option>
+        </select>
+    </div>
+    <div class="ml-[54px] mt-[20px] inline-block">
+        <select
+            class="cursor-pointer font-semibold border-[1px] border-slate-500 drop-shadow-lg rounded-full px-4 py-2 md:w-[550px]"
+            name="wilaya-select">
+            <option selected disabled>By Fuel</option>
+            <option>Essence</option>
+            <option>Diesel</option>
+            <option>GPL</option>
+        </select>
+    </div>
+    <div class="ml-4 md:ml-[54px] mt-[20px] inline-block">
+        <select
+            class="cursor-pointer font-semibold border-[1px] border-slate-500 drop-shadow-lg rounded-full px-4 py-2 md:w-[550px]"
+            name="wilaya-select">
+            <option selected disabled>By Gear</option>
+            <option>Automatic</option>
+            <option>Manual</option>
+        </select>
+    </div>
+    <div class="ml-4 md:ml-[54px] mt-[30px]">
+        <img class="inline-block w-[32px] h-[32px]" src="Ressources/PNGs and SVGs/sort.png" alt="filter-icon">
+        <h2 class="inline-block font-bold text-xl ml-2">Sort by</h2>
+    </div>
+    <div class="ml-4 md:ml-[54px] mt-[20px] inline-block">
+        <select
+            class="cursor-pointer font-semibold border-[1px] border-slate-500 drop-shadow-lg rounded-full px-4 py-2 md:w-[550px]"
+            name="wilaya-select">
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Rating</option>
+        </select>
+    </div>
+    <!-- Cars -->
+    <div class="flex flex-col md:flex-row md:ml-14 md:mx-[54px] my-10 gap-10 bg-slate-100 p-8 rounded-md">
+        <!-- Car Image -->
+        <div class="">
+            <div>
+                <img class="rounded-md object-cover w-36 h-36"
+                    src="Ressources/Images/Covoiturage/Tesla sample images/2013-tesla-model-s_100421974_m.jpg">
+            </div>
+        </div>
+        <div class="flex flex-col gap-2">
+            <!-- Car name -->
+            <div>
+                <h1 class="text-2xl font-bold">Tesla Model S</h1>
+            </div>
+            <!-- Rating -->
+            <div class="text-xl" style="color: #0057D9">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <!-- Info -->
+            <div>
+                <p class="text-gray-800 text-lg">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti ex,
+                    voluptatum rerum architecto voluptates excepturi?</p>
+            </div>
+        </div>
+        <!-- Button Div -->
+        <a href="car-info.html" class="flex place-items-center">
+            <div class="flex place-items-center">
+                <div
+                    class="flex justify-center place-items-center bg-blue-500 w-44 h-10 drop-shadow-lg cursor-pointer rounded-full duration-300 hover:bg-blue-700 hover:duration-300">
+                    <h1 class="font-bold text-xl text-white">See More</h1>
+                </div>
+            </div>
+        </a>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>our services</h4>
+                    <ul>
+                        <li><a href="#">Destination</a></li>
+                        <li><a href="#">Hotel</a></li>
+                        <li><a href="#">covoiturage</a></li>
+                        <li><a href="#">guide</a></li>
+                        <li><a href="#">Restaurant</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
