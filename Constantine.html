@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="Styledestination.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="cards.css">
+  <script src="main.js"></script>
+    <title>Constantine, قسنطينة</title>
+</head>
+<body > 
+  <!-- start Header -->
+  <header class="bg-white bg-scroll font-medium ">
+    <nav class=" flex justify-between items-center w-[92%] mx-auto">
+        <div>
+            <img class="w-[120px]" src="img/Logo.png" alt="logo Nomad">
+        </div>
+        <div
+            class="navLinks duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 ">
+            <!--{-100 to be hidden }-->
+            <ul class="flex md:flex-row flex-col flex md:items-center md:gap-[4vw] gap-8 text-slate-600 z-10">
+                <!--gap for view port-->
+                <li><a class="nav-Links" href="#">Home</a></li>
+                <li><a class="nav-Links" href="destination2.html">Destination</a></li>
+                <li><a class=" nav-Links text-black" href="guide.html">Guide</a></li>
+
+                <li><a class="nav-Links" href="#">Carpoolinge</a></li>
+                <li><button class="nav-Links relative text-slate-600 " id="menu-btn"> Loisirs</button>
+                    <div class=" absolute bg-slate-100  hidden flex-col rounded mt-1 p-2 text-sm w-32 z-10"
+                        id="dropdown">
+                        <a href="#" class="px-2 py-1 text-slate-600 rounded hover:bg-slate-200">Hotel</a>
+                        <a href="#" class="px-2 py-1 text-slate-600 rounded hover:bg-slate-200">Restoration</a>
+                    </div>
+                </li>
+
+        </div>
+
+        <div class="flex items-center gap-6">
+            <a href="login.html"> <button
+                    class="bg-blue-500 text-white px-5 py-2 rounded-full shadow-xl hover:bg-blue-700 duration-500 ">Sign
+                    in </button> </a>
+
+            <ion-icon onclick="onToggleMenu(this)" name="menu"
+                class=" text-3xl cursor-pointer hover:shadow rounded-full md:hidden "> </ion-icon>
+            <!--pour qu'il soit cliquable -->
+        </div>
+    </nav>
+    <script>
+        const navLinks = document.querySelector('.navLinks') // selectioner la navbar
+        function onToggleMenu(e) //event argument qui va pointer vers mon element menu 
+        {
+            e.name === 'menu' ? (e.name = "close", navLinks.classList.add('top-[80px]'), navLinks.classList.add('opacity-100')) : (e.name = "menu", navLinks.classList.remove('top-[80px]'), navLinks.classList.remove('opacity-100'))
+            /*e.name=e.name==='menu' ? 'close' : 'menu' // pour changer l'icone de menu -> a fermer 
+            navLinks.classList.toggle('top-[9%]')*/
+        }
+    </script>
+</header>
+    <!-- End Header -->
+    <div> 
+        <img src="img/AdobeStock_36698535_Preview.jpeg" class=" px-1 w-full md:h-[600px] h-64">
+    </div>
+<!-- start container -->
+<div class="flex flex-col md:flex-row bg-white w-full">
+    <section class=" m-2 md:my-10 md:mx-4  border-transparent basis-4/6">
+      <div class="m-2 md:mt-10 md:mx-10">
+        <h3 class=" text-base text-lg font-medium py-3 underline decoration-blue-600">Algeria , 
+            قسنطينة</h3>
+        <h1 class=" text-blue-700 text-5xl md:text-7xl font-bold ">Constantine</h1>
+        <p class=" text-3xl font-normal text-black py-4 leading-relaxed ">
+            Constantine is a city located in northeastern Algeria, on a rocky plateau overlooking a deep gorge of the Rhumel River. The city has a rich history that dates back over 2,000 years. Here is an overview of its history and features.
+        </p>
+      </div>
+      <div class=" px-2 md:px-10 ">
+        <h1 class="text-black text-xl font-semibold" id="historique">Foundation and Ancient History</h1>
+        <!-- This text always show up -->
+        <p class="  text-lg font-normal text-gray-600 py-4  "> 
+            The city of Constantine was founded in the 3rd century BC by the Carthaginians, who called it Cirta. It was later conquered by the Romans in 203 BC, becoming an important city in the Roman province of Africa. It was also an important center of early Christianity, with several local martyrs and saints.
+          <!-- The three dots -->
+          <span id="dots">...</span>
+
+          <!-- This content only be shown as needed -->
+          <span>
+            <div class="  hidden text-xl font-normal text-slate-700  " id="more">
+              <h2 class="text-black text-xl font-semibold "> Middle Ages and Ottoman Era</h2>
+              <p class="text-lg font-normal text-gray-600 py-4  ">Middle Ages and Ottoman Era
+                After the fall of the Roman Empire, Constantine was conquered by the Vandals and Byzantines, before being taken by the Arabs in the 7th century. The city was ruled by various Arab and Berber dynasties in the following centuries. It became an important center of Islam, with several historic mosques.
+                In the 16th century, the city was conquered by the Ottoman Empire, which renamed it Qacentina. It became an important military and commercial base and experienced a period of economic and cultural development.</p>
+
+
+              <h2 class="text-black text-xl font-semibold "> Colonisation </h2>
+              <p class="text-lg font-normal text-gray-600 py-4  ">In the 7th century, Algiers was conquered by the Arab
+                armies of the Umayyad Caliphate, and
+                became a major center of Islamic scholarship and learning. During this period, the city
+                developed a rich culture and heritage, with many notable scholars, poets, and artists
+                calling Algiers home.</p>
+
+
+              <h2 class="text-black text-xl font-semibold ">  Colonial Period and Independence</h2>
+              <p class="text-lg font-normal text-gray-600 py-4  ">
+               
+                In the 19th century, the city fell under French domination and became an important center of French colonization in Algeria. It became the seat of the French military government in Algeria and experienced a period of economic and urban growth..</p>
+
+              <h2 class="text-black text-xl font-semibold "> Features of the City </h2>
+              <p class="text-lg font-normal text-gray-600 py-4  ">Today, Constantine is a dynamic and cosmopolitan city with a population of approximately one million inhabitants. It is famous for its unique architecture, with bridges and buildings constructed on limestone cliffs, as well as its historic mosques and rich cultural heritage.
+
+                The city is also an important center of higher education, with several major universities and research institutes. It is also an important center of industry, with a diverse economy including the production of textiles, chemicals, and food products.
+                
+                In summary, Constantine is a city rich in history and culture, with unique architecture and a diverse economy. It is a place of living and study for thousands of people and remains one of Algeria's most popular tourist destinations.
+              </p>
+            </div><span>
+        </p>
+
+        <!-- Implement the read more/read less button -->
+        <button onclick="toggleText()" id="button"
+          class="pb-2 text-slate-700 font-semibold text-lg duration-300 hover:text-xl ">Read
+          more</button>
+      </div>
+    </section>
+  </section>
+  <section class=" relative mt-4 md:mt-24 basis-2/6">
+    <ul class=" sticky top-0 bg-white w-96 p-5 border-l-4 border-black">
+
+      <h1 class="text-normal text-black  decoration-black  font-medium m-4"> Jump to : </h1>
+     <a href="guide.html"> <li 
+        class="before:content-['__01__'] before:font-medium  before:text-slate-500 before:m-4 before:text-xs text-xl text-black underline underline-offset-4 decoration-black hover:text-blue-500 font-medium hover:decoration-blue-500 m-4 cursor-pointer">
+        planning a trip
+      </li> </a>
+     <a href="DevenirGuide.html">  <li
+      class=" before:content-['__02__'] before:font-medium  before:text-slate-500 before:m-4 before:text-xs font-semibold text-xl text-black underline underline-offset-4 decoration-black hover:text-blue-500 hover:decoration-blue-500 m-4 cursor-pointer">
+      Becoming a guide </li></a>
+      <a href="destination2.html"><li
+        class=" before:content-['__03__'] before:font-medium  before:text-slate-500 before:m-4 before:text-xs font-semibold text-xl text-black underline underline-offset-4 decoration-black hover:text-blue-500 hover:decoration-blue-500 m-4 cursor-pointer">
+        See other destinations</li></a>
+      <a href="home"><li
+        class=" before:content-['__04__'] before:font-medium  before:text-slate-500 before:m-4 before:text-xs font-semibold text-xl text-black underline underline-offset-4 decoration-black hover:text-blue-500 hover:decoration-blue-500 m-4 cursor-pointer" >
+        Return to the homepage</li></a>
+    </ul>
+  </section>
+</div>
+<!-- End container -->
+<!-- start section destination -->
+<section class="destination">
+  <div class="container-destination">
+    <div class="card">
+        <div Class="ImageBox"> 
+        <img src="img/ahmedbey.jpg"   height="250px" width="300px"  class="saturate-150">
+        </div>
+        <div class=" content">
+          <h1 class="text-xl text-blue-900 py-4 font-semibold ">
+         Palace of Ahmed Bey   
+          </h1>
+          <p class="font-semibold text-slate-700">
+            This 18th-century palace was once the residence of the Ottoman ruler Ahmed Bey, and is one of the most impressive examples of Ottoman architecture in the city.
+          </p>
+        </div>
+    </div>
+    <div class="card">
+      <div Class="ImageBox"> 
+      <img src="img/mosqueconst.jpg"   height="250px" width="300px"  class="saturate-150">
+      </div>
+      <div class=" content">
+        <h1 class="text-xl text-blue-900 py-4 font-semibold">
+          The Great Mosque of Constantine
+        </h1>
+        <p class="font-semibold text-slate-700">
+         Also known as the Djamaa el Kebir, this mosque is one of the oldest and most important religious sites in the city.
+        </p>
+      </div>
+  </div>
+  <div class="card">
+    <div Class="ImageBox"> 
+    <img src="img/casbahconst.jpg"   height="250px" width="300px"  class="saturate-150">
+    </div>
+    <div class=" content">
+      <h1 class="text-xl text-blue-900 py-4 font-semibold">
+        The Casbah:
+      </h1>
+      <p class="font-semibold text-slate-700" >
+        The Casbah is the old town of Constantine, and is home to a maze of narrow streets, traditional markets, and historic buildings that provide a glimpse into the city's past.
+      </p>
+    </div>
+  </div>
+  <div class="card">
+    <div Class="ImageBox"> 
+    <img src="img/pontconst.jpg"   height="250px" width="300px"  class="saturate-150">
+    </div>
+    <div class=" content">
+      <h1 class="text-xl text-blue-900 py-4 font-semibold">The Suspension Bridge
+      </h1>
+      <p class="font-semibold text-slate-700">
+        This iconic bridge spans the Rhumel River and offers stunning views of the city and surrounding countryside.
+      </p>
+    </div>
+  </div>
+  <div class="card">
+    <div Class="ImageBox"> 
+    <img src="img/museumcirtajpg.jpg"   height="250px" width="300px"  class="saturate-150">
+    </div>
+    <div class=" content">
+      <h1 class="text-xl text-blue-900 py-4 font-semibold"> 
+        The Museum of Cirta
+      </h1>
+      <p class="font-semibold text-slate-700"> 
+        This museum is dedicated to the history and culture of the region, and features a wide range of artifacts and exhibits that trace the city's long and fascinating history.
+
+      </p>
+    </div>
+  </div>
+    <div class="card">
+        <div Class="ImageBox"> 
+        <img src="img/masjidconst.jpg"   height="250px" width="300px"  class="saturate-150">
+        </div>
+        <div class="content">
+          <h1 class="text-xl font-semibold text-blue-700 pb-2">
+            The Emir Abdelkader Mosque
+          </h1>
+          <p class="font-semibold text-slate-700" > his mosque is one of the most impressive religious buildings in the city, and features a stunning white marble facade and a large dome.
+          </p>
+        </div>
+    </div>
+    <div class="card">
+        <div Class="ImageBox"> 
+        <img src="img/monumentmortsbejaia.jpg"   height="250px" width="300px"  class="saturate-150">
+        </div>
+        <div class=" content ">
+          <h1 class="text-xl text-blue-900 py-4 font-semibold">
+            The Monument Aux Morts
+          </h1>
+          <p class="font-semibold text-slate-700">
+            This war memorial commemorates the soldiers who died in World War I and II, and features a large bronze statue of a soldier.
+          </p>
+        </div>
+    </div>
+    <div class="card">
+      <div Class="ImageBox"> 
+      <img src="img/archconst.jpg"   height="250px" width="300px"  class="saturate-150">
+      </div>
+      <div class=" content ">
+        <h1 class="text-xl text-blue-900 py-4 font-semibold">
+          The Trionfal Arch
+        </h1>
+        <p class="font-semibold text-slate-700">
+          This ancient Roman arch dates back to the 4th century, and is one of the few remaining examples of Roman architecture in the city.
+        </p>
+      </div>
+  </div>
+        </div>
+</section>
+<!--  End section destination -->
+
+
+
+<footer class="footer ">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>company</h4>
+          <ul>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">our services</a></li>
+            <li><a href="#">privacy policy</a></li>
+
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>get help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+
+            <li><a href="#">payment options</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>our services</h4>
+          <ul>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Hotel</a></li>
+            <li><a href="#">Carpooling</a></li>
+            <li><a href="#">Guide</a></li>
+            <li><a href="#">Restoration</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+   
+  <!-- Javascript code -->
+  <script>
+    function toggleText() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var button = document.getElementById("button");
+  
+      if (dots.classList.contains("hidden")) {
+        // Show the dots
+        dots.classList.remove("hidden");
+  
+        // Hide the more text
+        moreText.classList.add("hidden");
+  
+        // change text of the button
+        button.innerHTML = "Read more";
+      } else {
+        // Hide the dots
+        dots.classList.add("hidden");
+  
+        // hide the more text
+        moreText.classList.remove("hidden");
+  
+        // change text of the button
+        button.innerHTML = "Read less";
+      }
+    }
+  
+  </script>
+</body>
+</html>

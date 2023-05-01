@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="cards.css">
+  <link rel="stylesheet" href="Styledestination.css">
+  <script src="main.js"></script>
+    <title>Bejaia ,ⴱⴻⵊⴰⵢⴰ,بجاية</title>
+</head>
+<body > 
+  <!-- start Header -->
+  <header class="bg-white bg-scroll font-medium ">
+    <nav class=" flex justify-between items-center w-[92%] mx-auto">
+        <div>
+            <img class="w-[120px]" src="img/Logo.png" alt="logo Nomad">
+        </div>
+        <div
+            class="navLinks duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 ">
+            <!--{-100 to be hidden }-->
+            <ul class="flex md:flex-row flex-col flex md:items-center md:gap-[4vw] gap-8 text-slate-600 z-10">
+                <!--gap for view port-->
+                <li><a class="nav-Links" href="#">Home</a></li>
+                <li><a class="nav-Links" href="destination2.html">Destination</a></li>
+                <li><a class=" nav-Links text-black" href="guide.html">Guide</a></li>
+
+                <li><a class="nav-Links" href="#">Carpoolinge</a></li>
+                <li><button class="nav-Links relative text-slate-600 " id="menu-btn"> Loisirs</button>
+                    <div class=" absolute bg-slate-100  hidden flex-col rounded mt-1 p-2 text-sm w-32 z-10"
+                        id="dropdown">
+                        <a href="#" class="px-2 py-1 text-slate-600 rounded hover:bg-slate-200">Hotel</a>
+                        <a href="#" class="px-2 py-1 text-slate-600 rounded hover:bg-slate-200">Restoration</a>
+                    </div>
+                </li>
+
+        </div>
+
+        <div class="flex items-center gap-6">
+            <a href="login.html"> <button
+                    class="bg-blue-500 text-white px-5 py-2 rounded-full shadow-xl hover:bg-blue-700 duration-500 ">Sign
+                    in </button> </a>
+
+            <ion-icon onclick="onToggleMenu(this)" name="menu"
+                class=" text-3xl cursor-pointer hover:shadow rounded-full md:hidden "> </ion-icon>
+            <!--pour qu'il soit cliquable -->
+        </div>
+    </nav>
+    <script>
+        const navLinks = document.querySelector('.navLinks') // selectioner la navbar
+        function onToggleMenu(e) //event argument qui va pointer vers mon element menu 
+        {
+            e.name === 'menu' ? (e.name = "close", navLinks.classList.add('top-[80px]'), navLinks.classList.add('opacity-100')) : (e.name = "menu", navLinks.classList.remove('top-[80px]'), navLinks.classList.remove('opacity-100'))
+            /*e.name=e.name==='menu' ? 'close' : 'menu' // pour changer l'icone de menu -> a fermer 
+            navLinks.classList.toggle('top-[9%]')*/
+        }
+    </script>
+</header>
+    <!-- End Header -->
+    <div> 
+        <img src="img/img5_5c881b8b59407.jpg" class=" px-1 w-full h-64 lg:h-[580px]">
+    </div>
+<!-- start container -->
+<div class="flex flex-col md:flex-row bg-white w-full">
+    <section class=" m-2 md:my-10 md:mx-4  border-transparent basis-4/6">
+      <div class="m-2 md:mt-10 md:mx-10">
+        <h3 class=" text-base text-lg font-medium py-3 underline decoration-blue-600">Algeria , 
+            بجاية</h3>
+        <h1 class=" text-blue-700 pb-2text-5xl md:text-7xl font-bold ">Bejaia</h1>
+        <p class=" text-3xl font-normal text-black py-4 leading-relaxed ">
+            Béjaïa is a coastal city located in northeastern Algeria, known for its rich historical, cultural, and natural heritage.
+        </p>
+      </div>
+      <div class=" px-2 md:px-10 ">
+        <h1 class="text-black text-xl font-semibold" id="historique">Foundation and Ancient History</h1>
+        <!-- This text always show up -->
+        <p class="  text-lg font-normal text-gray-600 py-4  "> 
+            
+The region around Béjaïa has a long and rich history dating back to ancient times. It was an important trading center along the Mediterranean, with connections to Carthage, Rome, and other ancient civilizations.
+          <!-- The three dots -->
+          <span id="dots">...</span>
+
+          <!-- This content only be shown as needed -->
+          <span>
+            <div class="  hidden text-xl font-normal text-slate-700  " id="more">
+              <h2 class="text-black text-xl font-semibold "> Middle Ages and Ottoman Era</h2>
+              <p class="text-lg font-normal text-gray-600 py-4  ">Middle Ages and Ottoman Era
+                After the fall of the Roman Empire, Constantine was conquered by the Vandals and Byzantines, before being taken by the Arabs in the 7th century. The city was ruled by various Arab and Berber dynasties in the following centuries. It became an important center of Islam, with several historic mosques.
+                In the 16th century, the city was conquered by the Ottoman Empire, which renamed it Qacentina. It became an important military and commercial base and experienced a period of economic and cultural development.</p>
+
+
+              <h2 class="text-black text-xl font-semibold "> Medieval and Colonial History:</h2>
+              <p class="text-lg font-normal text-gray-600 py-4  ">During the medieval period, the region was conquered by various Arab and Berber dynasties, including the Almoravids and the Almohads. Béjaïa became an important center of Islamic scholarship, trade, and culture, with several historic mosques, madrasas, and markets.
+
+                During the colonial period, Béjaïa was part of French-controlled Algeria. It was an important center of agriculture and industry, with significant production of olive oil, textiles, and wine. It was also an important center of the Algerian nationalist movement, with several important events such as the Bejaia massacre of 1963.</p>
+
+
+              <h2 class="text-black text-xl font-semibold ">  Features of the City</h2>
+              <p class="text-lg font-normal text-gray-600 py-4  ">
+               
+                Today, Béjaïa is a vibrant and diverse city with a population of over 200,000 people. It is known for its beautiful beaches, stunning mountain vistas, and rich cultural heritage.
+
+The city is home to several historic sites, including the Kasbah of Béjaïa, the Roman ruins at Saldae, and several historic mosques and madrasas. It is also a center of contemporary art and culture, with several galleries and museums showcasing local and international works.
+
+The region is famous for its local cuisine, with dishes such as couscous, tagine, and pastries. It is also an important center of agriculture, with significant production of olive oil, almonds, and other crops.
+
+In summary, Béjaïa is a city with a rich history and vibrant culture. It is a place of natural beauty, with stunning beaches, mountains, and countryside. It remains an important center of industry, tourism, and culture in Algeria.
+
+
+
+</p>
+
+              
+            </div><span>
+        </p>
+
+        <!-- Implement the read more/read less button -->
+        <button onclick="toggleText()" id="button"
+          class="pb-2 text-slate-700 font-semibold text-lg duration-300 hover:text-xl ">Read
+          more</button>
+      </div>
+    </section>
+  </section>
+  <section class=" relative mt-4 md:mt-24 basis-2/6">
+    <ul class=" sticky top-0 bg-white w-96 p-5 border-l-4 border-black">
+
+      <h1 class="text-normal text-black  decoration-black  font-medium m-4"> Jump to : </h1>
+     <a href="guide.html"> <li 
+        class="before:content-['__01__'] before:font-medium  before:text-slate-500 before:m-4 before:text-xs text-xl text-black underline underline-offset-4 decoration-black hover:text-blue-500 font-medium hover:decoration-blue-500 m-4 cursor-pointer">
+        planning a trip
+      </li> </a>
+     <a href="DevenirGuide.html">  <li
+      class=" before:content-['__02__'] before:font-medium  before:text-slate-500 before:m-4 before:text-xs font-semibold text-xl text-black underline underline-offset-4 decoration-black hover:text-blue-500 hover:decoration-blue-500 m-4 cursor-pointer">
+      Becoming a guide </li></a>
+      <a href="destination2.html"><li
+        class=" before:content-['__03__'] before:font-medium  before:text-slate-500 before:m-4 before:text-xs font-semibold text-xl text-black underline underline-offset-4 decoration-black hover:text-blue-500 hover:decoration-blue-500 m-4 cursor-pointer">
+        See other destinations</li></a>
+      <a href="home"><li
+        class=" before:content-['__04__'] before:font-medium  before:text-slate-500 before:m-4 before:text-xs font-semibold text-xl text-black underline underline-offset-4 decoration-black hover:text-blue-500 hover:decoration-blue-500 m-4 cursor-pointer" >
+        Return to the homepage</li></a>
+    </ul>
+  </section>
+</div>
+<!-- End container -->
+<h1 class="  font-bold text-blue-700 pb-2text-3xl md:text-5xl py-4 px-2 md:py-8 md:px-10" id="explore">Explore Bejaia
+</h1> 
+
+<section class="destination">
+  <div class="container-destination">
+    <div class="card">
+        <div Class="ImageBox"> 
+        <img src="img/yemmagouraya.jpg"   height="250px" width="300px"  class="saturate-150">
+        </div>
+        <div class=" content">
+          <h1 class="text-xl text-blue-900 py-4 font-semibold ">
+            Gouraya National Park
+          </h1>
+          <p class="font-semibold text-slate-700">
+            This national park is located just outside Bejaia and is known for its stunning natural scenery, including mountains, forests, and beaches.
+          </p>
+        </div>
+    </div>
+    <div class="card">
+      <div Class="ImageBox"> 
+      <img src="img/museebejaia.jpg"   height="250px" width="300px"  class="saturate-150">
+      </div>
+      <div class=" content">
+        <h1 class="text-xl text-blue-900 py-4 font-semibold">
+          Bejaia Museum
+        </h1>
+        <p class="font-semibold text-slate-700">
+          This museum features a collection of artifacts from the region's history and culture, including ancient coins, pottery, and weapons.
+        </p>
+      </div>
+  </div>
+  <div class="card">
+    <div Class="ImageBox"> 
+    <img src="img/capcarbon.jpg"   height="250px" width="300px"  class="saturate-150">
+    </div>
+    <div class=" content">
+      <h1 class="text-xl text-blue-900 py-4 font-semibold">
+        Cap Carbon
+      </h1>
+      <p class="font-semibold text-slate-700" >
+        This scenic lookout point offers panoramic views of the Mediterranean Sea and the surrounding countryside.
+      </p>
+    </div>
+  </div>
+  <div class="card">
+    <div Class="ImageBox"> 
+    <img src="img/musée1.jpg"   height="250px" width="300px"  class="saturate-150">
+    </div>
+    <div class=" content">
+      <h1 class="text-xl text-blue-900 py-4 font-semibold">The Mediterranean Maritime Museum
+      </h1>
+      <p class="font-semibold text-slate-700">
+        This museum is dedicated to the maritime history of the Mediterranean, including exhibits on shipbuilding, navigation, and fishing.
+      </p>
+    </div>
+  </div>
+  <div class="card">
+    <div Class="ImageBox"> 
+    <img src="img/brisedemer.jpg"   height="250px" width="300px"  class="saturate-150">
+    </div>
+    <div class=" content">
+      <h1 class="text-xl text-blue-900 py-4 font-semibold"> 
+        Brise de mer
+      </h1>
+      <p class="font-semibold text-slate-700"> 
+         This scenic coastal promenade is a popular spot for strolling, jogging, and people-watching, with views of the sea and the mountains.
+
+      </p>
+    </div>
+  </div>
+    <div class="card">
+        <div Class="ImageBox"> 
+        <img src="img/casbahbejaia.jpg"   height="250px" width="300px"  class="saturate-150">
+        </div>
+        <div class="content">
+          <h1 class="text-xl font-semibold text-blue-700 pb-2">
+            The Kasbah of Bejaia
+          </h1>
+          <p class="font-semibold text-slate-700" > The Kasbah is the old town of Bejaia and is a UNESCO World Heritage site. It is a maze of narrow streets, traditional markets, and historic buildings that date back to the Ottoman era.
+          </p>
+        </div>
+    </div>
+    <div class="card">
+        <div Class="ImageBox"> 
+        <img src="img/monumentmortsbejaia.jpg"   height="250px" width="300px"  class="saturate-150">
+        </div>
+        <div class=" content ">
+          <h1 class="text-xl text-blue-900 py-4 font-semibold">
+            The Monument Aux Morts
+          </h1>
+          <p class="font-semibold text-slate-700">
+            This war memorial commemorates the soldiers who died in World War I and II, and features a large bronze statue of a soldier.
+          </p>
+        </div>
+    </div>
+        </div>
+</section>
+
+
+
+<footer class="footer ">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>company</h4>
+          <ul>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">our services</a></li>
+            <li><a href="#">privacy policy</a></li>
+
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>get help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+
+            <li><a href="#">payment options</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>our services</h4>
+          <ul>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Hotel</a></li>
+            <li><a href="#">Carpooling</a></li>
+            <li><a href="#">Guide</a></li>
+            <li><a href="#">Restoration</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Javascript code -->
+  <script>
+    function toggleText() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var button = document.getElementById("button");
+  
+      if (dots.classList.contains("hidden")) {
+        // Show the dots
+        dots.classList.remove("hidden");
+  
+        // Hide the more text
+        moreText.classList.add("hidden");
+  
+        // change text of the button
+        button.innerHTML = "Read more";
+      } else {
+        // Hide the dots
+        dots.classList.add("hidden");
+  
+        // hide the more text
+        moreText.classList.remove("hidden");
+  
+        // change text of the button
+        button.innerHTML = "Read less";
+      }
+    }
+  
+  </script>
+</body>
+</html>

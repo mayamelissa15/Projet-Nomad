@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="cards.css">
+  <link rel="stylesheet" href="Styledestination.css">
+  <script src="main.js"></script>
+    <title>Oran,وهران</title>
+</head>
+<body > 
+  <!-- start Header -->
+  <header class="bg-white bg-scroll font-medium ">
+    <nav class=" flex justify-between items-center w-[92%] mx-auto">
+        <div>
+            <img class="w-[120px]" src="img/Logo.png" alt="logo Nomad">
+        </div>
+        <div
+            class="navLinks duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 ">
+            <!--{-100 to be hidden }-->
+            <ul class="flex md:flex-row flex-col flex md:items-center md:gap-[4vw] gap-8 text-slate-600 z-10">
+                <!--gap for view port-->
+                <li><a class="nav-Links" href="#">Home</a></li>
+                <li><a class="nav-Links" href="destination2.html">Destination</a></li>
+                <li><a class=" nav-Links text-black" href="guide.html">Guide</a></li>
+
+                <li><a class="nav-Links" href="#">Carpoolinge</a></li>
+                <li><button class="nav-Links relative text-slate-600 " id="menu-btn"> Loisirs</button>
+                    <div class=" absolute bg-slate-100  hidden flex-col rounded mt-1 p-2 text-sm w-32 z-10"
+                        id="dropdown">
+                        <a href="#" class="px-2 py-1 text-slate-600 rounded hover:bg-slate-200">Hotel</a>
+                        <a href="#" class="px-2 py-1 text-slate-600 rounded hover:bg-slate-200">Restoration</a>
+                    </div>
+                </li>
+
+        </div>
+
+        <div class="flex items-center gap-6">
+            <a href="login.html"> <button
+                    class="bg-blue-500 text-white px-5 py-2 rounded-full shadow-xl hover:bg-blue-700 duration-500 ">Sign
+                    in </button> </a>
+
+            <ion-icon onclick="onToggleMenu(this)" name="menu"
+                class=" text-3xl cursor-pointer hover:shadow rounded-full md:hidden "> </ion-icon>
+            <!--pour qu'il soit cliquable -->
+        </div>
+    </nav>
+    <script>
+        const navLinks = document.querySelector('.navLinks') // selectioner la navbar
+        function onToggleMenu(e) //event argument qui va pointer vers mon element menu 
+        {
+            e.name === 'menu' ? (e.name = "close", navLinks.classList.add('top-[80px]'), navLinks.classList.add('opacity-100')) : (e.name = "menu", navLinks.classList.remove('top-[80px]'), navLinks.classList.remove('opacity-100'))
+            /*e.name=e.name==='menu' ? 'close' : 'menu' // pour changer l'icone de menu -> a fermer 
+            navLinks.classList.toggle('top-[9%]')*/
+        }
+    </script>
+</header>
+    <!-- End Header -->
+    <div> 
+        <img src="img/wah.jpeg"class=" px-1 w-full h-64 lg:h-[500px]">
+    </div>
+<!-- start container -->
+<div class="flex flex-col md:flex-row bg-white w-full">
+    <section class=" m-2 md:my-10 md:mx-4  border-transparent basis-4/6">
+      <div class="m-2 md:mt-10 md:mx-10">
+        <h3 class=" text-base text-lg font-medium py-3 underline decoration-blue-600">Algeria , 
+            وهران</h3>
+        <h1 class=" text-blue-700 text-5xl md:text-7xl font-bold ">Oran</h1>
+        <p class=" text-3xl font-normal text-black py-4 leading-relaxed ">
+            Oran is a province located in western Algeria, along the Mediterranean coast. It has a rich history and a diverse economy. Here is an overview of its history and features.
+        </p>
+      </div>
+      <div class=" px-2 md:px-10 ">
+        <h1 class="text-black text-xl font-semibold" id="historique">  Ancient and Colonial History</h1>
+        <!-- This text always show up -->
+        <p class="  text-lg font-normal text-gray-600 py-4  "> 
+          
+The area that is now Oran has a long history dating back to ancient times. It was an important Phoenician and Carthaginian trading post and later became a Roman city. After the fall of the Roman Empire, the region was conquered by various Arab and Berber dynasties.
+
+In the 16th century, the city of Oran was captured by the Spanish, who held it until the 18th century when it was taken by the Ottoman Empire. During the 19th century, it became an important center of French colonization in Algeria.
+          <!-- The three dots -->
+          <span id="dots">...</span>
+
+          <!-- This content only be shown as needed -->
+          <span>
+            <div class="  hidden text-xl font-normal text-slate-700  " id="more">
+              <h2 class="text-black text-xl font-semibold "> Independence and Modern Development</h2>
+              <p class="text-lg font-normal text-gray-600 py-4  ">
+                After Algeria's independence in 1962, Oran became an important center of industry and development. The city experienced rapid growth and urbanization, with a diverse economy including oil refining, chemical production, and agriculture.</p>
+
+
+              <h2 class="text-black text-xl font-semibold ">Features of the Province</h2>
+              <p class="text-lg font-normal text-gray-600 py-4  ">Today, Oran is a vibrant and diverse province with a population of over 1.5 million people. It is home to several historic sites, including the Santa Cruz Fortress, the Bey's Palace, and the Great Mosque of Oran. It is also an important center of education, with several major universities and research institutes.</p>
+
+
+              <h2 class="text-black text-xl font-semibold ">  Oran province</h2>
+              <p class="text-lg font-normal text-gray-600 py-4  ">
+                The province is known for its beautiful coastline, with sandy beaches and clear blue waters. It is also an important center of tourism, with many hotels, resorts, and attractions.
+
+                In summary, Oran is a province with a rich history and a diverse economy. It is home to many historic sites, beautiful beaches, and a vibrant population. It remains an important center of industry, education, and tourism in Algeria.</p>
+
+
+            </div><span>
+        </p>
+
+        <!-- Implement the read more/read less button -->
+        <button onclick="toggleText()" id="button"
+          class="pb-2 text-slate-700 font-semibold text-lg duration-300 hover:text-xl ">Read
+          more</button>
+      </div>
+    </section>
+  </section>
+  <section class=" relative mt-4 md:mt-24 basis-2/6">
+    <ul class=" sticky top-0 bg-white w-96 p-5 border-l-4 border-black">
+
+      <h1 class="text-normal text-black  decoration-black  font-medium m-4"> Jump to : </h1>
+     <a href="guide.html"> <li 
+        class="before:content-['__01__'] before:font-medium  before:text-slate-500 before:m-4 before:text-xs text-xl text-black underline underline-offset-4 decoration-black hover:text-blue-500 font-medium hover:decoration-blue-500 m-4 cursor-pointer">
+        planning a trip
+      </li> </a>
+     <a href="DevenirGuide.html">  <li
+      class=" before:content-['__02__'] before:font-medium  before:text-slate-500 before:m-4 before:text-xs font-semibold text-xl text-black underline underline-offset-4 decoration-black hover:text-blue-500 hover:decoration-blue-500 m-4 cursor-pointer">
+      Becoming a guide </li></a>
+      <a href="destination2.html"><li
+        class=" before:content-['__03__'] before:font-medium  before:text-slate-500 before:m-4 before:text-xs font-semibold text-xl text-black underline underline-offset-4 decoration-black hover:text-blue-500 hover:decoration-blue-500 m-4 cursor-pointer">
+        See other destinations</li></a>
+      <a href="home"><li
+        class=" before:content-['__04__'] before:font-medium  before:text-slate-500 before:m-4 before:text-xs font-semibold text-xl text-black underline underline-offset-4 decoration-black hover:text-blue-500 hover:decoration-blue-500 m-4 cursor-pointer" >
+        Return to the homepage</li></a>
+    </ul>
+  </section>
+</div>
+<!-- End container -->
+
+<section class="destination">
+  <div class="container-destination">
+    <div class="card">
+        <div Class="ImageBox"> 
+        <img src="img/santacruzz.jpg"   height="250px" width="300px"  class="saturate-150">
+        </div>
+        <div class=" content">
+          <h1 class="text-xl text-blue-900 py-4 font-semibold ">
+            Santa Cruz Fort
+          </h1>
+          
+          <p class="font-semibold text-slate-700">
+          This ancient fortress sits atop a hill overlooking the Mediterranean Sea and offers stunning views of the city and coastline.
+          </p>
+        </div>
+    </div>
+    <div class="card">
+      <div Class="ImageBox"> 
+      <img src="img/beyspalace.jpg"   height="250px" width="300px"  class="saturate-150">
+      </div>
+      <div class=" content">
+        <h1 class="text-xl text-blue-900 py-4 font-semibold">
+      Bey's Palace
+        </h1>
+        <p class="font-semibold text-slate-700">
+          This 19th-century palace is a beautiful example of Ottoman architecture, with intricate tile work, arches, and domes.
+        </p>
+      </div>
+  </div>
+  <div class="card">
+    <div Class="ImageBox"> 
+    <img src="img/greatmosque.jpg"   height="250px" width="300px"  class="saturate-150">
+    </div>
+    <div class=" content">
+      <h1 class="text-xl text-blue-900 py-4 font-semibold">
+        Great Mosque of Oran
+      </h1>
+      <p class="font-semibold text-slate-700" >
+        This historic mosque is one of the largest in North Africa and features beautiful mosaics, marble columns, and intricate calligraphy. This theater is a beautiful example of Art Deco architecture and hosts a variety of cultural events throughout the year.
+
+      </p>
+    </div>
+  </div>
+  <div class="card">
+    <div Class="ImageBox"> 
+    <img src="img/thetareoran.jpg"   height="250px" width="300px"  class="saturate-150">
+    </div>
+    <div class=" content">
+      <h1 class="text-xl text-blue-900 py-4 font-semibold">
+        Le Theatre d'Oran
+      </h1>
+      <p class="font-semibold text-slate-700" >
+        Le Theatre d'Oran: This theater is a beautiful example of Art Deco architecture and hosts a variety of cultural events throughout the year.
+
+      </p>
+    </div>
+  </div>
+  <div class="card">
+    <div Class="ImageBox"> 
+    <img src="img/1ernovembre.jpg"   height="250px" width="300px"  class="saturate-150">
+    </div>
+    <div class=" content">
+      <h1 class="text-xl text-blue-900 py-4 font-semibold">First november place
+      </h1>
+      <p class="font-semibold text-slate-700">
+        This central square is a popular gathering spot for locals and visitors alike, and is home to several cafes, shops, and restaurants.
+      </p>
+    </div>
+  </div>
+  <div class="card">
+    <div Class="ImageBox"> 
+    <img src="img/synagogueoran.jpg"   height="250px" width="300px"  class="saturate-150">
+    </div>
+    <div class=" content">
+      <h1 class="text-xl text-blue-900 py-4 font-semibold"> 
+        La Grande Synagogue d'Oran
+      </h1>
+      <p class="font-semibold text-slate-700"> 
+        This historic synagogue is a beautiful example of Moorish architecture and features intricate tile work and stained glass windows.
+      </p>
+    </div>
+  </div>
+    <div class="card">
+        <div Class="ImageBox"> 
+        <img src="img/corniche.jpg"   height="250px" width="300px"  class="saturate-150">
+        </div>
+        <div class="content">
+          <h1 class="text-xl font-semibold text-blue-700 pb-2">
+            Oran's Corniche
+          </h1>
+          <p class="font-semibold text-slate-700" > This scenic road runs along the coast and offers stunning views of the Mediterranean Sea and the city.
+          </p>
+        </div>
+    </div>
+    <div class="card">
+        <div Class="ImageBox"> 
+        <img src="img/Entrée_de_Timimoun_تيميمون.jpg"   height="250px" width="300px"  class="saturate-150">
+        </div>
+        <div class=" content ">
+          <h1 class="text-xl text-blue-900 py-4 font-semibold">The Medina of Oran
+          </h1>
+          <p class="font-semibold text-slate-700">
+            This historic neighborhood features narrow streets, traditional architecture, and colorful markets selling spices, textiles, and other goods.
+          </p>
+        </div>
+    </div>
+    <div class="card">
+      <div Class="ImageBox"> 
+      <img src="img/museetimim.jpg"   height="250px" width="300px"  class="saturate-150">
+      </div>
+      <div class=" content ">
+        <h1 class="text-xl text-blue-900 py-4 font-semibold">
+          The Museum of Modern and Contemporary Art of Oran
+        </h1>
+        <p class="font-semibold text-slate-700">
+          This museum showcases the work of local and international artists and hosts regular exhibitions, workshops, and events.
+        </p>
+      </div>
+  </div>
+        <div class="card">
+          <div Class="ImageBox"> 
+          <img src="img/arctriomphe.jpg"   height="250px" width="300px"  class="saturate-150">
+          </div>
+          <div class=" content ">
+            <h1 class="text-xl text-blue-900 py-4 font-semibold">
+              The Trionfal Arch
+            </h1>
+            <p class="font-semibold text-slate-700">
+              This ancient Roman arch dates back to the 4th century, and is one of the few remaining examples of Roman architecture in the city.
+            </p>
+          </div>
+      </div>
+          
+         
+  </div>     
+</section>
+
+
+<footer class="footer ">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>company</h4>
+          <ul>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">our services</a></li>
+            <li><a href="#">privacy policy</a></li>
+
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>get help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+
+            <li><a href="#">payment options</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>our services</h4>
+          <ul>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Hotel</a></li>
+            <li><a href="#">Carpooling</a></li>
+            <li><a href="#">Guide</a></li>
+            <li><a href="#">Restoration</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Javascript code -->
+  <script>
+    function toggleText() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var button = document.getElementById("button");
+  
+      if (dots.classList.contains("hidden")) {
+        // Show the dots
+        dots.classList.remove("hidden");
+  
+        // Hide the more text
+        moreText.classList.add("hidden");
+  
+        // change text of the button
+        button.innerHTML = "Read more";
+      } else {
+        // Hide the dots
+        dots.classList.add("hidden");
+  
+        // hide the more text
+        moreText.classList.remove("hidden");
+  
+        // change text of the button
+        button.innerHTML = "Read less";
+      }
+    }
+  
+  </script>
+</body>
+</html>
