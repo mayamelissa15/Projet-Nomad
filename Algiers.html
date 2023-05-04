@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="cards.css">
+  <link rel="stylesheet" href="Styledestination.css">
+  <script src="main.js"></script>
+    <title>Alger , الجزائر</title>
+</head>
+<body > 
+  <!-- start Header -->
+  <header class="bg-white bg-scroll font-medium ">
+    <nav class=" flex justify-between items-center w-[92%] mx-auto">
+        <div>
+            <img class="w-[120px]" src="img/Logo.png" alt="logo Nomad">
+        </div>
+        <div
+            class="navLinks duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 ">
+            <!--{-100 to be hidden }-->
+            <ul class="flex md:flex-row flex-col flex md:items-center md:gap-[4vw] gap-8 text-slate-600 z-10">
+                <!--gap for view port-->
+                <li><a class="nav-Links" href="#">Home</a></li>
+                <li><a class="nav-Links" href="destination2.html">Destination</a></li>
+                <li><a class=" nav-Links text-black" href="guide.html">Guide</a></li>
+
+                <li><a class="nav-Links" href="#">Carpoolinge</a></li>
+                <li><button class="nav-Links relative text-slate-600 " id="menu-btn"> Loisirs</button>
+                    <div class=" absolute bg-slate-100  hidden flex-col rounded mt-1 p-2 text-sm w-32 z-10"
+                        id="dropdown">
+                        <a href="#" class="px-2 py-1 text-slate-600 rounded hover:bg-slate-200">Hotel</a>
+                        <a href="#" class="px-2 py-1 text-slate-600 rounded hover:bg-slate-200">Restoration</a>
+                    </div>
+                </li>
+
+        </div>
+
+        <div class="flex items-center gap-6">
+            <a href="login.html"> <button
+                    class="bg-blue-500 text-white px-5 py-2 rounded-full shadow-xl hover:bg-blue-700 duration-500 ">Sign
+                    in </button> </a>
+
+            <ion-icon onclick="onToggleMenu(this)" name="menu"
+                class=" text-3xl cursor-pointer hover:shadow rounded-full md:hidden "> </ion-icon>
+            <!--pour qu'il soit cliquable -->
+        </div>
+    </nav>
+    <script>
+        const navLinks = document.querySelector('.navLinks') // selectioner la navbar
+        function onToggleMenu(e) //event argument qui va pointer vers mon element menu 
+        {
+            e.name === 'menu' ? (e.name = "close", navLinks.classList.add('top-[80px]'), navLinks.classList.add('opacity-100')) : (e.name = "menu", navLinks.classList.remove('top-[80px]'), navLinks.classList.remove('opacity-100'))
+            /*e.name=e.name==='menu' ? 'close' : 'menu' // pour changer l'icone de menu -> a fermer 
+            navLinks.classList.toggle('top-[9%]')*/
+        }
+    </script>
+</header>
+    <!-- End Header -->
+<!-- start container -->
+<div> 
+  <img src="img/algiiers.jpg" class=" w-full h-64 lg:h-[450px]">
+</div>
+<div class="flex flex-col md:flex-row bg-white w-full">
+    <section class=" m-2 md:my-10 md:mx-4  border-transparent basis-4/6">
+      <div class="m-2 md:mt-10 md:mx-10">
+        <h3 class="  text-base text-lg font-medium py-3 underline decoration-blue-600">Algeria , الجزائر</h3>
+        <h1 class="  text-blue-700 text-5xl md:text-7xl font-bold ">Algiers</h1>
+        <p class="  text-3xl font-normal text-black py-4 leading-relaxed ">
+          Algiers. There's nowhere like it on the planet for wildlife, wild lands and rich traditions that endure.
+          Prepare to fall in love.
+        </p>
+      </div>
+      <div class=" px-2 md:px-10 ">
+        <h1 class="text-black text-xl font-semibold" id="historique">Historique</h1>
+        <!-- This text always show up -->
+        <p class="   text-lg font-normal text-gray-600 py-4  "> Algiers the capital city of
+          Algeria and has a long and fascinating history that dates back to ancient times. The city has
+          been inhabited by various groups of people over the centuries, including the Phoenicians,
+          Romans, Arabs, amazigh and French. Here is a brief overview of Algiers
+          <!-- The three dots -->
+          <span id="dots">...</span>
+
+          <!-- This content only be shown as needed -->
+          <span>
+            <div class="   hidden text-xl font-normal text-slate-700  " id="more">
+              <h2 class="text-black text-xl font-semibold "> Fundation </h2>
+              <p class="text-lg font-normal text-gray-600 py-4  ">The city was founded by the Phoenicians in the 4th
+                century BC, and was later conquered by the Romans
+                in the 2nd century AD. During the Roman era, Algiers was an important center of trade and
+                commerce, with a thriving port that served as a hub for the transportation of goods and
+                people across the Mediterranean.</p>
+
+
+              <h2 class="text-black text-xl font-semibold "> Colonisation </h2>
+              <p class="text-lg font-normal text-gray-600 py-4  ">In the 7th century, Algiers was conquered by the Arab
+                armies of the Umayyad Caliphate, and
+                became a major center of Islamic scholarship and learning. During this period, the city
+                developed a rich culture and heritage, with many notable scholars, poets, and artists
+                calling Algiers home.</p>
+
+
+              <h2 class="text-black text-xl font-semibold "> The Ottomans built</h2>
+              <p class="text-lg font-normal text-gray-600 py-4  ">
+                In the 16th century, Algiers was conquered by the Ottoman Empire, and became an important
+                center of trade and commerce once again. The Ottomans built new harbors and fortifications
+                in the city, which helped to further expand its economic and strategic importance.
+                In the 19th century, Algiers was conquered by the French, who established a colonial
+                administration and began a process of modernization and urbanization. The French built new
+                roads, buildings, and infrastructure in the city, and also established a large naval base
+                and administrative center in Algiers.</p>
+
+              <h2 class="text-black text-xl font-semibold "> Independance </h2>
+              <p class="text-lg font-normal text-gray-600 py-4  ">
+                During the 20th century, Algiers played a pivotal role in the struggle for Algerian
+                independence from French colonial rule. The city was the site of many key political and
+                military events during the Algerian War of Independence, which lasted from 1954 to 1962.
+              </p>
+            </div><span>
+        </p>
+
+        <!-- Implement the read more/read less button -->
+        <button onclick="toggleText()" id="button"
+          class="pb-2 text-slate-700 font-semibold text-lg duration-300 hover:text-xl ">Read
+          more</button>
+      </div>
+    </section>
+    <section class="  relative mt-4 md:mt-24 basis-2/6">
+      <ul class=" sticky top-0 bg-white w-96 p-5 border-l-4 border-black">
+
+        <h1 class="text-normal text-black  decoration-black  font-medium m-4"> Jump to : </h1>
+        <li
+          class="before:content-['__01__'] before:font-medium  before:text-slate-500 before:m-4 before:text-xs text-xl text-black underline underline-offset-4 decoration-black hover:text-blue-500 font-medium hover:decoration-blue-500 m-4">
+          Must see experiences
+        </li>
+        <li
+          class=" before:content-['__01__'] before:font-medium  before:text-slate-500 before:m-4 before:text-xs font-semibold text-xl text-black underline underline-offset-4 decoration-black hover:text-blue-500 hover:decoration-blue-500 m-4">
+          Featured & latest stories </li>
+        <li
+          class=" before:content-['__01__'] before:font-medium  before:text-slate-500 before:m-4 before:text-xs font-semibold text-xl text-black underline underline-offset-4 decoration-black hover:text-blue-500 hover:decoration-blue-500 m-4">
+          planning a trip</li>
+        <li
+          class=" before:content-['__01__'] before:font-medium  before:text-slate-500 before:m-4 before:text-xs font-semibold text-xl text-black underline underline-offset-4 decoration-black hover:text-blue-500 hover:decoration-blue-500 m-4">
+          books & Guides</li>
+      </ul>
+    </section>
+  </div>
+<!-- End container -->
+<section class="destination">
+  <div class="container-destination">
+    <div class="card">
+        <div Class="ImageBox"> 
+        <img src="img/casbah.jpg"   height="250px" width="300px"  class="saturate-150">
+        </div>
+        <div class=" content">
+          <h1 class="text-xl text-blue-900 py-4 font-semibold ">
+            Casbah of Algiers  
+          </h1>
+          <p class="font-semibold text-slate-700">The Casbah is the old town of Algiers and is a UNESCO World Heritage site. It is a maze of narrow streets, traditional markets, and historic buildings that date back to the Ottoman era.
+          </p>
+        </div>
+    </div>
+    <div class="card">
+      <div Class="ImageBox"> 
+      <img src="img/Notre dame d'Afrique (Alger) by Samir Bzk on 500px.jfif"   height="250px" width="300px"  class="saturate-150">
+      </div>
+      <div class=" content">
+        <h1 class="text-xl text-blue-900 py-4 font-semibold">
+          Notre Dame d'Afrique
+        </h1>
+        <p class="font-semibold text-slate-700">
+          This Catholic basilica is a landmark of Algiers and offers panoramic views of the city and the Mediterranean Sea.</p>
+      </div>
+  </div>
+  <div class="card">
+    <div Class="ImageBox"> 
+    <img src="img/jardinhamma.jpg"   height="250px" width="300px"  class="saturate-150">
+    </div>
+    <div class=" content">
+      <h1 class="text-xl text-blue-900 py-4 font-semibold">
+        Jardin d'Essai du Hamma
+      </h1>
+      <p class="font-semibold text-slate-700" >
+        This botanical garden is one of the largest and most beautiful in the world, featuring a wide variety of exotic plants, trees, and flowers.
+        4_Museum of Antiquities: This museum features a 
+      </p>
+    </div>
+  </div>
+  <div class="card">
+    <div Class="ImageBox"> 
+    <img src="img/musée1.jpg"   height="250px" width="300px"  class="saturate-150">
+    </div>
+    <div class=" content">
+      <h1 class="text-xl text-blue-900 py-4 font-semibold">Museum of Antiquities
+      </h1>
+      <p class="font-semibold text-slate-700">
+        This museum features a collection of artifacts from the Roman, Punic, and Islamic eras, including mosaics, ceramics, and jewelry.
+      </p>
+    </div>
+  </div>
+  <div class="card">
+    <div Class="ImageBox"> 
+    <img src="img/cathedral.jpg"   height="250px" width="300px"  class="saturate-150">
+    </div>
+    <div class=" content">
+      <h1 class="text-xl text-blue-900 py-4 font-semibold"> 
+        Algiers Cathedral
+      </h1>
+      <p class="font-semibold text-slate-700"> 
+        This historic cathedral is one of the most impressive examples of French colonial architecture in the city.
+
+      </p>
+    </div>
+  </div>
+    <div class="card">
+        <div Class="ImageBox"> 
+        <img src="img/musee2.jpg"   height="250px" width="300px"  class="saturate-150">
+        </div>
+        <div class="content">
+          <h1 class="text-xl font-semibold text-blue-700 pb-2">
+            The National Museum of Fine Arts
+          </h1>
+          <p class="font-semibold text-slate-700" >  This museum houses a large collection of Algerian art, including paintings, sculptures, and installations.ade and a large dome.
+          </p>
+        </div>
+    </div>
+    <div class="card">
+        <div Class="ImageBox"> 
+        <img src="img/Monument_aux_morts_-_Constantine_معلم_تذكاري_-_قسنطينة.jpg"   height="250px" width="300px"  class="saturate-150">
+        </div>
+        <div class=" content ">
+          <h1 class="text-xl text-blue-900 py-4 font-semibold">
+            The Monument of the Martyrs
+          </h1>
+          <p class="font-semibold text-slate-700">
+            This war memorial commemorates the Algerian War of Independence and features a large bronze statue of a fallen soldier.
+          </p>
+        </div>
+    </div>
+    <div class="card">
+      <div Class="ImageBox"> 
+      <img src="img/masjid.jpg"   height="250px" width="300px"  class="saturate-150">
+      </div>
+      <div class=" content ">
+        <h1 class="text-xl text-blue-900 py-4 font-semibold">
+          The Ketchaoua Mosque
+        </h1>
+        <p class="font-semibold text-slate-700">
+          This historic mosque is a UNESCO World Heritage site and is one of the oldest and most important religious sites in the city..
+        </p>
+      </div>
+  </div>
+        </div>
+</section>
+<!-- start Section destination -->
+
+
+
+<toolkit>
+    <div>
+        <h1 class="text-black text-3xl md:text-5xl font-bold my-20 mx-4 md:m-20" id="tool">Planning toolkit</h1>
+      </div>
+    
+      <card class="flex flex-col md:flex-row md:justify-between my-8 mx-4 md:m-20">
+    
+        <div
+          class="  h-96 w-64  bg-gradient-to-b from-blue-300/30 to-white rounded-3xl m-5 cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none duration-500">
+          <img class="h-20 w-20 mt-2 mx-auto" src="https://cdn-icons-png.flaticon.com/512/3655/3655399.png">
+          <h1 class="text-5xl text-black font-semibold m-5 ">Best things to do </h1>
+          <p class="text-slate-700 font-medium m-5 ">
+            Discover some of the most unique and fulfilling experiences your next destination has to offer.</p>
+        </div>
+        <div
+          class="  h-96 w-64 bg-gradient-to-b from-blue-300/30 to-white  rounded-3xl m-5 cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none duration-500">
+          <img class="h-20 w-20 mt-2 mx-auto" src="https://cdn-icons-png.flaticon.com/512/4910/4910558.png">
+          <h1 class="text-5xl text-black font-semibold m-5 ">When to visit </h1>
+          <p class="text-slate-700 font-medium m-5 ">
+            Tips & Travel trends to help you pick the perfect time to visit this destination.</p>
+        </div>
+        <div
+          class="  h-96 w-64  bg-gradient-to-b from-blue-300/30 to-white rounded-3xl m-5 cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none duration-500">
+          <img class="h-20 w-20 mt-2 mx-auto" src="https://cdn-icons-png.flaticon.com/512/5855/5855571.png">
+          <h1 class="text-5xl text-black font-semibold m-5 ">Best places to visit </h1>
+          <p class="text-slate-700 font-medium m-5 ">
+            Put these must-see destinations on your next travel wish list.</p>
+        </div>
+        <div
+          class="  h-96 w-64  bg-gradient-to-b from-blue-300/30 to-white rounded-3xl m-5 cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none duration-500">
+          <img class="h-20 w-20 mt-2 mx-auto" src="https://cdn-icons-png.flaticon.com/512/4723/4723204.png">
+          <h1 class="text-5xl text-black font-semibold m-5 ">ways to get around </h1>
+          <p class="text-slate-700 font-medium m-5 ">
+            Browse the various transportation options to make your trip that much easier when you arrive.</p>
+        </div>
+    
+      </card>
+</toolkit>
+
+<footer class="footer ">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>company</h4>
+          <ul>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">our services</a></li>
+            <li><a href="#">privacy policy</a></li>
+
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>get help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+
+            <li><a href="#">payment options</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>our services</h4>
+          <ul>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Hotel</a></li>
+            <li><a href="#">Carpooling</a></li>
+            <li><a href="#">Guide</a></li>
+            <li><a href="#">Restoration</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Javascript code -->
+  <script>
+    function toggleText() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var button = document.getElementById("button");
+  
+      if (dots.classList.contains("hidden")) {
+        // Show the dots
+        dots.classList.remove("hidden");
+  
+        // Hide the more text
+        moreText.classList.add("hidden");
+  
+        // change text of the button
+        button.innerHTML = "Read more";
+      } else {
+        // Hide the dots
+        dots.classList.add("hidden");
+  
+        // hide the more text
+        moreText.classList.remove("hidden");
+  
+        // change text of the button
+        button.innerHTML = "Read less";
+      }
+    }
+  
+  </script>
+</body>
+</html>

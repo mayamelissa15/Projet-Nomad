@@ -26,8 +26,11 @@
 
   
 <!-- FORMULAIRE D'INSCRIPTION  -->
-<form method="post" enctype="multipart/form-data" class=" reveal  p-4 lg:p-10 w-[90%]  lg:w-[70%] mx-auto bg-white border-transparent rounded-3xl shadow-2xl m-20 " action="#" id="guide">
+<form method="post" enctype="multipart/form-data" class=" reveal  p-4 lg:p-10 w-[90%]  lg:w-[70%] mx-auto bg-white border-transparent rounded-3xl shadow-2xl m-20 relative" action="#" id="guide">
        {% csrf_token %}
+       <div class="absolute -top-6 right-16">
+        <img class="h-[48px] w-[48px]" src="img/quote-blue.png">
+    </div>   
   <div class="lg:mt-3 font-medium flex flex-col gap-2">
     <label class="text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium  ">Mail</label>
     <input name="email" type="email"  class="peer rounded-[10px] outline-none invalid:border-pink-500 invalid:border-2  shadow-md  py-2 px-2 w-full" placeholder="m_mellaz@estin.dz" >

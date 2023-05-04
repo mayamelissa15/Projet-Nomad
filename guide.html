@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<!!>, initial-scale=1.0">
+    <title>Find Your guide!</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="index.css"> <!--Hover effect nav bar + font for all the pages etc -->
+    <!--importer l'icon de la reponsive ta3 navbar-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+    <!--Responsive Navbar-->
+    <header class="bg-white bg-scroll font-medium ">
+        <nav class=" flex justify-between items-center w-[92%] mx-auto">
+            <div>
+                <img class="w-[120px]" src="img/Logo.png" alt="logo Nomad">
+            </div>
+            <div
+                class="navLinks duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 ">
+                <!--{-100 to be hidden }-->
+                <ul class="flex md:flex-row flex-col flex md:items-center md:gap-[4vw] gap-8 text-slate-600 z-10">
+                    <!--gap for view port-->
+                    <li><a class="nav-Links" href="#">Home</a></li>
+                    <li><a class="nav-Links" href="destination2.html">Destinations</a></li>
+                    <li><a class=" nav-Links text-black" href="guide.html">Guide</a></li>
+
+                    <li><a class="nav-Links" href="#">Carpooling</a></li>
+                    <li><button class="nav-Links relative text-slate-600 " id="menu-btn"> Leisure</button>
+                        <div class=" absolute bg-slate-100  hidden flex-col rounded mt-1 p-2 text-sm w-32 z-10"
+                            id="dropdown">
+                            <a href="#" class="px-2 py-1 text-slate-600 rounded hover:bg-slate-200">Hotel</a>
+                            <a href="#" class="px-2 py-1 text-slate-600 rounded hover:bg-slate-200">Restoration</a>
+                        </div>
+                    </li>
+
+            </div>
+
+            <div class="flex items-center gap-6">
+                <a href="login.html"> <button
+                        class="bg-blue-500 text-white px-5 py-2 rounded-full shadow-xl hover:bg-blue-700 duration-500 ">Sign
+                        in </button> </a>
+
+                <ion-icon onclick="onToggleMenu(this)" name="menu"
+                    class=" text-3xl cursor-pointer hover:shadow rounded-full md:hidden "> </ion-icon>
+                <!--pour qu'il soit cliquable -->
+            </div>
+        </nav>
+        <script>
+            const navLinks = document.querySelector('.navLinks') // selectioner la navbar
+            function onToggleMenu(e) //event argument qui va pointer vers mon element menu 
+            {
+                e.name === 'menu' ? (e.name = "close", navLinks.classList.add('top-[80px]'), navLinks.classList.add('opacity-100')) : (e.name = "menu", navLinks.classList.remove('top-[80px]'), navLinks.classList.remove('opacity-100'))
+                /*e.name=e.name==='menu' ? 'close' : 'menu' // pour changer l'icone de menu -> a fermer 
+                navLinks.classList.toggle('top-[9%]')*/
+            }
+        </script>
+    </header>
+
+    <!--Text animation-->
+    <menu class=" flex flex-col-reverse lg:flex-row">
+        <div class="m-8 lg:m-20 flex flex-col gap-10 items-center">
+            <div>
+                <h1 id="text" class=" text-2xl lg:text-6xl font-semibold "> Are you looking for a guide quickly? </h1>
+                <h2 class="text-2xl font-semibold text-slate-600 mt-8">Choose a private guide! </h2>
+            </div>
+
+            <div>
+                <p id="text" class="  text-lg font-medium text-slate-700 ">By choosing this option, you can explore
+                    hidden places and discover unknown facets of your destination, without any time constraints. With a
+                    guide just for you, you can enjoy an original and exciting experience.
+
+                    Don't hesitate any longer and choose a private guide to discover your destination in a unique and
+                    unforgettable way!</p>
+            </div>
+            <div>
+                <a class="bg-blue-500 text-white font-medium  px-5 py-2 rounded-full hover:bg-blue-700 duration-500 shadow-xl "
+                    href="#guide">Choose your guide </a>
+                </div>
+
+        </div>
+        <img class="" src="img/image.png">
+    </menu>
+
+    
+        <h1 class="reveal text-4xl m-5 font-bold text-black flex justify-center">How does it work? </h1>
+        <container class=" flex flex-col gap-4 md:flex-row   ">
+            <div
+                class="  hover:shadow-2xl duration-500 transition transform hover:-translate-y-1 motion-reduce rounded-2xl mx-auto  lg:p-5" >
+                <img src="img/4155601.jpg" style="height:250px;width:250px;" class="reveal">
+                <h1 class="reveal text-xl font-semibold text-black ">A tour in 3 steps?
+                </h1>
+                <p class="reveal text-lg font-medium text-slate-500 ">Find your guide in 3 parts ->
+                </p>
+
+            </div>
+            <div
+                class="  hover:shadow-2xl duration-500 transition transform hover:-translate-y-1 motion-reduce rounded-2xl mx-auto  lg:p-5">
+                <img src="img/3908628.jpg " style="height:250px;width:250px;" class="reveal">
+                <h1 class="reveal text-xl font-semibold text-black">
+                    I describe my needs
+
+
+                </h1>
+                <p class="reveal text-lg font-medium text-slate-500">
+                    to inform the available guides.
+                </p>
+
+            </div>
+            <div
+                class=" hover:shadow-2xl duration-500 transition transform hover:-translate-y-1 motion-reduce rounded-2xl mx-auto  lg:p-5">
+                <img src="img/3959402.jpg" style="height:250px;width:250px;" class="reveal">
+                <h1 class="reveal text-xl font-semibold text-black">
+                    I receive up to 4 offers
+
+
+                </h1>
+                <p class="reveal text-lg font-medium text-slate-500 ">
+                    for private tours in my language.
+                </p>
+
+            </div>
+            <div
+                class="  hover:shadow-2xl duration-500 transition transform hover:-translate-y-1 motion-reduce rounded-2xl mx-auto  lg:p-5">
+                <img src="img/guider-concept-personnes-information-technique-plat-minuscule-faq_126608-1473.jpg"
+                    style="height:250px;width:250px;" class="reveal">
+                <h1 class="reveal text-xl font-semibold text-black">
+                    I choose a guide or not.
+
+
+                </h1>
+                <p class="reveal text-lg font-medium text-slate-500 ">
+                    It's free and without obligation.
+                </p>
+
+            </div>
+        </container>
+   
+
+    <div class="my-20 flex flex-col-reverse lg:flex-row">
+        <img class=" reveal mx-8 mt-24 rounded-xl " src="img/e4d8107a54b17c1e323fcac6323d167f.jpg">
+        <div class="reveal m-8 lg:m-20 flex flex-col gap-4 items-center">
+            <div>
+                <h1 class="text-4xl font-bold text-black">
+                    Find a guide available on your dates.
+
+                </h1>
+                <h2 class="text-2xl font-medium text-slate-600 py-5">
+                    Let our guides know your expectations for this tour!
+                </h2>
+            </div>
+            <div>
+                <p class="text-xl font-medium text-slate-900 ">A tour guide conducts guided toursto discover monuments,
+                    works of art, places, cathedrals, historic buildings, and other places of interest. During the tour,
+                    they provide clear explanations of the history, characteristics, and cultural significance of the
+                    locations, while highlighting interesting spots. Tour guides answer visitors questions and are
+                    responsible for the accuracy of the information provided.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+ <div id="guide" class=" reveal bg-slate-100 h-[100%] w-[100%] m-0">
+        <h1 class="text-2xl lg:text-5xl font-semibold text-black mx-8 lg:mx-10 pt-10 ">Plan your future vacation in advance! </h1>
+        <p class="text-lg font-medium text-slate-600 mx-10 my-10 pt-10 ">
+            Start planning your next vacation now and avoid the stress of last-minute bookings. By planning ahead, you
+            can take the time to research destinations, find the best deals, and create an
+            itinerary that fits your interests and budget.
+
+           
+        </p>
+     <form class="reveal  p-4 lg:p-10 w-[90%]  lg:w-[70%] mx-auto my-auto  bg-white border-transparent rounded-3xl shadow-2xl m-20  " action="#">
+            <div class="mt-5 font-medium flex flex-col gap-2">
+                <label class="text-gray-700 text-sm after:content-['*'] after:ml-0.5 after:text-red-500">Date of departure</label>
+                <input type="date"
+                    class=" rounded-[10px] border-transparent shadow-md py-2 px-2 w-full text-gray-500  ">
+            </div>
+            <div class="mt-3 flex flex-col gap-2 ">
+                <label class="text-gray-700 text-sm font-medium "> Desired duration with the guide</label>
+                <div class="grid grid-cols-2 gap-5">
+                    <input type="number" min="0" class=" rounded-[10px] border-transparent shadow-md py-2 px-2 outline-black " required>
+                    <select class=" rounded-[10px] border-transparent shadow-md py-1 px-2 w-full ">
+                        <option></option>
+                        <option class="text-gray-500 text-medium">Hour(s)</option>
+                        <option class="text-gray-500 text-medium"> Day(s)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mt-3 font-medium flex flex-col gap-2">
+                <label class="text-gray-700 text-sm after:content-['*'] after:ml-0.5 after:text-red-500">Wilaya</label>
+                <select placeholder="Nombre de participants"
+                    class=" after:content-['*'] after:ml-0.5 after:text-red-500 rounded-[10px] border-transparent shadow-md py-2 px-2 w-full outline-black " required>
+                    <option></option>
+                    <option class="text-gray-500"> Alger</option>
+                    <option class="text-gray-500"> Oran</option>
+                    <option class="text-gray-500"> Timimoune</option>
+                    <option class="text-gray-500"> Setif</option>
+                    <option class="text-gray-500"> Bejaia</option>
+                    <option class="text-gray-500"> Constantine</option>
+
+                </select>
+            </div>
+            <div class="mt-3 font-medium flex flex-col gap-2">
+                <label class="text-gray-700 text-sm ">Your budget per hour</label>
+                <input type="number" min="100" max="500" class=" rounded-[10px] border-transparent shadow-md py-2 px-2 outline-black " required>
+            </div>
+            <div class="mt-3 font-medium flex flex-col gap-2">
+                <label class="text-gray-700 text-sm after:content-['*'] after:ml-0.5 after:text-red-500">Number of
+                    attendees</label>
+                <select placeholder="Nombre de participants"
+                    class=" rounded-[10px] border-transparent shadow-md py-2 px-2 w-full outline-black " required >
+                    <option></option>
+                    <option class="text-gray-500"> 1 person</option>
+                    <option class="text-gray-500"> 2 person</option>
+                    <option class="text-gray-500"> 3 person</option>
+                    <option class="text-gray-500"> 4 person</option>
+                    <option class="text-gray-500"> 5 person</option>
+                    <option class="text-gray-500"> 6 person</option>
+                    <option class="text-gray-500"> 7 person</option>
+                    <option class="text-gray-500"> 8 person</option>
+                    <option class="text-gray-500"> 9 person</option>
+                    <option class="text-gray-500"> +10 person</option>
+                    <option class="text-gray-500"> +20 person</option>
+                </select>
+
+            </div>
+            <div class="mt-3 font-medium flex flex-col gap-2">
+                <label class=" text-gray-700 text-sm text-smafter:content-['*'] after:ml-0.5 after:text-red-500 ">Guide language</label>
+                <select placeholder="Nombre de participants"
+                    class=" rounded-[10px] border-transparent shadow-md py-2 px-2 w-full outline-black " required>
+                    <option></option>
+                    <option class="text-gray-500"> Kabyle</option>
+                    <option class="text-gray-500"> Arabe</option>
+                    <option class="text-gray-500"> Arabe (Darija)</option>
+                    <option class="text-gray-500"> Francais</option>
+                    <option class="text-gray-500"> Anglais</option>
+                    <option class="text-gray-500"> Espagnol</option>
+                    <option class="text-gray-500"> Mandarin</option>
+                </select>
+            </div>
+
+            <div class="mt-3 font-medium flex flex-col gap-2">
+                <label class=" text-gray-700 text-sm ">Specify your request !</label>
+                <textarea style=" resize:none;"
+                    class=" rounded-[10px] border-transparent shadow-md py-2 px-2 w-full text-gray-700 text-sm text-medium outline-black " required placeholder="J'aspirerais à explorer les merveilleux endroits de Béjaia tel que  CapCarbon et aux Aiguades à partir de 16h. Je souhaiterais visiter chaque endroit pendant environ 1h et je suis disposé à payer 250 DA par heure."></textarea>
+            </div>
+
+            <div class="mt-5">
+                <input type="checkbox" class="border-transparent shadow-md">
+                <span>
+                    I accept the <a href="#" class="text-blue-500 font-semibold">Terms of Use</a> & <a href="#"
+                        class="text-blue-500 font-semibold">Privacy Policy</a>
+                </span>
+            </div>
+            <div class="mt-5 flex justify-end ">
+                <button class="bg-blue-500 text-white px-5 py-2 rounded-full hover:bg-blue-700 duration-500 ">Register
+                    now </button>
+            </div>
+        </form>
+    </div>
+    
+
+    <footer class="footer font-medium">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col">
+              <h4>company</h4>
+              <ul>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">our services</a></li>
+                <li><a href="#">privacy policy</a></li>
+      
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>get help</h4>
+              <ul>
+                <li><a href="#">FAQ</a></li>
+      
+                <li><a href="#">payment options</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>our services</h4>
+              <ul>
+                <li><a href="#">Destination</a></li>
+                <li><a href="#">Hotel</a></li>
+                <li><a href="#">Carpooling</a></li>
+                <li><a href="#">Guide</a></li>
+                <li><a href="#">Restoration</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>follow us</h4>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer> 
+
+</body>
+
+</html>

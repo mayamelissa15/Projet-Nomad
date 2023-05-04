@@ -124,7 +124,10 @@
 
            
         </p>
-     <form method="POST" class="reveal  p-4 lg:p-10 w-[90%]  lg:w-[70%] mx-auto my-auto  bg-white border-transparent rounded-3xl shadow-2xl m-20  " action="#">
+     <form method="POST" class="relative reveal  p-4 lg:p-10 w-[90%]  lg:w-[70%] mx-auto my-auto  bg-white border-transparent rounded-3xl shadow-2xl m-20  " action="#">
+        <div class="absolute -top-6 right-16">
+            <img class="h-[48px] w-[48px]" src="static/img/quote-blue.png">
+        </div>   
         {% csrf_token %}
             <div class="mt-5 font-medium flex flex-col gap-2">
                 <label class="text-gray-700 text-sm after:content-['*'] after:ml-0.5 after:text-red-500">Date of departure</label>

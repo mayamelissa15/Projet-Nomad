@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes demandes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <body class="bg-white flex justfify-center">
+        <!--Sidebar ta3na -->
+       
+            <sidebar class="md:w-3/12">
+                <span class="absolute text-white text-3xl top-3 md:top-5 left-4 cursor-pointer bg-sky-50" onclick="Openbar()">
+                    <i class="bi bi-filter-left px-2 bg-slate-100 text-black rounded-md"></i>
+                </span>
+                <div
+                    class="sidebar fixed top-0 bottom-0 lg:left-0 left-[-300px] p-2 w-[300px] overflow-y-auto text-center bg-slate-100 ">
+    
+                    <div class="text-slate-700 text-xl ">
+                        <div class="p-2.5 mt-1 flex items-center ">
+                            <i class=" text-white bi bi-app-indicator px-2 py-1 bg-blue-500 rounded-xl cursor-pointer "></i>
+                            <h1 class="font-semibold text-slate-700 text-[15px] ml-3">My Profil </h1>
+                            <i class=" text-black bi bi-x cursor-pointer ml-28  lg-hidden " onclick="Openbar()"></i>
+                        </div>
+                        <hr class="my-2.5 text-slate-700 mx-1.5 ">
+                    </div>
+    
+                    
+                    <hr class="my-2.5 text-slate-700 mx-1.5 ">
+                    <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300  cursor-pointer hover:bg-white
+            transition ease-in-out delay-150  hover:-translate-y-0.5 hover:scale-100  hover:shadow duration-300">
+                        <i class="bi bi-gear text-sm "></i>
+                        <span class="text-[15px] ml-4 text-slate-700  font-semibold  "> Settings </span>
+                    </div>
+                    <hr class="my-2.5 text-slate-700 mx-1.5 ">
+                   
+                   
+                    <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300  cursor-pointer bg-white transition ease-in-out delay-150  hover:-translate-y-0.5 hover:scale-100  hover:shadow duration-300 "
+                        onclick="dropdown()">
+                        <i class="bi bi-signpost-split"></i>
+                        <div class="flex justify-between w-full items-center ">
+    
+                            <span class="text-[15px] ml-4 text-slate-700  font-semibold  "> Guide</span>
+                            <span class="text-sm rotate-180" id="arrow">
+                                <i class="bi bi-chevron-down"></i>
+                            </span>
+    
+                        </div>
+                    </div>
+    
+                    <div class="text-left  font-thin mt-2 w-4/5 mx-auto text-slate-700 text-[15px] " id="submenu">
+                        <a href="MyAccount.html"><h1 class="cursor-pointer p-2 hover:bg-white rounded-md mt-1 font-semibold">My Organized Trips
+                        </h1> </a>
+                        <a href="Mesdemandes.html"><h1 class="cursor-pointer p-2 hover:bg-white rounded-md mt-1 font-semibold"> My requests</h1></a>
+                    </div>
+    
+    
+    
+                    <hr class="my-2.5 text-slate-700 mx-1.5 ">
+                    <div
+                        class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300  cursor-pointer hover:bg-white transition ease-in-out delay-150  hover:-translate-y-0.5 hover:scale-100  hover:shadow duration-300 ">
+                        <i class="bi bi-car-front-fill"></i>
+                        <span class="text-[15px] ml-4 text-slate-700  font-semibold  "> My car </span>
+                    </div>
+    
+                    <hr class="my-2.5 text-slate-700 mx-1.5 ">
+                    <div
+                        class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300  cursor-pointer hover:bg-white transition ease-in-out delay-150  hover:-translate-y-0.5 hover:scale-100  hover:shadow duration-300 ">
+                        <i class="bi bi-box-arrow-right"></i>
+    
+                        <span class="text-[15px] ml-4 text-slate-700  font-semibold  "> Logout </span>
+                    </div>
+                </div>
+            </sidebar>
+     <section class="  md:w-9/12">
+         <profile class="m-3 flex justify-end md:justify-between"> 
+                <p class="text-blanc text-lg font-semibold "> Hello , Username 👋  </p>
+            
+                <img src="img/avatar.png" class="w-6 h-6 md:w-8 md:h-8">  
+         </profile>
+         <hr class="my-6 md:my-4 text-slate-700 mx-1.5 ">
+        
+         <div class="flex flex-col md:m-8 m-4 md:flex-row  ">
+         <h1 class=" text-2xl md:text-3xl text-slate-900 font-semibold  "> My requests </h1>
+
+</div>
+         <p class="text-slate-700 font-normal md:m-8 m-4 text-medium md:text-xl py-5 md:py-1 pr-5">On this page, you will find an overview of your requests for tourist guides to discover the most beautiful destinations in Algeria that we offer. We recommend that you closely monitor your requests and contact the guide as soon as it is accepted.</p>
+
+
+
+         <div class="flex flex-row gap-4 m-5 bg-green-100 border-transparent shadow-xl p-5 rounded-3xl transition ease-in-out delay-150  hover:-translate-y-0.5 hover:scale-100  hover:shadow duration-300 cursor-pointer">
+            <img src="img/Oraan.jpg" class="w-28 h-28 rounded-3xl shadow-md ">
+            <div class="flex flex-col">
+            <h2 class="text-xl text-black font-medium m-1">Oran</h2>
+            <p class="text-md text-black font-medium m-1">2 personnes </p>
+            <p class="text-md text-black font-medium m-1"> March 10 , at 18:00 </p>
+            <div class="flex flex-row">
+            <p class="text-md text-green-700 font-semibold my-2"> Accepted  </p>
+            <i class="bi bi-check-circle text-green-700 p-2 "></i>
+            </div>
+        </div>
+
+      </div>
+ 
+      <div class="flex flex-row gap-4 m-5 bg-gray-100 border-transparent shadow-xl p-5 rounded-3xl transition ease-in-out delay-150  hover:-translate-y-0.5 hover:scale-100  hover:shadow duration-300 cursor-pointer">
+        <img src="img/Algeer.jpg" class="w-28 h-28 rounded-3xl shadow-md ">
+        <div class="flex flex-col">
+        <h2 class="text-xl text-black font-medium m-1">Alger</h2>
+        <p class="text-md text-black font-medium m-1">6 personnes </p>
+        <p class="text-md text-black font-medium m-1"> March 17 , at 8:00 </p>
+        <div class="flex flex-row">
+            <p class="text-md text-slate-700 font-medium my-2"> On hold</p>
+            <i class="bi bi-clock-history text-slate-900 p-2"></i>
+        </div>
+    </div>
+
+  </div>
+
+  <div class="flex flex-row gap-4 m-5 bg-red-100 border-transparent shadow-xl p-5 rounded-3xl transition ease-in-out delay-150  hover:-translate-y-0.5 hover:scale-100  hover:shadow duration-300 cursor-pointer">
+    <img src="img/Constaantine.jpg" class="w-28 h-28 rounded-3xl shadow-md ">
+    <div class="flex flex-col">
+    <h2 class="text-xl text-black font-medium m-1">Constantine</h2>
+    <p class="text-md text-black font-medium m-1">12 personne </p>
+    <p class="text-md text-black font-medium m-1"> March 21 , at 16:00 </p>
+    <div class="flex flex-row">
+        <p class="text-md text-red-700 font-medium my-2"> Refused </p>
+        <i class="bi bi-calendar2-x text-red-900 p-2"></i>
+    </div>
+</div>
+
+</div>
+         
+            
+    </section>
+    <script>function dropdown() {
+        document.querySelector('#submenu').classList.toggle('hidden')
+        document.querySelector('#arrow').classList.toggle('rotate-0')
+    }
+    dropdown()
+
+    function Openbar() {
+        document.querySelector('.sidebar').classList.toggle('left-[-300px]')
+    }</script>
+</body>
+</html>
