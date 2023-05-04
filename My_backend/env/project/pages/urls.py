@@ -7,5 +7,6 @@ urlpatterns = [
     path('Search', views.search_dest, name='search-dest'),
     path('guide',views.guide, name='guide'),
     path('DevenirGuide',views.DevenirGuide, name='DevenirGuide'),
+    path('covoiturage',views.covoiturage, name='covoiturage'),
 
 ]

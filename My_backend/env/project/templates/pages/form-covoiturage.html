@@ -1,0 +1,138 @@
+
+
+{% extends 'main-part.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <div class="w-full">
+        <div>
+            <img src="Ressources/PNGs and SVGs/rent illustration.png" class="mx-auto h-[500px]" alt="header-bg">
+        </div>
+        <div class="flex justify-center">
+            <h1 class="font-bold text-2xl py-4">Looking for a hassle-free and convenient car rent experience?</h1>
+        </div>
+        <div class="flex justify-center text-center text-[#5B5B5B] font-semibold text-xl px-48">Look no further than our
+            car rental website! With our user-friendly interface,
+            you can quickly and easily rent your car by filling the form below.</div>
+    </div>
+    <div class="relative my-8 mx-64 border-2 border-slate-300 bg-white h-[1250px] rounded-[50px]">
+        <!--Quote icon div-->  
+        <div class="absolute -top-6 right-16">
+            <img class="h-[48px] w-[48px]" src="Ressources/PNGs and SVGs/quote-blue.png">
+        </div>
+        <form method="post" enctype="multipart/form-data" action="#" id="covoiturage">
+            {% csrf_token %}
+            <div class="flex items-center mx-14 pt-4">
+                <div
+                    class="flex items-center justify-center font-semibold border-[1px] border-slate-300 drop-shadow-md rounded-full px-4 py-2 my-6">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Algeria.svg/256px-Flag_of_Algeria.svg.png"
+                        alt="Algerian Flag" class="h-5">  
+
+
+                        
+                    <span class="text-gray-500 ml-1">+213</span>
+                </div>
+                <input name="phone_nbr" type="tel" placeholder="Enter your phone number"
+                    class="font-semibold border-[1px] border-slate-300 drop-shadow-md rounded-full px-4 py-2 my-6 w-full">
+            </div>
+            <div class="flex flex-row items-center mx-14">
+                <div class="flex basis-1/4 justify-center">
+                    <h1 class="flex font-semibold text-[20px]">Rent your car from: </h1>
+                </div>
+                <div class="flex basis-3/4">
+                    <input name="rent_from" type="date"
+                        class="flex font-semibold border-[1px] border-slate-300 drop-shadow-md rounded-full px-4 py-2 my-6 w-full">
+                </div>
+            </div>
+            <div class="flex flex-row items-center mx-14">
+                <div class="flex basis-1/4 justify-center">
+                    <h1 class="flex font-semibold text-[20px]">To: </h1>
+                </div>
+                <div class="flex basis-3/4">
+                    <input name="rent_to" type="date"
+                        class="flexfont-semibold border-[1px] border-slate-300 drop-shadow-md rounded-full px-4 py-2 my-6 w-full">
+                </div>
+            </div>
+            <div class="flex items-center mx-14 py-4">
+                <input name="License_nbr" type="text" placeholder="License plate number"
+                    class="font-semibold border-[1px] border-slate-300 drop-shadow-md rounded-full px-4 py-2 w-full">
+            </div>
+            <div class="flex items-center mx-14 py-4 select-box">
+                <select id="trans-box"
+                    class="cursor-pointer font-semibold border-[1px] border-slate-300 drop-shadow-md rounded-full px-4 py-2 w-full"
+                    name="transmission-select">
+                    <option selected disabled>Transmission</option>
+                    <option>Automatic</option>
+                    <option>Manual</option>
+                </select>
+                <img style="transform: translate(0,-45%)" class="absolute inline-block top-1/2 right-4 h-[16px] w-[16px]"
+                    src="Ressources/PNGs and SVGs/down-arrow.png">
+            </div>
+            <div class="flex items-center mx-14 py-4 select-box">
+                <select id="fuel-box"
+                    class="cursor-pointer font-semibold border-[1px] border-slate-300 drop-shadow-md rounded-full px-4 py-2 w-full"
+                    name="fuel-select">
+                    <option selected disabled>Fuel</option>
+                    <option>Essence</option>
+                    <option>Diesel</option>
+                    <option>Electricity</option>
+                </select>
+                <img style="transform: translate(0,-45%)" class="absolute inline-block top-1/2 right-4 h-[16px] w-[16px]"
+                    src="Ressources/PNGs and SVGs/down-arrow.png">
+            </div>
+            <div class="flex flex-row items-center mx-14">
+                <div class="flex basis-2/4">
+                    <h1 class="flex font-semibold text-[20px]">Upload an image of your identity card: </h1>
+                </div>
+                <div class="flex basis-3/4">
+                    <input name="identity_card" type="file"
+                        class="file:py-2 file:px-4 file:text-blue-700 file:rounded-full file:bg-violet-50 file:border-0 file:cursor-pointer file:mr-8 hover:file:bg-violet-200 file:duration-[300ms] hover:duration-[300ms] flex font-semibold border-[1px] border-slate-300 drop-shadow-md rounded-full px-4 py-2 my-6 w-full"
+                        multiple>
+                </div>
+            </div>
+            <div class="flex flex-row items-center mx-14">
+                <div class="flex basis-2/4">
+                    <h1 class="flex font-semibold text-[20px]">Upload an image of your driving license: </h1>
+                </div>
+                <div class="flex basis-3/4">
+                    <input name="driving_license" type="file"
+                        class="file:py-2 file:px-4 file:text-blue-700 file:rounded-full file:bg-violet-50 file:border-0 file:cursor-pointer file:mr-8 hover:file:bg-violet-200 file:duration-[300ms] hover:duration-[300ms] flex font-semibold border-[1px] border-slate-300 drop-shadow-md rounded-full px-4 py-2 my-6 w-full"
+                        multiple>
+                </div>
+            </div>
+            <div class="flex flex-row items-center mx-14">
+                <div class="flex basis-2/4">
+                    <h1 class="flex font-semibold text-[20px]">Upload an image of your vehicule: </h1>
+                </div>
+                <div class="flex basis-3/4">
+                    <input name="car_pic" type="file"
+                        class="file:py-2 file:px-4 file:text-blue-700 file:rounded-full file:bg-violet-50 file:border-0 file:cursor-pointer file:mr-8 hover:file:bg-violet-200 file:duration-[300ms] hover:duration-[300ms]  flex font-semibold border-[1px] border-slate-300 drop-shadow-md rounded-full px-4 py-2 my-6 w-full"
+                        multiple>
+                </div>
+            </div>
+            <div class="flex flex-col mx-14 mt-8">
+                <div class="flex basis-2/4">
+                    <h1 class="flex font-semibold text-[20px]">Add some notes about your vehicule: </h1>
+                </div>
+                <div>
+                    <textarea name="notes" id="notes-box" placeholder="Notes"
+                        class="border mt-8 rounded-xl border-slate-300 h-[200px] w-full"> </textarea>
+                </div>
+            </div>
+            <div class="flex flex-row justify-end mt-10 mx-14">
+
+               <button type="submit" class="cursor-pointer text-white text-xl font-semibold bg-[#0057D9] px-8 py-2 rounded-full drop-shadow-md duration-[300ms] hover:bg-blue-900 hover:duration-[300ms]">Done </button>
+
+                
+            </div>
+         </form>
+    </div>
+
+</body>
+
+</html>
+
+{% endblock content %}

@@ -2,7 +2,7 @@ from django.db.models import Q
 from django.shortcuts import render
 
 from . import models
-from .models import Voyage,Guide
+from .models import Voyage,Guide,Car
 
 def main_part(request):
     return render(request, 'main-part.html')
@@ -111,3 +111,49 @@ def DevenirGuide(request):
 
 
     return render(request, 'pages/DevenirGuide.html')
+
+
+
+
+
+def covoiturage(request):
+
+
+
+    if request.method == 'POST':
+
+
+
+        phn_nbr= request.POST.get('phone_nbr')
+        rent_from= request.POST.get('rent_from')
+        rent_to=request.POST.get('rent_to')
+        lisece_nbr=request.POST.get('License_nbr')
+        trans=request.POST.get('transmission-select')
+        fuel=request.POST.get('fuel-select')
+
+        ident_card= request.FILES['identity_card']
+
+        licen_pic= request.FILES['driving_license']
+        
+        car_pic= request.FILES['car_pic']
+
+        notes=request.POST.get('notes')
+
+        data=Car(
+
+                 phone_nbr = phn_nbr,
+                 rent_from=rent_from,
+                 rent_to=rent_to,
+                 License_nbr=lisece_nbr,
+                 Transmission=trans,
+                 Fuel=fuel,
+                 identity_card=ident_card,
+                 driving_license =licen_pic,
+                 car_pic =car_pic,
+                 notes=notes,
+        )
+
+
+        data.save()
+
+    return render(request,'pages/form-covoiturage.html')

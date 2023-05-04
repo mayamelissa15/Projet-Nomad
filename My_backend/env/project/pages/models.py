@@ -45,6 +45,9 @@ z=[
 t=[('on','on'),
 ('off','off'),]
 
+
+
+
 class Voyage(models.Model):
     Date_of_departure = models.DateField(null=False)
     duration = models.IntegerField(null=False)
@@ -65,7 +68,10 @@ class Voyage(models.Model):
     Specify_your_request = models.CharField(max_length=60,null=False)  
 
     accept_terms = models.CharField(max_length=50,null=False,default='off',choices=t)
-                                                                     
+
+
+
+
 
 
 class Guide(models.Model):
@@ -97,5 +103,34 @@ class Guide(models.Model):
 
 
 
+
+
+class Car(models.Model):
+
+    phone_nbr=models.CharField(max_length=50,null=False)
+
+    rent_from=models.DateField(null=False)
+
+    rent_to=models.DateField(null=False)
+
+    License_nbr=models.CharField(max_length=50,null=False)
+
+
+    Transmission=models.CharField(max_length=50,choices=[('Automatic','Automatic'), ('Manual','Manual') ])
+
+    Fuel = models.CharField(max_length=50 , choices=[('Essence','Essence'),('Diesel','Diesel'),('Electricity','Electricity')])
+
+    identity_card = models.ImageField(upload_to='identitypics_cars/%y/%m/%d',null=True)
+    
+    driving_license = models.ImageField(upload_to='driving_license/%y/%m/%d',null=True)
+
+    car_pic = models.ImageField(upload_to='cars_pics/%y/%m/%d',null=True)
+
+    notes= models.TextField(max_length=50,null=True,blank=True)
+
+
+
+
+                                                                     
 
 
